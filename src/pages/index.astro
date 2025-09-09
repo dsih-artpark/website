@@ -1,0 +1,270 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import bhaskarSpeaking from '../images/bhaskar-speaking.jpg';
+import rohitPmac from '../images/rohit-pmac.jpg';
+import harishTalk from '../images/harish-talk.jpg';
+import hmPrismhLaunch from '../images/hm-prismh-launch.jpg';
+import teamAllHands from '../images/team-all-hands.jpg';
+---
+
+<style>
+  .word-container {
+    display: inline-block;
+    min-width: 150px;
+    text-align: center;
+    position: relative;
+  }
+  
+  @media (min-width: 640px) {
+    .word-container {
+      min-width: 300px;
+      text-align: left;
+    }
+  }
+
+  .typewriter-word {
+    color: #3b82f6; /* default blue */
+    border-right: 2px solid #3b82f6;
+    animation: blink 1s infinite;
+    position: relative;
+    display: inline-block;
+  }
+
+  .typewriter-word::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, 
+      rgba(0,0,0,0.3) 0%, 
+      rgba(0,0,0,0.2) 25%, 
+      rgba(0,0,0,0.4) 50%, 
+      rgba(0,0,0,0.2) 75%, 
+      rgba(0,0,0,0.3) 100%);
+    border-radius: 2px;
+    transform-origin: left;
+    animation: none;
+  }
+
+  .typewriter-word[style*="--underline-trigger"]::after {
+    animation: drawUnderline 0.8s ease-out forwards;
+  }
+
+  .typewriter-word.health {
+    color: #166534; /* dark green */
+    border-right-color: #166534;
+  }
+
+  .typewriter-word.climate {
+    color: #dc2626; /* orangish-red */
+    border-right-color: #dc2626;
+  }
+
+  .typewriter-word.technology {
+    color: #1e40af; /* dark blue */
+    border-right-color: #1e40af;
+  }
+
+  .typewriter-word.policy {
+    color: #3b82f6; /* lighter blue */
+    border-right-color: #3b82f6;
+  }
+
+  @keyframes blink {
+    0%, 50% { border-right-color: transparent; }
+    51%, 100% { border-right-color: currentColor; }
+  }
+
+  @keyframes drawUnderline {
+    0% {
+      width: 0;
+      transform: scaleX(0);
+    }
+    50% {
+      transform: scaleX(1.1) scaleY(0.8);
+    }
+    100% {
+      width: 100%;
+      transform: scaleX(1) scaleY(1);
+    }
+  }
+
+  /* Add a subtle wavy effect to the underline */
+  .typewriter-word::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(0,0,0,0.1) 2px,
+      rgba(0,0,0,0.1) 4px
+    );
+    opacity: 0;
+    animation: none;
+  }
+
+  .typewriter-word[style*="--underline-trigger"]::before {
+    animation: showWavyLine 0.5s ease-out 0.3s forwards;
+  }
+
+  @keyframes showWavyLine {
+    0% {
+      opacity: 0;
+      transform: translateY(5px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+<Layout title="Health Initiatives @ ARTPARK - Home">
+  <!-- Hero Section with Image Collage -->
+  <section class="relative flex flex-col items-center bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 pt-4 pb-8 sm:min-h-screen sm:justify-center sm:pt-0 sm:pb-0">
+    
+    <!-- Top Row - 2 Images (Bhaskar and Rohit) -->
+    <div class="flex justify-center gap-2 sm:gap-8 mb-3 sm:mb-8 w-full px-2 sm:px-4">
+      <!-- Bhaskar Speaking -->
+      <div class="w-[140px] h-[100px] sm:w-[300px] sm:h-[200px] rounded-2xl overflow-hidden shadow-2xl transform rotate-2">
+        <Image 
+          src={bhaskarSpeaking} 
+          alt="Bhaskar Speaking" 
+          class="w-full h-full object-cover"
+          width={300}
+          height={200}
+        />
+      </div>
+      
+      <!-- Rohit PMAC -->
+      <div class="w-[140px] h-[100px] sm:w-[300px] sm:h-[200px] rounded-2xl overflow-hidden shadow-2xl transform -rotate-1">
+        <Image 
+          src={rohitPmac} 
+          alt="Rohit PMAC" 
+          class="w-full h-full object-cover"
+          width={300}
+          height={200}
+        />
+      </div>
+    </div>
+    
+    <!-- Central Text Content -->
+    <div class="text-center px-2 sm:px-6 lg:px-8 max-w-5xl mx-auto mb-3 sm:mb-8">
+      <h1 class="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-gray-800 dark:text-white mb-3 sm:mb-8 leading-tight">
+        <span class="block sm:inline">Driving Innovations at the Intersection of </span>
+        <span class="word-container block sm:inline-block mt-2 sm:mt-0">
+          <span class="typewriter-word" id="typewriter-word"></span>
+        </span>
+      </h1>
+      
+      <!-- Navigation Links -->
+      <div class="flex flex-row gap-3 sm:gap-4 justify-center items-center mt-4 sm:mt-12">
+        <a href="/team" class="bg-blue-800 hover:bg-blue-900 text-white px-4 py-2 sm:px-8 sm:py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg text-sm sm:text-base flex-1 max-w-36 sm:max-w-none sm:flex-none">
+          Meet Our Team
+        </a>
+        <a href="/projects" class="border-2 border-blue-800 text-blue-800 hover:bg-blue-800 hover:text-white px-4 py-2 sm:px-8 sm:py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base flex-1 max-w-36 sm:max-w-none sm:flex-none">
+          View Projects
+        </a>
+      </div>
+    </div>
+    
+    <!-- Bottom Row - 3 Images (Harish, HM Prismh, Team) -->
+    <div class="flex justify-center gap-1 sm:gap-6 w-full px-2 sm:px-4 pb-4 sm:pb-0">
+      <!-- Harish Talk -->
+      <div class="w-[100px] h-[80px] sm:w-[250px] sm:h-[180px] rounded-2xl overflow-hidden shadow-2xl transform rotate-3">
+        <Image 
+          src={harishTalk} 
+          alt="Harish Talk" 
+          class="w-full h-full object-cover"
+          width={250}
+          height={180}
+        />
+      </div>
+      
+      <!-- HM Prismh Launch -->
+      <div class="w-[100px] h-[80px] sm:w-[250px] sm:h-[180px] rounded-2xl overflow-hidden shadow-2xl transform -rotate-2">
+        <Image 
+          src={hmPrismhLaunch} 
+          alt="HM Prismh Launch" 
+          class="w-full h-full object-cover"
+          width={250}
+          height={180}
+        />
+      </div>
+      
+      <!-- Team All Hands -->
+      <div class="w-[100px] h-[80px] sm:w-[250px] sm:h-[180px] rounded-2xl overflow-hidden shadow-2xl transform rotate-1">
+        <Image 
+          src={teamAllHands} 
+          alt="Team All Hands" 
+          class="w-full h-full object-cover"
+          width={250}
+          height={180}
+        />
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  const words = [
+    { text: 'One Health', class: 'health' },
+    { text: 'Climate', class: 'climate' },
+    { text: 'Technology', class: 'technology' },
+    { text: 'Policy', class: 'policy' }
+  ];
+  
+  let currentWordIndex = 0;
+  let currentCharIndex = 0;
+  let isDeleting = false;
+  const typewriterElement = document.getElementById('typewriter-word');
+
+  function typeWriter() {
+    if (!typewriterElement) return; // Exit if element not found
+    
+    const currentWord = words[currentWordIndex];
+    
+    // Set the color class
+    typewriterElement.className = `typewriter-word ${currentWord.class}`;
+    
+    if (isDeleting) {
+      // Delete characters
+      typewriterElement.textContent = currentWord.text.substring(0, currentCharIndex - 1);
+      currentCharIndex--;
+    } else {
+      // Type characters
+      typewriterElement.textContent = currentWord.text.substring(0, currentCharIndex + 1);
+      currentCharIndex++;
+    }
+
+    let typeSpeed = isDeleting ? 50 : 100; // Faster when deleting
+
+    if (!isDeleting && currentCharIndex === currentWord.text.length) {
+      // Word is complete, trigger underline animation
+      typewriterElement.style.setProperty('--underline-trigger', '1');
+      
+      typeSpeed = 2000;
+      isDeleting = true;
+    } else if (isDeleting && currentCharIndex === 0) {
+      // Word is deleted, reset underline and move to next word
+      typewriterElement.style.removeProperty('--underline-trigger');
+      
+      isDeleting = false;
+      currentWordIndex = (currentWordIndex + 1) % words.length;
+      typeSpeed = 500; // Pause before typing next word
+    }
+
+    setTimeout(typeWriter, typeSpeed);
+  }
+
+  // Start the typewriter effect
+  typeWriter();
+</script>

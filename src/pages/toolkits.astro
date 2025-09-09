@@ -1,0 +1,159 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { 
+  getAllToolkits, 
+  getUniqueCategories, 
+  getStatusColor, 
+  getCategoryColor 
+} from '../utils/toolkits';
+
+// Get toolkits data
+const toolkits = await getAllToolkits();
+const categories = ["All", ...(await getUniqueCategories())];
+---
+
+<Layout title="Toolkits - Health Initiatives @ ARTPARK" description="Access our collection of powerful development tools and utilities">
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-primary-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          Our <span class="text-primary-600 dark:text-primary-400">Toolkits</span>
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          A centralized collection of powerful tools and utilities we've built to streamline development workflows and boost productivity.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Category Filter -->
+  <section class="py-8 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap justify-center gap-3">
+        {categories.map((category) => (
+          <button 
+            class={`px-4 py-2 rounded-full text-sm font-medium transition-colors category-filter ${
+              category === "All" 
+                ? "bg-primary-600 text-white" 
+                : "bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300 hover:bg-primary-600 hover:text-white"
+            }`}
+            data-category={category}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Toolkits Grid -->
+  <section class="py-20 bg-white dark:bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="toolkits-grid">
+        {toolkits.map((toolkit) => (
+          <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow toolkit-card flex flex-col" data-category={toolkit.data.category}>
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                {toolkit.data.title}
+              </h3>
+              
+              <div class="flex gap-2 mb-4">
+                <span class={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(toolkit.data.status)}`}>
+                  {toolkit.data.status}
+                </span>
+                <span class={`px-2 py-1 rounded text-xs font-medium ${getCategoryColor(toolkit.data.category)}`}>
+                  {toolkit.data.category}
+                </span>
+              </div>
+              <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm flex-grow">
+                {toolkit.data.description}
+              </p>
+              
+              <!-- Features -->
+              <div class="mb-6">
+                <h4 class="text-sm font-medium text-gray-900 dark:text-white mb-2">Key Features:</h4>
+                <div class="flex flex-wrap gap-1">
+                  {toolkit.data.features.map((feature) => (
+                    <span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs rounded">
+                      {feature}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              
+              <!-- Action Buttons -->
+              <div class="flex space-x-3 mt-auto">
+                {toolkit.data.link && (
+                  <a 
+                    href={toolkit.data.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="flex-1 bg-primary-600 hover:bg-primary-700 text-white text-center px-4 py-2 rounded text-sm font-medium transition-colors"
+                  >
+                    Use Tool
+                  </a>
+                )}
+                {toolkit.data.github && (
+                  <a 
+                    href={toolkit.data.github} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="flex-1 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 text-center px-4 py-2 rounded text-sm font-medium transition-colors"
+                  >
+                    View Code
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gray-50 dark:bg-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        Need a Custom Tool?
+      </h2>
+      <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+        We're always building new tools to solve development challenges. Have a specific need? Let's build it together.
+      </p>
+      <a href="mailto:tools@dsih-team.com" class="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg font-medium transition-colors">
+        Request a Tool
+      </a>
+    </div>
+  </section>
+
+  <script>
+    // Category filtering functionality
+    const categoryFilters = document.querySelectorAll('.category-filter') as NodeListOf<HTMLButtonElement>;
+    const toolkitCards = document.querySelectorAll('.toolkit-card') as NodeListOf<HTMLElement>;
+
+    categoryFilters.forEach(filter => {
+      filter.addEventListener('click', () => {
+        const selectedCategory = filter.dataset.category;
+        
+        // Update active filter
+        categoryFilters.forEach(f => {
+          f.classList.remove('bg-primary-600', 'text-white');
+          f.classList.add('bg-gray-100', 'text-gray-700', 'dark:bg-gray-700', 'dark:text-gray-300');
+        });
+        
+        filter.classList.remove('bg-gray-100', 'text-gray-700', 'dark:bg-gray-700', 'dark:text-gray-300');
+        filter.classList.add('bg-primary-600', 'text-white');
+        
+        // Filter cards
+        toolkitCards.forEach(card => {
+          if (selectedCategory === 'All' || card.dataset.category === selectedCategory) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</Layout>

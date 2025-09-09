@@ -1,0 +1,64 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+// Get all blog posts from content collections
+const blogPosts = await getCollection('blog');
+---
+
+<Layout title="Blog - Health Initiatives @ ARTPARK" description="Read our latest insights, research findings, and updates from Health Initiatives @ ARTPARK.">
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-primary-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          Our <span class="text-primary-600 dark:text-primary-400">Blog</span>
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          Insights, research findings, and updates from our team.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Posts Grid -->
+  <section class="py-20 bg-white dark:bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {blogPosts.length > 0 ? (
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {blogPosts.map((post) => (
+            <a 
+              href={`/blog/${post.slug}`}
+              class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group cursor-pointer"
+            >
+              {post.data.heroImage && (
+                <img 
+                  src={post.data.heroImage} 
+                  alt={post.data.title}
+                  class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              )}
+              <div class="p-6">
+                <div class="text-sm text-gray-500 dark:text-gray-400 mb-2">
+                  {post.data.pubDate.toLocaleDateString()}
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+                  {post.data.title}
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300 text-sm">
+                  {post.data.description}
+                </p>
+              </div>
+            </a>
+          ))}
+        </div>
+      ) : (
+        <div class="text-center">
+          <p class="text-lg text-gray-600 dark:text-gray-300">
+            No blog posts available yet. Check back soon!
+          </p>
+        </div>
+      )}
+    </div>
+  </section>
+</Layout>

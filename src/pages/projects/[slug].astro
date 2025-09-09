@@ -1,0 +1,306 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection, getEntry } from 'astro:content';
+import { Image } from 'astro:assets';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const project = await getEntry('projects', slug!);
+
+if (!project) {
+  return Astro.redirect('/404');
+}
+
+const { Content } = await project.render();
+---
+
+<Layout title={`${project.data.title} - Health Initiatives @ ARTPARK`} description={project.data.description}>
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-primary-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            {project.data.title}
+          </h1>
+          
+          <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
+            {project.data.description}
+          </p>
+        </div>
+        
+        <div class="relative">
+          {project.data.image ? (
+            <Image 
+              src={project.data.image} 
+              alt={project.data.title}
+              width={800}
+              height={400}
+              class="w-full h-96 object-cover rounded-lg shadow-xl"
+              loading="eager"
+            />
+          ) : (
+            <div class="w-full h-96 bg-gray-200 dark:bg-gray-700 rounded-lg shadow-xl flex items-center justify-center">
+              <span class="text-gray-500 dark:text-gray-400 text-lg">No image available</span>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Details -->
+  <section class="py-20 bg-white dark:bg-gray-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Project Content -->
+      <div class="prose prose-lg dark:prose-invert max-w-none">
+        <Content />
+      </div>
+    </div>
+  </section>
+
+  <!-- Toolkits & Team Members -->
+  <section class="py-20 bg-gray-50 dark:bg-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12">
+        <!-- Related Toolkits -->
+        <div>
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Toolkits Built</h2>
+          <div class="space-y-4">
+            {(await getCollection('toolkits'))
+              .filter(toolkit => toolkit.data.projects?.some(p => p.toLowerCase() === slug.toLowerCase()))
+              .map((toolkit) => (
+                <div class="bg-white dark:bg-gray-900 rounded-lg p-4 shadow-sm border border-gray-200 dark:border-gray-700">
+                  <div class="flex-1">
+                    <h3 class="font-semibold text-gray-900 dark:text-white mb-1">
+                      <a href={`/toolkits#${toolkit.slug}`} class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                        {toolkit.data.title}
+                      </a>
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">{toolkit.data.description}</p>
+                    <div class="flex items-center space-x-4">
+                      <span class={`px-2 py-1 rounded text-xs font-medium ${
+                        toolkit.data.status === 'Live' ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200' :
+                        toolkit.data.status === 'In Development' ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200' :
+                        'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200'
+                      }`}>
+                        {toolkit.data.status}
+                      </span>
+                      {toolkit.data.link && (
+                        <a 
+                          href={toolkit.data.link} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          class="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 text-sm"
+                        >
+                          View Live
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            {!(await getCollection('toolkits')).some(toolkit => toolkit.data.projects?.some(p => p.toLowerCase() === slug.toLowerCase())) && (
+              <p class="text-gray-600 dark:text-gray-400 italic">No toolkits associated with this project yet.</p>
+            )}
+          </div>
+        </div>
+
+        <!-- Team Members -->
+        <div>
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Team Members</h2>
+          <div class="grid grid-cols-2 gap-3">
+            {(await getCollection('team'))
+              .filter(member => member.data.projects?.includes(slug))
+              .map((member) => (
+                <div class="bg-white dark:bg-gray-900 rounded-lg p-3 shadow-sm border border-gray-200 dark:border-gray-700">
+                  <div class="flex flex-col items-center text-center">
+                    {member.data.avatar ? (
+                      <img 
+                        src={member.data.avatar} 
+                        alt={member.data.name}
+                        class="w-10 h-10 rounded-full object-cover mb-2"
+                      />
+                    ) : (
+                      <div class="w-10 h-10 rounded-full bg-primary-100 dark:bg-primary-900 flex items-center justify-center mb-2">
+                        <span class="text-primary-600 dark:text-primary-400 font-semibold text-sm">
+                          {member.data.name.split(' ').map(n => n[0]).join('')}
+                        </span>
+                      </div>
+                    )}
+                    <div>
+                      <h3 class="text-sm font-medium text-gray-900 dark:text-white">
+                        <a href={`/team/${member.slug}`} class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                          {member.data.name}
+                        </a>
+                      </h3>
+                      <p class="text-xs text-gray-600 dark:text-gray-300">{member.data.role}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            {!(await getCollection('team')).some(member => member.data.projects?.includes(slug)) && (
+              <p class="text-gray-600 dark:text-gray-400 italic col-span-2">No team members assigned to this project yet.</p>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards & Media Coverage -->
+  <section class="py-20 bg-white dark:bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          Awards & Media Coverage
+        </h2>
+        <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          Recognition and coverage for this project across various publications and platforms.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {(await getCollection('media'))
+          .filter(item => item.data.project.toLowerCase() === slug.toLowerCase())
+          .sort((a, b) => {
+            // Awards first, then media coverage
+            if (a.data.type === 'Award' && b.data.type !== 'Award') return -1;
+            if (a.data.type !== 'Award' && b.data.type === 'Award') return 1;
+            // Within same type, sort alphabetically by slug
+            return a.slug.localeCompare(b.slug);
+          })
+          .map((item) => (
+            <article class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col h-full">
+              <div class="relative">
+                {item.data.image ? (
+                  <img 
+                    src={item.data.image} 
+                    alt={item.data.title}
+                    class="w-full h-48 object-cover"
+                  />
+                ) : (
+                  <div class="w-full h-48 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-600 flex items-center justify-center">
+                    <div class="text-center">
+                      <svg class="w-12 h-12 text-gray-400 dark:text-gray-500 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                      </svg>
+                      <p class="text-xs text-gray-500 dark:text-gray-400 font-medium">{item.data.publication}</p>
+                    </div>
+                  </div>
+                )}
+                <div class="absolute top-4 right-4">
+                  <span class={`px-3 py-1 rounded-full text-xs font-medium ${
+                    item.data.type === "Award" ? "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200" :
+                    item.data.type === "Article" ? "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200" :
+                    item.data.type === "Podcast" ? "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200" :
+                    item.data.type === "Video" ? "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200" :
+                    item.data.type === "Conference" ? "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200" :
+                    item.data.type === "Report" ? "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200" :
+                    "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200"
+                  }`}>
+                    {item.data.type}
+                  </span>
+                </div>
+              </div>
+              
+              <div class="p-6 flex flex-col justify-between h-full">
+                <div>
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+                    {item.data.title}
+                  </h3>
+                  
+                  <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">
+                    <span class="font-medium">{item.data.publication}</span>
+                  </p>
+                  
+                  <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">
+                    {new Date(item.data.date).toLocaleDateString('en-US', { 
+                      year: 'numeric', 
+                      month: 'long', 
+                      day: 'numeric' 
+                    })}
+                  </p>
+                  
+                  <p class="text-sm text-gray-600 dark:text-gray-300">
+                    {item.data.excerpt}
+                  </p>
+                </div>
+                
+                <div class="mt-6">
+                  <a 
+                    href={item.data.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="w-full bg-primary-600 hover:bg-primary-700 text-white text-center px-4 py-2 rounded text-sm font-medium transition-colors inline-flex items-center justify-center gap-2"
+                  >
+                    Read More
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          ))}
+        {(await getCollection('media')).filter(item => item.data.project.toLowerCase() === slug.toLowerCase()).length === 0 && (
+          <div class="col-span-full text-center py-12">
+            <p class="text-gray-600 dark:text-gray-400 italic">No awards or media coverage for this project yet.</p>
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Projects -->
+  <section class="py-20 bg-white dark:bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          Our Other Projects
+        </h2>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {(await getCollection('projects'))
+          .filter(p => p.slug !== slug)
+          .slice(0, 3)
+          .map((otherProject) => (
+            <a 
+              href={`/projects/${otherProject.slug}`}
+              class="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group cursor-pointer"
+            >
+              {otherProject.data.image ? (
+                <Image 
+                  src={otherProject.data.image} 
+                  alt={otherProject.data.title}
+                  width={400}
+                  height={200}
+                  class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
+              ) : (
+                <div class="w-full h-48 bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
+                  <span class="text-gray-500 dark:text-gray-400 text-sm">No image available</span>
+                </div>
+              )}
+              <div class="p-6">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+                  {otherProject.data.title}
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300 text-sm">
+                  {otherProject.data.description}
+                </p>
+              </div>
+            </a>
+          ))}
+      </div>
+    </div>
+  </section>
+</Layout>
