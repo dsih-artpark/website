@@ -57,17 +57,5 @@ The website uses Tailwind CSS for styling. You can customize the design by:
 
 1. Modifying the color scheme in `tailwind.config.mjs`
 2. Updating the layout in `src/layouts/Layout.astro`
-3. Customizing individual page styles
-
-## Deployment
-
-This website can be deployed to any static hosting service:
-
-- **Vercel**: Connect your GitHub repository
-- **Netlify**: Drag and drop the `dist` folder
-- **GitHub Pages**: Use GitHub Actions to build and deploy
-- **AWS S3**: Upload the `dist` folder contents
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
+3. Modifying the components in `src/layouts/components`
+4. Customizing individual page styles
