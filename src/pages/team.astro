@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { getCurrentTeamMembers, getAlumniTeamMembers, getTeamMemberAvatar } from '../utils/team';
+import { getCurrentTeamMembers, getAlumniTeamMembers, getTeamMemberAvatar, getTeamMemberOptimizedImage } from '../utils/team';
 import { Image } from 'astro:assets';
 import websiteIcon from '../images/website.svg';
 
@@ -41,11 +41,21 @@ const alumniTeamMembers = await getAlumniTeamMembers();
           <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
             <div class="p-3 md:p-6 flex flex-col h-full">
               <div class="text-center flex-shrink-0">
-                <img 
-                  src={getTeamMemberAvatar(member)} 
-                  alt={member.data.name}
-                  class="w-16 h-16 md:w-24 md:h-24 rounded-full mx-auto mb-2 md:mb-4 object-cover"
-                />
+                {getTeamMemberOptimizedImage(member.data.avatar) ? (
+                  <Image 
+                    src={getTeamMemberOptimizedImage(member.data.avatar)} 
+                    alt={member.data.name}
+                    width={96}
+                    height={96}
+                    class="w-16 h-16 md:w-24 md:h-24 rounded-full mx-auto mb-2 md:mb-4 object-cover"
+                  />
+                ) : (
+                  <img 
+                    src={getTeamMemberAvatar(member)} 
+                    alt={member.data.name}
+                    class="w-16 h-16 md:w-24 md:h-24 rounded-full mx-auto mb-2 md:mb-4 object-cover"
+                  />
+                )}
                 <a href={`/team/${member.slug}`} class="text-sm md:text-xl font-semibold text-gray-900 dark:text-white mb-1 hover:text-primary-600 dark:hover:text-primary-400 transition-colors block min-h-[2rem] md:min-h-[3rem] flex items-center justify-center">
                   {member.data.prefix ? `${member.data.prefix} ${member.data.name}` : member.data.name}
                 </a>
@@ -196,11 +206,21 @@ const alumniTeamMembers = await getAlumniTeamMembers();
             <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow opacity-75">
               <div class="p-3 md:p-6 flex flex-col h-full">
                 <div class="text-center flex-shrink-0">
-                  <img 
-                    src={getTeamMemberAvatar(member)} 
-                    alt={member.data.name}
-                    class="w-16 h-16 md:w-24 md:h-24 rounded-full mx-auto mb-2 md:mb-4 object-cover"
-                  />
+                  {getTeamMemberOptimizedImage(member.data.avatar) ? (
+                    <Image 
+                      src={getTeamMemberOptimizedImage(member.data.avatar)} 
+                      alt={member.data.name}
+                      width={96}
+                      height={96}
+                      class="w-16 h-16 md:w-24 md:h-24 rounded-full mx-auto mb-2 md:mb-4 object-cover"
+                    />
+                  ) : (
+                    <img 
+                      src={getTeamMemberAvatar(member)} 
+                      alt={member.data.name}
+                      class="w-16 h-16 md:w-24 md:h-24 rounded-full mx-auto mb-2 md:mb-4 object-cover"
+                    />
+                  )}
                   <a href={`/team/${member.slug}`} class="text-sm md:text-xl font-semibold text-gray-900 dark:text-white mb-1 hover:text-primary-600 dark:hover:text-primary-400 transition-colors block min-h-[2rem] md:min-h-[3rem] flex items-center justify-center">
                     {member.data.prefix ? `${member.data.prefix} ${member.data.name}` : member.data.name}
                   </a>

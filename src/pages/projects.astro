@@ -1,10 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { getCollection } from 'astro:content';
+import { getProjectsWithImages } from '../utils/projects';
 import { Image } from 'astro:assets';
 
-// Get all projects from content collections
-const projects = await getCollection('projects');
+// Get all projects with optimized images
+const projects = await getProjectsWithImages();
 ---
 
 <Layout title="Our Projects - Health Initiatives @ ARTPARK" description="Explore the innovative projects and solutions created by Health Initiatives @ ARTPARK">
@@ -32,9 +32,9 @@ const projects = await getCollection('projects');
             class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col h-full group cursor-pointer"
           >
             <div class="relative">
-              {project.data.image ? (
+              {project.optimizedImage ? (
                 <Image 
-                  src={project.data.image} 
+                  src={project.optimizedImage} 
                   alt={project.data.title}
                   width={400}
                   height={200}
