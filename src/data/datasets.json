@@ -1,0 +1,980 @@
+[
+  {
+    "ds_id": "CS0007DS0041",
+    "title": "20th Livestock Census",
+    "data_owner_id": 1,
+    "spatial_coverage_region_id": "country_IN",
+    "temporal_coverage_start_date": "2019-07-01",
+    "temporal_resolution": "NONE",
+    "additional_metadata": {
+      "notes": "Downloaded from https://www.ahvs.kar.nic.in/en-reportsstat.html. Maharashtra data recived from PKC."
+    },
+    "id": 1,
+    "collection_id": 1,
+    "description": "District, Village and Ward-wise livestock population for Karnataka and District-wise livestock population for Maharashtra",
+    "spatial_resolution": "VILLAGE",
+    "temporal_coverage_end_date": "2019-07-01",
+    "access_level": "DOWNLOAD",
+    "raw_datasets": [
+      {
+        "source": "Government of India",
+        "rds_id": "CSRDS1",
+        "id": 1,
+        "title": "20th Livestock Census"
+      }
+    ],
+    "collection": {
+      "category_id": "CS",
+      "id": 1,
+      "category_name": "Census and Surveys",
+      "collection_id": "CS0007",
+      "collection_name": "Livestock Census (by DAHD)"
+    },
+    "tags": [
+      {
+        "id": 1,
+        "tag_name": "Livestock"
+      }
+    ],
+    "data_owner": {
+      "name": "Government of India",
+      "contact_person": "",
+      "contact_person_email": "",
+      "id": 1
+    },
+    "spatial_coverage_region": {
+      "region_name": "India",
+      "id": 146769,
+      "parent_region_id": "",
+      "region_id": "country_IN"
+    }
+  },
+  {
+    "ds_id": "EP0006DS0087",
+    "title": "DFMD - All India Seromonitoring Annual Summaries",
+    "data_owner_id": 2,
+    "spatial_coverage_region_id": "country_IN",
+    "temporal_coverage_start_date": "2013-07-01",
+    "temporal_resolution": "YEAR",
+    "additional_metadata": {},
+    "id": 2,
+    "collection_id": 2,
+    "description": "All India State Level Seromonitoring summaries for FMD",
+    "spatial_resolution": "STATE",
+    "temporal_coverage_end_date": "2022-07-01",
+    "access_level": "DOWNLOAD",
+    "raw_datasets": [
+      {
+        "source": "NIFMD",
+        "rds_id": "EPRDS46",
+        "id": 2,
+        "title": "NIFMD Annual Reports"
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "id": 2,
+      "category_name": "Epidemiology",
+      "collection_id": "EP0006",
+      "collection_name": "Epidemiological Summary"
+    },
+    "tags": [
+      {
+        "id": 2,
+        "tag_name": "Foot and Mouth Disease"
+      }
+    ],
+    "data_owner": {
+      "name": "NIFMD",
+      "contact_person": "",
+      "contact_person_email": "",
+      "id": 2
+    },
+    "spatial_coverage_region": {
+      "region_name": "India",
+      "id": 146769,
+      "parent_region_id": "",
+      "region_id": "country_IN"
+    }
+  },
+  {
+    "ds_id": "EP0006DS0086",
+    "title": "NDLM - Bharat Pashudhan - FMD Vaccinations",
+    "data_owner_id": 3,
+    "spatial_coverage_region_id": "country_IN",
+    "temporal_coverage_start_date": "2021-07-10",
+    "temporal_resolution": "NONE",
+    "additional_metadata": null,
+    "id": 10,
+    "collection_id": 2,
+    "description": "FMD Vaccinations data from NDLM website",
+    "spatial_resolution": "DISTRICT",
+    "temporal_coverage_end_date": "2025-07-10",
+    "access_level": "DOWNLOAD",
+    "raw_datasets": [
+      {
+        "source": "NDLM",
+        "rds_id": "EPRDS45",
+        "id": 6,
+        "title": "Bharat Pashudhan FMD Vaccinations"
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "id": 2,
+      "category_name": "Epidemiology",
+      "collection_id": "EP0006",
+      "collection_name": "Epidemiological Summary"
+    },
+    "tags": [
+      {
+        "id": 1,
+        "tag_name": "Livestock"
+      }
+    ],
+    "data_owner": {
+      "name": "NDLM",
+      "contact_person": null,
+      "contact_person_email": null,
+      "id": 3
+    },
+    "spatial_coverage_region": {
+      "region_name": "India",
+      "id": 146769,
+      "parent_region_id": "",
+      "region_id": "country_IN"
+    }
+  },
+  {
+    "ds_id": "EP0006DS0089",
+    "title": "DFMD - All India Serosurveillance Annual Summaries",
+    "data_owner_id": 2,
+    "spatial_coverage_region_id": "country_IN",
+    "temporal_coverage_start_date": "2013-07-10",
+    "temporal_resolution": "YEAR",
+    "additional_metadata": null,
+    "id": 12,
+    "collection_id": 2,
+    "description": "All India State Level Serosurveillance summaries for FMD",
+    "spatial_resolution": "STATE",
+    "temporal_coverage_end_date": "2022-07-10",
+    "access_level": "DOWNLOAD",
+    "raw_datasets": [
+      {
+        "source": "NIFMD",
+        "rds_id": "EPRDS46",
+        "id": 2,
+        "title": "NIFMD Annual Reports"
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "id": 2,
+      "category_name": "Epidemiology",
+      "collection_id": "EP0006",
+      "collection_name": "Epidemiological Summary"
+    },
+    "tags": [
+      {
+        "id": 2,
+        "tag_name": "Foot and Mouth Disease"
+      },
+      {
+        "id": 1,
+        "tag_name": "Livestock"
+      }
+    ],
+    "data_owner": {
+      "name": "NIFMD",
+      "contact_person": "",
+      "contact_person_email": "",
+      "id": 2
+    },
+    "spatial_coverage_region": {
+      "region_name": "India",
+      "id": 146769,
+      "parent_region_id": "",
+      "region_id": "country_IN"
+    }
+  },
+  {
+    "ds_id": "GS0015DS0034",
+    "title": "LGD Region IDs and Names",
+    "data_owner_id": 1,
+    "spatial_coverage_region_id": "country_IN",
+    "temporal_coverage_start_date": null,
+    "temporal_resolution": "NONE",
+    "additional_metadata": null,
+    "id": 13,
+    "collection_id": 5,
+    "description": "Local Government Directory names & codes for all India - states, districts, subdistricts, villages, ulbs",
+    "spatial_resolution": "STATE",
+    "temporal_coverage_end_date": null,
+    "access_level": "DOWNLOAD",
+    "raw_datasets": [
+      {
+        "source": "NIFMD",
+        "rds_id": "EPRDS46",
+        "id": 2,
+        "title": "NIFMD Annual Reports"
+      }
+    ],
+    "collection": {
+      "category_id": "GS",
+      "id": 5,
+      "category_name": "Geospatial",
+      "collection_id": "GS0015",
+      "collection_name": "Geographical & Administrative Units"
+    },
+    "tags": [],
+    "data_owner": {
+      "name": "Government of India",
+      "contact_person": "",
+      "contact_person_email": "",
+      "id": 1
+    },
+    "spatial_coverage_region": {
+      "region_name": "India",
+      "id": 146769,
+      "parent_region_id": "",
+      "region_id": "country_IN"
+    }
+  },
+  {
+    "ds_id": "EP0006DS0055",
+    "title": "Karnataka - FMD - NADCP Vaccination Progress Reports",
+    "data_owner_id": 6,
+    "spatial_coverage_region_id": "state_29",
+    "temporal_coverage_start_date": "2020-07-10",
+    "temporal_resolution": "DATE",
+    "additional_metadata": null,
+    "id": 14,
+    "collection_id": 2,
+    "description": "District-level vaccination & Tagging progress reports for Rounds 1,2,3,4,5",
+    "spatial_resolution": "DISTRICT",
+    "temporal_coverage_end_date": "2024-07-10",
+    "access_level": "DOWNLOAD",
+    "raw_datasets": [
+      {
+        "source": "National Animal Disease Control Programme",
+        "rds_id": "EPRDS26",
+        "id": 9,
+        "title": "KA FMD NADCP Vaccination Reports"
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "id": 2,
+      "category_name": "Epidemiology",
+      "collection_id": "EP0006",
+      "collection_name": "Epidemiological Summary"
+    },
+    "tags": [
+      {
+        "id": 1,
+        "tag_name": "Livestock"
+      },
+      {
+        "id": 2,
+        "tag_name": "Foot and Mouth Disease"
+      }
+    ],
+    "data_owner": {
+      "name": "National Animal Disease Control Programme",
+      "contact_person": null,
+      "contact_person_email": null,
+      "id": 6
+    },
+    "spatial_coverage_region": {
+      "region_name": "Karnataka",
+      "id": 183,
+      "parent_region_id": "country_IN",
+      "region_id": "state_29"
+    }
+  },
+  {
+    "ds_id": "EP0006DS0059",
+    "title": "Karnataka - FMD - NADCP - Vaccination Schedule",
+    "data_owner_id": 6,
+    "spatial_coverage_region_id": "state_29",
+    "temporal_coverage_start_date": "2021-07-10",
+    "temporal_resolution": "DATE",
+    "additional_metadata": null,
+    "id": 16,
+    "collection_id": 2,
+    "description": "Scheduled vaccination dates for cattle/buffalo, sheep/goat at the village-level - rounds 3, 4 and 5",
+    "spatial_resolution": "VILLAGE",
+    "temporal_coverage_end_date": "2024-07-10",
+    "access_level": "DOWNLOAD",
+    "raw_datasets": [
+      {
+        "source": "National Animal Disease Control Programme",
+        "rds_id": "EPRDS29",
+        "id": 10,
+        "title": "KA FMD NADCP Vaccination Schedule"
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "id": 2,
+      "category_name": "Epidemiology",
+      "collection_id": "EP0006",
+      "collection_name": "Epidemiological Summary"
+    },
+    "tags": [
+      {
+        "id": 1,
+        "tag_name": "Livestock"
+      },
+      {
+        "id": 2,
+        "tag_name": "Foot and Mouth Disease"
+      }
+    ],
+    "data_owner": {
+      "name": "National Animal Disease Control Programme",
+      "contact_person": null,
+      "contact_person_email": null,
+      "id": 6
+    },
+    "spatial_coverage_region": {
+      "region_name": "Karnataka",
+      "id": 183,
+      "parent_region_id": "country_IN",
+      "region_id": "state_29"
+    }
+  },
+  {
+    "ds_id": "CS0026DS0093",
+    "title": "DAHD - Meat Production Statistics",
+    "data_owner_id": 7,
+    "spatial_coverage_region_id": "country_IN",
+    "temporal_coverage_start_date": "2014-07-21",
+    "temporal_resolution": "YEAR",
+    "additional_metadata": null,
+    "id": 19,
+    "collection_id": 6,
+    "description": "Annual Meat Production Statistics from DAHD",
+    "spatial_resolution": "STATE",
+    "temporal_coverage_end_date": "2024-07-21",
+    "access_level": "DOWNLOAD",
+    "raw_datasets": [
+      {
+        "source": "DAHD",
+        "rds_id": "CSRDS9",
+        "id": 11,
+        "title": "Basic Animal Husbandry Statistics Annual Reports"
+      }
+    ],
+    "collection": {
+      "category_id": "CS",
+      "id": 6,
+      "category_name": "Census and Surveys",
+      "collection_id": "CS0026",
+      "collection_name": "Animal Husbandry Statistics"
+    },
+    "tags": [
+      {
+        "id": 1,
+        "tag_name": "Livestock"
+      }
+    ],
+    "data_owner": {
+      "name": "DAHD",
+      "contact_person": null,
+      "contact_person_email": null,
+      "id": 7
+    },
+    "spatial_coverage_region": {
+      "region_name": "India",
+      "id": 146769,
+      "parent_region_id": "",
+      "region_id": "country_IN"
+    }
+  },
+  {
+    "ds_id": "CS0001DS0094",
+    "title": "Population Census 2011",
+    "data_owner_id": 1,
+    "spatial_coverage_region_id": "country_IN",
+    "temporal_coverage_start_date": "2011-01-01",
+    "temporal_resolution": "NONE",
+    "additional_metadata": {
+      "source": "https://censusindia.gov.in/census.website/data/census-tables"
+    },
+    "id": 23,
+    "collection_id": 7,
+    "description": "Human Population Census of 2011",
+    "spatial_resolution": "STATE",
+    "temporal_coverage_end_date": "2011-01-01",
+    "access_level": "DOWNLOAD",
+    "raw_datasets": [
+      {
+        "source": "Government of India",
+        "rds_id": "CSRDS10",
+        "id": 12,
+        "title": "Population Census 2011"
+      }
+    ],
+    "collection": {
+      "category_id": "CS",
+      "id": 7,
+      "category_name": "Census and Surveys",
+      "collection_id": "CS0001",
+      "collection_name": "Census of India (by Home Ministry)"
+    },
+    "tags": [
+      {
+        "id": 3,
+        "tag_name": "Census"
+      }
+    ],
+    "data_owner": {
+      "name": "Government of India",
+      "contact_person": "",
+      "contact_person_email": "",
+      "id": 1
+    },
+    "spatial_coverage_region": {
+      "region_name": "India",
+      "id": 146769,
+      "parent_region_id": "",
+      "region_id": "country_IN"
+    }
+  },
+  {
+    "ds_id": "EP0006DS0098",
+    "title": "FMDCP Start Years",
+    "data_owner_id": 2,
+    "spatial_coverage_region_id": "country_IN",
+    "temporal_coverage_start_date": "2003-01-01",
+    "temporal_resolution": "YEAR",
+    "additional_metadata": null,
+    "id": 30,
+    "collection_id": 2,
+    "description": "Start years of FMD Control Programme at a district level",
+    "spatial_resolution": "DISTRICT",
+    "temporal_coverage_end_date": "2017-01-01",
+    "access_level": "DOWNLOAD",
+    "raw_datasets": [
+      {
+        "source": "NIFMD",
+        "rds_id": "EPRDS46",
+        "id": 2,
+        "title": "NIFMD Annual Reports"
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "id": 2,
+      "category_name": "Epidemiology",
+      "collection_id": "EP0006",
+      "collection_name": "Epidemiological Summary"
+    },
+    "tags": [
+      {
+        "id": 1,
+        "tag_name": "Livestock"
+      }
+    ],
+    "data_owner": {
+      "name": "NIFMD",
+      "contact_person": "",
+      "contact_person_email": "",
+      "id": 2
+    },
+    "spatial_coverage_region": {
+      "region_name": "India",
+      "id": 146769,
+      "parent_region_id": "",
+      "region_id": "country_IN"
+    }
+  },
+  {
+    "ds_id": "EP0006DS0097",
+    "title": "Karnataka FMD Outbreaks",
+    "data_owner_id": 2,
+    "spatial_coverage_region_id": "state_29",
+    "temporal_coverage_start_date": "2021-01-01",
+    "temporal_resolution": "MONTH",
+    "additional_metadata": null,
+    "id": 31,
+    "collection_id": 2,
+    "description": "Karnataka District level FMD Outbreaks in 2021",
+    "spatial_resolution": "DISTRICT",
+    "temporal_coverage_end_date": "2021-01-01",
+    "access_level": "DOWNLOAD",
+    "raw_datasets": [
+      {
+        "source": "DFMD Annual Reports",
+        "rds_id": "EPRDS49",
+        "id": 18,
+        "title": "Karnataka FMD Outbreaks"
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "id": 2,
+      "category_name": "Epidemiology",
+      "collection_id": "EP0006",
+      "collection_name": "Epidemiological Summary"
+    },
+    "tags": [
+      {
+        "id": 1,
+        "tag_name": "Livestock"
+      }
+    ],
+    "data_owner": {
+      "name": "NIFMD",
+      "contact_person": "",
+      "contact_person_email": "",
+      "id": 2
+    },
+    "spatial_coverage_region": {
+      "region_name": "Karnataka",
+      "id": 183,
+      "parent_region_id": "country_IN",
+      "region_id": "state_29"
+    }
+  },
+  {
+    "ds_id": "CS0002DS0095",
+    "title": "Situation Assessment of Agricultural Households and Land and Livestock Holdings 2019 Microdata",
+    "data_owner_id": 4,
+    "spatial_coverage_region_id": "country_IN",
+    "temporal_coverage_start_date": "2019-01-01",
+    "temporal_resolution": "NONE",
+    "additional_metadata": null,
+    "id": 32,
+    "collection_id": 3,
+    "description": "Microdata of CS0002DS0084",
+    "spatial_resolution": "DISTRICT",
+    "temporal_coverage_end_date": "2019-01-01",
+    "access_level": "DOWNLOAD",
+    "raw_datasets": [
+      {
+        "source": "Government of India",
+        "rds_id": "CSRDS7",
+        "id": 5,
+        "title": "State Wise Registered Veterinary Practitioners"
+      }
+    ],
+    "collection": {
+      "category_id": "CS",
+      "id": 3,
+      "category_name": "Census and Surveys",
+      "collection_id": "CS0002",
+      "collection_name": "National Sample Survey Organisation"
+    },
+    "tags": [
+      {
+        "id": 1,
+        "tag_name": "Livestock"
+      }
+    ],
+    "data_owner": {
+      "name": "National Sample Survey Organisation",
+      "contact_person": null,
+      "contact_person_email": null,
+      "id": 4
+    },
+    "spatial_coverage_region": {
+      "region_name": "India",
+      "id": 146769,
+      "parent_region_id": "",
+      "region_id": "country_IN"
+    }
+  },
+  {
+    "ds_id": "GS0015DS0032",
+    "title": "Pimpri Chinchwad - CHCs & PHCs",
+    "data_owner_id": 13,
+    "spatial_coverage_region_id": "subdistrict_4194",
+    "temporal_coverage_start_date": null,
+    "temporal_resolution": "NONE",
+    "additional_metadata": null,
+    "id": 39,
+    "collection_id": 5,
+    "description": "Name, Address, Imputed Latitude & Longitude positions of CHC/PHC in Pimpri Chinchwad Municipality",
+    "spatial_resolution": "OTHER",
+    "temporal_coverage_end_date": null,
+    "access_level": "DOWNLOAD",
+    "raw_datasets": [
+      {
+        "source": "PCMC",
+        "rds_id": "GSRDS3",
+        "id": 29,
+        "title": "Pimpri Chinchwad - CHCs & PHCs"
+      }
+    ],
+    "collection": {
+      "category_id": "GS",
+      "id": 5,
+      "category_name": "Geospatial",
+      "collection_id": "GS0015",
+      "collection_name": "Geographical & Administrative Units"
+    },
+    "tags": [],
+    "data_owner": {
+      "name": "Pune City Municipal Corporation",
+      "contact_person": null,
+      "contact_person_email": null,
+      "id": 13
+    },
+    "spatial_coverage_region": {
+      "region_name": "Pune City",
+      "id": 94418,
+      "parent_region_id": "district_490",
+      "region_id": "subdistrict_4194"
+    }
+  },
+  {
+    "ds_id": "GS0015DS0064",
+    "title": "Bengaluru City - Impervious Surfaces",
+    "data_owner_id": 10,
+    "spatial_coverage_region_id": "district_525",
+    "temporal_coverage_start_date": "2022-01-01",
+    "temporal_resolution": "NONE",
+    "additional_metadata": null,
+    "id": 40,
+    "collection_id": 5,
+    "description": "Impervious percentages for BBMP wards",
+    "spatial_resolution": "WARD",
+    "temporal_coverage_end_date": "2022-01-01",
+    "access_level": "DOWNLOAD",
+    "raw_datasets": [
+      {
+        "source": "BBMP",
+        "rds_id": "GSRDS9",
+        "id": 30,
+        "title": "Bengaluru City - Impervious Surfaces"
+      }
+    ],
+    "collection": {
+      "category_id": "GS",
+      "id": 5,
+      "category_name": "Geospatial",
+      "collection_id": "GS0015",
+      "collection_name": "Geographical & Administrative Units"
+    },
+    "tags": [],
+    "data_owner": {
+      "name": "BBMP",
+      "contact_person": null,
+      "contact_person_email": null,
+      "id": 10
+    },
+    "spatial_coverage_region": {
+      "region_name": "Bengaluru Urban",
+      "id": 5,
+      "parent_region_id": "state_29",
+      "region_id": "district_525"
+    }
+  },
+  {
+    "ds_id": "CS0001DS0050",
+    "title": "Census 2011 - Population Data - Karnataka",
+    "data_owner_id": 1,
+    "spatial_coverage_region_id": "state_29",
+    "temporal_coverage_start_date": "2011-01-01",
+    "temporal_resolution": "NONE",
+    "additional_metadata": null,
+    "id": 41,
+    "collection_id": 7,
+    "description": "Village-level population in Karnataka",
+    "spatial_resolution": "VILLAGE",
+    "temporal_coverage_end_date": "2011-01-01",
+    "access_level": "DOWNLOAD",
+    "raw_datasets": [
+      {
+        "source": "Government of India",
+        "rds_id": "CSRDS2",
+        "id": 31,
+        "title": "Census 2011 - Population Data - Karnataka"
+      }
+    ],
+    "collection": {
+      "category_id": "CS",
+      "id": 7,
+      "category_name": "Census and Surveys",
+      "collection_id": "CS0001",
+      "collection_name": "Census of India (by Home Ministry)"
+    },
+    "tags": [],
+    "data_owner": {
+      "name": "Government of India",
+      "contact_person": "",
+      "contact_person_email": "",
+      "id": 1
+    },
+    "spatial_coverage_region": {
+      "region_name": "Karnataka",
+      "id": 183,
+      "parent_region_id": "country_IN",
+      "region_id": "state_29"
+    }
+  },
+  {
+    "ds_id": "GS0015DS0044",
+    "title": "Bengaluru City - Ward-wise Public Goods ",
+    "data_owner_id": 10,
+    "spatial_coverage_region_id": "state_29",
+    "temporal_coverage_start_date": "2023-01-01",
+    "temporal_resolution": "NONE",
+    "additional_metadata": null,
+    "id": 42,
+    "collection_id": 5,
+    "description": "BBMP ward-level availability of public goods such police stations, lakes, parks, government schools, bus stops & playgrounds",
+    "spatial_resolution": "VILLAGE",
+    "temporal_coverage_end_date": "2023-01-01",
+    "access_level": "DOWNLOAD",
+    "raw_datasets": [
+      {
+        "source": "BBMP",
+        "rds_id": "GSRDS7",
+        "id": 32,
+        "title": "Bengaluru City - Ward-wise Public Goods "
+      }
+    ],
+    "collection": {
+      "category_id": "GS",
+      "id": 5,
+      "category_name": "Geospatial",
+      "collection_id": "GS0015",
+      "collection_name": "Geographical & Administrative Units"
+    },
+    "tags": [],
+    "data_owner": {
+      "name": "BBMP",
+      "contact_person": null,
+      "contact_person_email": null,
+      "id": 10
+    },
+    "spatial_coverage_region": {
+      "region_name": "Karnataka",
+      "id": 183,
+      "parent_region_id": "country_IN",
+      "region_id": "state_29"
+    }
+  },
+  {
+    "ds_id": "EP0006DS0091",
+    "title": "MoHFW - HMIS TB Summary Data",
+    "data_owner_id": 15,
+    "spatial_coverage_region_id": "country_IN",
+    "temporal_coverage_start_date": "2017-01-01",
+    "temporal_resolution": "YEAR",
+    "additional_metadata": null,
+    "id": 44,
+    "collection_id": 2,
+    "description": "District wise HMIS data related to TB",
+    "spatial_resolution": "DISTRICT",
+    "temporal_coverage_end_date": "2020-01-01",
+    "access_level": "DOWNLOAD",
+    "raw_datasets": [
+      {
+        "source": "MoHFW",
+        "rds_id": "EPRDS48",
+        "id": 34,
+        "title": "HMIS Summary Data"
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "id": 2,
+      "category_name": "Epidemiology",
+      "collection_id": "EP0006",
+      "collection_name": "Epidemiological Summary"
+    },
+    "tags": [
+      {
+        "id": 6,
+        "tag_name": "Tuberculosis"
+      }
+    ],
+    "data_owner": {
+      "name": "MoHFW",
+      "contact_person": null,
+      "contact_person_email": null,
+      "id": 15
+    },
+    "spatial_coverage_region": {
+      "region_name": "India",
+      "id": 146769,
+      "parent_region_id": "",
+      "region_id": "country_IN"
+    }
+  },
+  {
+    "ds_id": "CS0026DS0099",
+    "title": "DAHD - Milk Production Statistics",
+    "data_owner_id": 7,
+    "spatial_coverage_region_id": "country_IN",
+    "temporal_coverage_start_date": "2012-01-01",
+    "temporal_resolution": "YEAR",
+    "additional_metadata": null,
+    "id": 52,
+    "collection_id": 6,
+    "description": "Annual Milk Production Statistics from DAHD",
+    "spatial_resolution": "STATE",
+    "temporal_coverage_end_date": "2024-01-01",
+    "access_level": "DOWNLOAD",
+    "raw_datasets": [
+      {
+        "source": "DAHD",
+        "rds_id": "CSRDS9",
+        "id": 11,
+        "title": "Basic Animal Husbandry Statistics Annual Reports"
+      }
+    ],
+    "collection": {
+      "category_id": "CS",
+      "id": 6,
+      "category_name": "Census and Surveys",
+      "collection_id": "CS0026",
+      "collection_name": "Animal Husbandry Statistics"
+    },
+    "tags": [
+      {
+        "id": 1,
+        "tag_name": "Livestock"
+      }
+    ],
+    "data_owner": {
+      "name": "DAHD",
+      "contact_person": null,
+      "contact_person_email": null,
+      "id": 7
+    },
+    "spatial_coverage_region": {
+      "region_name": "India",
+      "id": 146769,
+      "parent_region_id": "",
+      "region_id": "country_IN"
+    }
+  },
+  {
+    "ds_id": "CS0023DS0085",
+    "title": "State/UT-wise Number of Registered Veterinary Practitioners in the Country as on 31-03-2023 ",
+    "data_owner_id": 1,
+    "spatial_coverage_region_id": "country_IN",
+    "temporal_coverage_start_date": "2023-03-31",
+    "temporal_resolution": "NONE",
+    "additional_metadata": null,
+    "id": 8,
+    "collection_id": 4,
+    "description": "State/UT-wise Number of Registered Veterinary Practitioners in the Country as on 31-03-2023 ",
+    "spatial_resolution": "STATE",
+    "temporal_coverage_end_date": "2023-03-31",
+    "access_level": "DOWNLOAD",
+    "raw_datasets": [],
+    "collection": {
+      "category_id": "CS",
+      "id": 4,
+      "category_name": "Census and Surveys",
+      "collection_id": "CS0023",
+      "collection_name": "Open Data Portals"
+    },
+    "tags": [
+      {
+        "id": 1,
+        "tag_name": "Livestock"
+      }
+    ],
+    "data_owner": {
+      "name": "Government of India",
+      "contact_person": "",
+      "contact_person_email": "",
+      "id": 1
+    },
+    "spatial_coverage_region": {
+      "region_name": "India",
+      "id": 146769,
+      "parent_region_id": "",
+      "region_id": "country_IN"
+    }
+  },
+  {
+    "ds_id": "CS0002DS0084",
+    "title": "Situation Assessment of Agricultural Households and Land and Livestock Holdings 2019",
+    "data_owner_id": 4,
+    "spatial_coverage_region_id": "country_IN",
+    "temporal_coverage_start_date": "2018-07-08",
+    "temporal_resolution": "YEAR",
+    "additional_metadata": null,
+    "id": 6,
+    "collection_id": 3,
+    "description": "Selected tables extracted from the report Situation Assessment of Agricultural Households and Land and Livestock Holdings of Households in Rural India 2019",
+    "spatial_resolution": "STATE",
+    "temporal_coverage_end_date": "2019-07-08",
+    "access_level": "DOWNLOAD",
+    "raw_datasets": [],
+    "collection": {
+      "category_id": "CS",
+      "id": 3,
+      "category_name": "Census and Surveys",
+      "collection_id": "CS0002",
+      "collection_name": "National Sample Survey Organisation"
+    },
+    "tags": [
+      {
+        "id": 1,
+        "tag_name": "Livestock"
+      }
+    ],
+    "data_owner": {
+      "name": "National Sample Survey Organisation",
+      "contact_person": null,
+      "contact_person_email": null,
+      "id": 4
+    },
+    "spatial_coverage_region": {
+      "region_name": "India",
+      "id": 146769,
+      "parent_region_id": "",
+      "region_id": "country_IN"
+    }
+  },
+  {
+    "ds_id": "CS0026DS0083",
+    "title": "Bharat Pashudhan Registered Animals and Owners",
+    "data_owner_id": 3,
+    "spatial_coverage_region_id": "country_IN",
+    "temporal_coverage_start_date": "2021-07-08",
+    "temporal_resolution": "NONE",
+    "additional_metadata": null,
+    "id": 3,
+    "collection_id": 6,
+    "description": "Livestock owners and Pashu aadhaar data",
+    "spatial_resolution": "DISTRICT",
+    "temporal_coverage_end_date": "2025-07-08",
+    "access_level": "DOWNLOAD",
+    "raw_datasets": [],
+    "collection": {
+      "category_id": "CS",
+      "id": 6,
+      "category_name": "Census and Surveys",
+      "collection_id": "CS0026",
+      "collection_name": "Animal Husbandry Statistics"
+    },
+    "tags": [
+      {
+        "id": 1,
+        "tag_name": "Livestock"
+      }
+    ],
+    "data_owner": {
+      "name": "NDLM",
+      "contact_person": null,
+      "contact_person_email": null,
+      "id": 3
+    },
+    "spatial_coverage_region": {
+      "region_name": "India",
+      "id": 146769,
+      "parent_region_id": "",
+      "region_id": "country_IN"
+    }
+  }
+]
