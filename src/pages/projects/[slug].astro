@@ -68,13 +68,13 @@ const optimizedImage = getProjectImage(project.data.image);
     </div>
   </section>
 
-  <!-- Toolkits & Team Members -->
+  <!-- Technical Artefacts & Team Members -->
   <section class="py-20 bg-gray-50 dark:bg-gray-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-12">
-        <!-- Related Toolkits -->
+        <!-- Related Technical Artefacts -->
         <div>
-          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Toolkits Built</h2>
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Technical Artefacts Built</h2>
           <div class="space-y-4">
             {(await getCollection('toolkits'))
               .filter(toolkit => toolkit.data.projects?.some(p => p.toLowerCase() === slug.toLowerCase()))

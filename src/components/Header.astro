@@ -12,60 +12,14 @@
       </div>
       <div class="hidden md:block">
         <div class="ml-10 flex items-baseline space-x-6">
-          <!-- About Dropdown -->
-          <div class="relative group">
-            <button 
-              class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
-              aria-label="About menu"
-              aria-expanded="false"
-              aria-haspopup="true"
-            >
-              About
-              <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <title>Dropdown arrow</title>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            <div class="absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-              <div class="py-1">
-                <a href="/about" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">About Us</a>
-                <a href="/team" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Team</a>
-                <a href="/collaborators" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Collaborators</a>
-                <a href="/media" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Awards & Recognition</a>
-                <a href="/contact" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Contact Us</a>
-              </div>
-            </div>
-          </div>
-          
-          <a href="/projects" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-            Projects
+          <a href="/data" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+            Data Catalogue
           </a>
           
-          <!-- Library Dropdown -->
-          <div class="relative group">
-            <button 
-              class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
-              aria-label="Library menu"
-              aria-expanded="false"
-              aria-haspopup="true"
-            >
-              Library
-              <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <title>Dropdown arrow</title>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            <div class="absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-              <div class="py-1">
-                <a href="/data" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Data</a>
-                <a href="/toolkits" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Toolkits</a>
-              </div>
-            </div>
-          </div>
-          
-          <a href="/blog" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-            Blog
+          <a href="/toolkits" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+            Technical Artefacts
           </a>
+          
         </div>
       </div>
       <div class="md:hidden">
@@ -91,72 +45,14 @@
         Home
       </a>
       
-      <!-- About Section -->
-      <div class="px-3 py-2">
-        <button 
-          id="about-dropdown-toggle"
-          class="flex items-center justify-between w-full text-left text-base font-semibold text-gray-700 dark:text-gray-300 py-2 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-          aria-label="About section"
-          aria-expanded="false"
-          aria-haspopup="true"
-        >
-          About
-          <svg id="about-caret" class="w-4 h-4 ml-2 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <title>Expand About section</title>
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </button>
-        <div id="about-dropdown" class="hidden pl-4 space-y-1 mt-2">
-          <a href="/about" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 block px-3 py-2 rounded-md text-base font-medium">
-            About Us
-          </a>
-          <a href="/team" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 block px-3 py-2 rounded-md text-base font-medium">
-            Team
-          </a>
-          <a href="/collaborators" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 block px-3 py-2 rounded-md text-base font-medium">
-            Collaborators
-          </a>
-          <a href="/media" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 block px-3 py-2 rounded-md text-base font-medium">
-            Awards & Recognition
-          </a>
-          <a href="/contact" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 block px-3 py-2 rounded-md text-base font-medium">
-            Contact Us
-          </a>
-        </div>
-      </div>
-      
-      <a href="/projects" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 block px-3 py-2 rounded-md text-base font-medium">
-        Projects
+      <a href="/data" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 block px-3 py-2 rounded-md text-base font-medium">
+        Data Catalogue
       </a>
       
-      <!-- Library Section -->
-      <div class="px-3 py-2">
-        <button 
-          id="library-dropdown-toggle"
-          class="flex items-center justify-between w-full text-left text-base font-semibold text-gray-700 dark:text-gray-300 py-2 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-          aria-label="Library section"
-          aria-expanded="false"
-          aria-haspopup="true"
-        >
-          Library
-          <svg id="library-caret" class="w-4 h-4 ml-2 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <title>Expand Library section</title>
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </button>
-        <div id="library-dropdown" class="hidden pl-4 space-y-1 mt-2">
-          <a href="/data" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 block px-3 py-2 rounded-md text-base font-medium">
-            Data
-          </a>
-          <a href="/toolkits" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 block px-3 py-2 rounded-md text-base font-medium">
-            Toolkits
-          </a>
-        </div>
-      </div>
-      
-      <a href="/blog" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 block px-3 py-2 rounded-md text-base font-medium">
-        Blog
+      <a href="/toolkits" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 block px-3 py-2 rounded-md text-base font-medium">
+        Technical Artefacts
       </a>
+      
     </div>
   </div>
 </nav>
@@ -172,26 +68,5 @@
     mobileMenuButton?.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
   });
 
-  // Dropdown toggles
-  const aboutToggle = document.getElementById('about-dropdown-toggle');
-  const aboutDropdown = document.getElementById('about-dropdown');
-  const aboutCaret = document.getElementById('about-caret');
-  
-  const libraryToggle = document.getElementById('library-dropdown-toggle');
-  const libraryDropdown = document.getElementById('library-dropdown');
-  const libraryCaret = document.getElementById('library-caret');
-
-  aboutToggle?.addEventListener('click', () => {
-    const isHidden = aboutDropdown?.classList.contains('hidden');
-    aboutDropdown?.classList.toggle('hidden');
-    aboutCaret?.classList.toggle('rotate-180');
-    aboutToggle?.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
-  });
-
-  libraryToggle?.addEventListener('click', () => {
-    const isHidden = libraryDropdown?.classList.contains('hidden');
-    libraryDropdown?.classList.toggle('hidden');
-    libraryCaret?.classList.toggle('rotate-180');
-    libraryToggle?.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
-  });
+  // No dropdown toggles needed anymore
 </script>

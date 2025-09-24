@@ -3,8 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import { 
   getAllToolkits, 
   getUniqueCategories, 
-  getStatusColor, 
-  getCategoryColor 
+  getCategoryColor,
+  capitalizeType
 } from '../utils/toolkits';
 
 // Get toolkits data
@@ -12,145 +12,852 @@ const toolkits = await getAllToolkits();
 const categories = ["All", ...(await getUniqueCategories())];
 ---
 
-<Layout title="Toolkits - Health Initiatives @ ARTPARK" description="Access our collection of powerful development tools and utilities">
+<Layout title="Technical Artefacts - Health Initiatives @ ARTPARK" description="Access our collection of powerful development tools and utilities">
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-primary-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center">
         <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-          Our <span class="text-primary-600 dark:text-primary-400">Toolkits</span>
+          Our <span class="text-primary-600 dark:text-primary-400">Technical Artefacts</span>
         </h1>
         <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-          A centralized collection of powerful tools and utilities we've built to streamline development workflows and boost productivity.
+          This page is a centralized catalogue of various data engineering tools, modelling frameworks, products, and other technical artefacts we've built and collated from our collaborators, to enable community access and foster secientific reproducibility and innovation.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Category Filter -->
-  <section class="py-8 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
+  <!-- Filters Section -->
+  <section class="py-4 bg-white dark:bg-gray-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-wrap justify-center gap-3">
-        {categories.map((category) => (
+      <!-- Desktop Filters -->
+      <div class="hidden md:block">
+        <div class="flex items-center justify-between gap-4 mb-4">
+          <!-- Left side: Dropdown -->
+          <div class="flex items-center gap-4">
+            <!-- Developed By Dropdown -->
+            <div class="relative">
+              <select id="developedByFilter" class="appearance-none bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 pr-8 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+                <option value="">All</option>
+              </select>
+              <div class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+                <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Right side: Search -->
+          <div class="relative">
+            <input 
+              type="text" 
+              id="searchInput" 
+              placeholder="Search technical artefacts..." 
+              class="w-64 pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+            >
+            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Mobile Filters -->
+      <div class="md:hidden space-y-4">
+        <!-- Developed By Dropdown -->
+        <div class="flex justify-center">
+          <div class="relative w-full max-w-sm">
+            <select id="mobileDevelopedByFilter" class="w-full appearance-none bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 pr-8 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+              <option value="">All</option>
+            </select>
+            <div class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Search Bar -->
+        <div class="flex justify-center">
+          <div class="relative w-full max-w-sm">
+            <input 
+              type="text" 
+              id="mobileSearchInput" 
+              placeholder="Search technical artefacts..." 
+              class="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+            >
+            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Type Filters -->
+      <div class="mt-6">
+        <div class="flex items-center gap-2 mb-3">
+          <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+          </svg>
+          <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Filter by type:</span>
+        </div>
+        <div class="flex flex-wrap gap-2" id="typeFilters">
+          {categories.filter(cat => cat !== "All").map(type => (
+            <button 
+              class="type-filter-btn inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-600 hover:text-gray-800 dark:hover:text-gray-200 transition-colors duration-200"
+              data-type={type}
+            >
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              {type}
+            </button>
+          ))}
+        </div>
+        
+        <!-- Reset Filters Button -->
+        <div class="mt-4 flex justify-end">
           <button 
-            class={`px-4 py-2 rounded-full text-sm font-medium transition-colors category-filter ${
-              category === "All" 
-                ? "bg-primary-600 text-white" 
-                : "bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300 hover:bg-primary-600 hover:text-white"
-            }`}
-            data-category={category}
+            id="resetFiltersBtn"
+            class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-colors duration-200"
           >
-            {category}
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+            </svg>
+            Reset Filters
           </button>
-        ))}
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Toolkits Grid -->
-  <section class="py-20 bg-white dark:bg-gray-900">
+  <!-- Toolkits List -->
+  <section class="py-8 bg-white dark:bg-gray-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="toolkits-grid">
-        {toolkits.map((toolkit) => (
-          <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow toolkit-card flex flex-col" data-category={toolkit.data.category}>
-            <div class="p-6 flex flex-col flex-grow">
-              <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+      <!-- Desktop Table -->
+      <div class="hidden md:block bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
+        <table class="w-full table-fixed" style="table-layout: fixed;">
+          <thead>
+            <tr class="bg-gray-50 dark:bg-gray-700 border-b border-gray-200 dark:border-gray-600">
+              <th class="px-6 py-4 text-left text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide w-1/3 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors" data-sort="title">
+                <div class="flex items-center gap-1">
+                  Name
+                  <svg class="w-3 h-3 sort-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"></path>
+                  </svg>
+                </div>
+              </th>
+              <th class="px-6 py-4 text-left text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide w-32 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors" data-sort="type">
+                <div class="flex items-center gap-1">
+                  Type
+                  <svg class="w-3 h-3 sort-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"></path>
+                  </svg>
+                </div>
+              </th>
+              <th class="px-6 py-4 text-center text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide w-32">Links</th>
+              <th class="px-6 py-4 text-center text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide w-20">Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            {toolkits.map((toolkit, index) => (
+              <>
+              <tr class="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer transition-colors duration-200" 
+                  data-index={index} 
+                  data-toggle-index={index}
+                  data-category={toolkit.data.type}
+                  data-title={toolkit.data.title.toLowerCase()}
+                  data-developed-by={toolkit.data.developed_by || 'In House'}>
+                <!-- Name Column -->
+                <td class="px-6 py-4">
+                  <h3 class="text-sm font-semibold text-gray-900 dark:text-white" title={toolkit.data.title}>
                 {toolkit.data.title}
               </h3>
-              
-              <div class="flex gap-2 mb-4">
-                <span class={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(toolkit.data.status)}`}>
-                  {toolkit.data.status}
+                </td>
+                
+                <!-- Type Column -->
+                <td class="px-6 py-4">
+                  <span class={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${getCategoryColor(toolkit.data.type)}`}>
+                    {capitalizeType(toolkit.data.type)}
                 </span>
-                <span class={`px-2 py-1 rounded text-xs font-medium ${getCategoryColor(toolkit.data.category)}`}>
-                  {toolkit.data.category}
-                </span>
+                </td>
+                
+                <!-- Links Column -->
+                <td class="px-6 py-4 text-center">
+                  <div class="flex justify-center space-x-2">
+                    {toolkit.data.link && (
+                      <a 
+                        href={toolkit.data.link} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center justify-center px-3 py-1.5 bg-primary-600 hover:bg-primary-700 text-white text-xs font-medium rounded transition-colors duration-200"
+                        onclick="event.stopPropagation();"
+                      >
+                        <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        </svg>
+                        Use
+                      </a>
+                    )}
+                    {toolkit.data.github_repo && (
+                      <a 
+                        href={toolkit.data.github_repo} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center justify-center px-3 py-1.5 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 text-xs font-medium rounded transition-colors duration-200"
+                        onclick="event.stopPropagation();"
+                      >
+                        <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        Code
+                      </a>
+                    )}
+                  </div>
+                </td>
+                
+                <!-- Details Toggle Column -->
+                <td class="px-6 py-4 text-center">
+                  <div class="flex justify-center items-center">
+                    <svg class="w-5 h-5 text-gray-400 transform transition-transform" id={`chevron-${index}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
               </div>
-              <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm flex-grow">
-                {toolkit.data.description}
-              </p>
+                </td>
+              </tr>
               
-              <!-- Features -->
-              <div class="mb-6">
-                <h4 class="text-sm font-medium text-gray-900 dark:text-white mb-2">Key Features:</h4>
-                <div class="flex flex-wrap gap-1">
-                  {toolkit.data.features.map((feature) => (
-                    <span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs rounded">
-                      {feature}
+              <!-- Collapsible Details Row -->
+              <tr class="hidden" id={`details-${index}`}>
+                <td colspan="4" class="px-6 py-4 bg-gray-50 dark:bg-gray-700 border-b border-gray-200 dark:border-gray-600">
+                  <div class="space-y-4 text-sm">
+                    <div class="w-full">
+                      <span class="font-medium text-gray-700 dark:text-gray-300">Description:</span>
+                      <p class="text-gray-600 dark:text-gray-400 mt-1 break-words overflow-wrap-anywhere hyphens-auto whitespace-normal w-full">{toolkit.data.description}</p>
+                    </div>
+                    {toolkit.data.developed_by_asterisk && (
+                      <div>
+                        <span class="font-medium text-gray-700 dark:text-gray-300">Developed By:</span>
+                        <p class="text-gray-600 dark:text-gray-400 mt-1">{toolkit.data.developed_by_asterisk}</p>
+                      </div>
+                    )}
+                    {toolkit.data.contact_email && (
+                      <div>
+                        <span class="font-medium text-gray-700 dark:text-gray-300">Contact:</span>
+                        <p class="text-gray-600 dark:text-gray-400 mt-1">{toolkit.data.contact_email}</p>
+                      </div>
+                    )}
+                    {toolkit.data.additional_notes && (
+                      <div>
+                        <span class="font-medium text-gray-700 dark:text-gray-300">Additional Notes:</span>
+                        <p class="text-gray-600 dark:text-gray-400 mt-1">{toolkit.data.additional_notes}</p>
+                      </div>
+                    )}
+                  </div>
+                </td>
+              </tr>
+              </>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile List -->
+      <div id="mobile-toolkits-container" class="md:hidden space-y-4">
+        {toolkits.map((toolkit, index) => (
+          <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden"
+               data-category={toolkit.data.type}
+               data-title={toolkit.data.title.toLowerCase()}
+               data-developed-by={toolkit.data.developed_by || 'In House'}>
+            <!-- Main Row -->
+            <div class="p-4 border-b border-gray-200 dark:border-gray-700" data-mobile-index={index} data-mobile-toggle-index={index}>
+              <div class="flex items-start justify-between mb-3">
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-center gap-3 mb-2">
+                    <!-- Type -->
+                    <span class={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${getCategoryColor(toolkit.data.type)}`}>
+                      {capitalizeType(toolkit.data.type)}
                     </span>
-                  ))}
+                  </div>
+                  <!-- Title -->
+                  <h3 class="text-sm font-semibold text-gray-900 dark:text-white leading-tight">
+                    {toolkit.data.title}
+                  </h3>
+                </div>
+                <!-- Chevron -->
+                <div class="ml-3 flex-shrink-0 cursor-pointer" data-mobile-toggle-index={index}>
+                  <svg class="w-5 h-5 text-gray-400 transform transition-transform" id={`mobile-chevron-${index}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
                 </div>
               </div>
               
               <!-- Action Buttons -->
-              <div class="flex space-x-3 mt-auto">
+              <div class="flex justify-end space-x-2">
                 {toolkit.data.link && (
                   <a 
                     href={toolkit.data.link} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    class="flex-1 bg-primary-600 hover:bg-primary-700 text-white text-center px-4 py-2 rounded text-sm font-medium transition-colors"
+                    class="inline-flex items-center justify-center px-3 py-1.5 bg-primary-600 hover:bg-primary-700 text-white text-xs font-medium rounded transition-colors duration-200"
+                    onclick="event.stopPropagation();"
                   >
-                    Use Tool
+                    <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                    Use
                   </a>
                 )}
-                {toolkit.data.github && (
+                {toolkit.data.github_repo && (
                   <a 
-                    href={toolkit.data.github} 
+                    href={toolkit.data.github_repo} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    class="flex-1 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 text-center px-4 py-2 rounded text-sm font-medium transition-colors"
+                    class="inline-flex items-center justify-center px-3 py-1.5 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 text-xs font-medium rounded transition-colors duration-200"
+                    onclick="event.stopPropagation();"
                   >
-                    View Code
+                    <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    Code
                   </a>
+                )}
+              </div>
+            </div>
+            
+            <!-- Collapsible Details -->
+            <div class="hidden" id={`mobile-details-${index}`}>
+              <div class="p-4 bg-gray-50 dark:bg-gray-700 space-y-4 text-sm">
+                <!-- Description -->
+                <div>
+                  <span class="font-medium text-gray-700 dark:text-gray-300">Description:</span>
+                  <p class="text-gray-600 dark:text-gray-400 mt-1 break-words">{toolkit.data.description}</p>
+                </div>
+                
+                {toolkit.data.developed_by_asterisk && (
+                  <div>
+                    <span class="font-medium text-gray-700 dark:text-gray-300">Developed By:</span>
+                    <p class="text-gray-600 dark:text-gray-400 mt-1">{toolkit.data.developed_by_asterisk}</p>
+                  </div>
+                )}
+                
+                {toolkit.data.contact_email && (
+                  <div>
+                    <span class="font-medium text-gray-700 dark:text-gray-300">Contact:</span>
+                    <p class="text-gray-600 dark:text-gray-400 mt-1">{toolkit.data.contact_email}</p>
+                  </div>
+                )}
+                
+                {toolkit.data.additional_notes && (
+                  <div>
+                    <span class="font-medium text-gray-700 dark:text-gray-300">Additional Notes:</span>
+                    <p class="text-gray-600 dark:text-gray-400 mt-1">{toolkit.data.additional_notes}</p>
+                  </div>
                 )}
               </div>
             </div>
           </div>
         ))}
       </div>
+
+      <!-- Results count -->
+      <div class="mt-6 text-sm text-gray-600 dark:text-gray-400">
+        <span id="resultsCount">Showing {toolkits.length} toolkits</span>
+      </div>
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="py-20 bg-gray-50 dark:bg-gray-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-        Need a Custom Tool?
-      </h2>
-      <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-        We're always building new tools to solve development challenges. Have a specific need? Let's build it together.
-      </p>
-      <a href="mailto:tools@dsih-team.com" class="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg font-medium transition-colors">
-        Request a Tool
-      </a>
-    </div>
-  </section>
 
   <script>
-    // Category filtering functionality
-    const categoryFilters = document.querySelectorAll('.category-filter') as NodeListOf<HTMLButtonElement>;
-    const toolkitCards = document.querySelectorAll('.toolkit-card') as NodeListOf<HTMLElement>;
+    // Global state for filters and sorting
+    let selectedTypes: string[] = [];
+    let currentFilters = {
+      search: '',
+      types: [] as string[],
+      developedBy: ''
+    };
+    let currentSort = {
+      column: '',
+      direction: 'asc' as 'asc' | 'desc'
+    };
 
-    categoryFilters.forEach(filter => {
-      filter.addEventListener('click', () => {
-        const selectedCategory = filter.dataset.category;
+    // Function to get unique developers from toolkits data
+    function getUniqueDevelopers() {
+      const developers = new Set<string>();
+      const rows = document.querySelectorAll('tbody tr[data-developed-by]');
+      rows.forEach(row => {
+        const developedBy = row.getAttribute('data-developed-by');
+        if (developedBy) {
+          developers.add(developedBy);
+        }
+      });
+      return Array.from(developers).sort();
+    }
+
+    // Function to populate dropdown with dynamic options
+    function populateDevelopedByDropdown() {
+      const developers = getUniqueDevelopers();
+      const desktopSelect = document.getElementById('developedByFilter') as HTMLSelectElement;
+      const mobileSelect = document.getElementById('mobileDevelopedByFilter') as HTMLSelectElement;
+      
+      if (desktopSelect && mobileSelect) {
+        // Clear existing options except the first "All" option
+        desktopSelect.innerHTML = '<option value="">All</option>';
+        mobileSelect.innerHTML = '<option value="">All</option>';
         
-        // Update active filter
-        categoryFilters.forEach(f => {
-          f.classList.remove('bg-primary-600', 'text-white');
-          f.classList.add('bg-gray-100', 'text-gray-700', 'dark:bg-gray-700', 'dark:text-gray-300');
+        // Add dynamic options
+        developers.forEach(developer => {
+          const optionText = developer === 'In House' ? 'Developed In House' : 
+                           developer === 'CNI Lab, IISc and ICTS Bengaluru' ? 'Developed by CNI, IISc, & ICTS Bengaluru' :
+                           developer === 'Ashoka University' ? 'Developed by Ashoka' : developer;
+          
+          const desktopOption = new Option(optionText, developer);
+          const mobileOption = new Option(optionText, developer);
+          
+          desktopSelect.add(desktopOption);
+          mobileSelect.add(mobileOption);
+        });
+      }
+    }
+
+    // Function to toggle details visibility for desktop
+    function toggleDetails(index: number) {
+      const detailsElement = document.getElementById(`details-${index}`);
+      const chevronElement = document.getElementById(`chevron-${index}`);
+      
+      if (detailsElement && chevronElement) {
+        const isHidden = detailsElement.classList.contains('hidden');
+        
+        // Close all other open desktop details first
+        const allDesktopDetails = document.querySelectorAll('[id^="details-"]');
+        const allDesktopChevrons = document.querySelectorAll('[id^="chevron-"]');
+        
+        allDesktopDetails.forEach((element, i) => {
+          if (i !== index) {
+            element.classList.add('hidden');
+          }
         });
         
-        filter.classList.remove('bg-gray-100', 'text-gray-700', 'dark:bg-gray-700', 'dark:text-gray-300');
-        filter.classList.add('bg-primary-600', 'text-white');
+        allDesktopChevrons.forEach((element, i) => {
+          if (i !== index) {
+            (element as HTMLElement).style.transform = 'rotate(0deg)';
+          }
+        });
         
-        // Filter cards
-        toolkitCards.forEach(card => {
-          if (selectedCategory === 'All' || card.dataset.category === selectedCategory) {
-            card.style.display = 'block';
+        // Close all mobile details as well
+        const allMobileDetails = document.querySelectorAll('[id^="mobile-details-"]');
+        const allMobileChevrons = document.querySelectorAll('[id^="mobile-chevron-"]');
+        
+        allMobileDetails.forEach(element => {
+          element.classList.add('hidden');
+        });
+        
+        allMobileChevrons.forEach(element => {
+          (element as HTMLElement).style.transform = 'rotate(0deg)';
+        });
+        
+        // Now toggle the selected desktop detail
+        if (isHidden) {
+          detailsElement.classList.remove('hidden');
+          chevronElement.style.transform = 'rotate(180deg)';
+        } else {
+          detailsElement.classList.add('hidden');
+          chevronElement.style.transform = 'rotate(0deg)';
+        }
+      }
+    }
+
+    // Function to toggle mobile details visibility
+    function toggleMobileDetails(index: number) {
+      const detailsElement = document.getElementById(`mobile-details-${index}`);
+      const chevronElement = document.getElementById(`mobile-chevron-${index}`);
+      
+      if (detailsElement && chevronElement) {
+        const isHidden = detailsElement.classList.contains('hidden');
+        
+        // Close all other open mobile details first
+        const allMobileDetails = document.querySelectorAll('[id^="mobile-details-"]');
+        const allMobileChevrons = document.querySelectorAll('[id^="mobile-chevron-"]');
+        
+        allMobileDetails.forEach((element, i) => {
+          if (i !== index) {
+            element.classList.add('hidden');
+          }
+        });
+        
+        allMobileChevrons.forEach((element, i) => {
+          if (i !== index) {
+            (element as HTMLElement).style.transform = 'rotate(0deg)';
+          }
+        });
+        
+        // Close all desktop details as well
+        const allDesktopDetails = document.querySelectorAll('[id^="details-"]');
+        const allDesktopChevrons = document.querySelectorAll('[id^="chevron-"]');
+        
+        allDesktopDetails.forEach(element => {
+          element.classList.add('hidden');
+        });
+        
+        allDesktopChevrons.forEach(element => {
+          (element as HTMLElement).style.transform = 'rotate(0deg)';
+        });
+        
+        // Now toggle the selected mobile detail
+        if (isHidden) {
+          detailsElement.classList.remove('hidden');
+          chevronElement.style.transform = 'rotate(180deg)';
+        } else {
+          detailsElement.classList.add('hidden');
+          chevronElement.style.transform = 'rotate(0deg)';
+        }
+      }
+    }
+
+    // Function to sort data
+    function sortData(column: string) {
+      const tbody = document.querySelector('table tbody');
+      if (!tbody) return;
+
+      const rows = Array.from(tbody.querySelectorAll('tr[data-index]'));
+      
+      // Determine sort direction
+      if (currentSort.column === column) {
+        currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
+      } else {
+        currentSort.column = column;
+        currentSort.direction = 'asc';
+      }
+
+      // Update sort icons
+      document.querySelectorAll('.sort-icon').forEach(icon => {
+        (icon as HTMLElement).style.transform = 'rotate(0deg)';
+        (icon as HTMLElement).style.opacity = '0.5';
+      });
+
+      const currentHeader = document.querySelector(`th[data-sort="${column}"] .sort-icon`);
+      if (currentHeader) {
+        (currentHeader as HTMLElement).style.opacity = '1';
+        (currentHeader as HTMLElement).style.transform = currentSort.direction === 'asc' ? 'rotate(180deg)' : 'rotate(0deg)';
+      }
+
+      // Sort rows
+      rows.sort((a, b) => {
+        let aValue = '';
+        let bValue = '';
+
+        switch (column) {
+          case 'title':
+            aValue = a.getAttribute('data-title') || '';
+            bValue = b.getAttribute('data-title') || '';
+            break;
+          case 'type':
+            aValue = a.getAttribute('data-category') || '';
+            bValue = b.getAttribute('data-category') || '';
+            break;
+          default:
+            return 0;
+        }
+
+        if (currentSort.direction === 'asc') {
+          return aValue.localeCompare(bValue);
+        } else {
+          return bValue.localeCompare(aValue);
+        }
+      });
+
+      // Re-append sorted rows
+      rows.forEach(row => tbody.appendChild(row));
+    }
+
+    // Function to apply filters
+    function applyFilters() {
+      // Close all open toggles first
+      const allDesktopDetails = document.querySelectorAll('[id^="details-"]');
+      const allDesktopChevrons = document.querySelectorAll('[id^="chevron-"]');
+      const allMobileDetails = document.querySelectorAll('[id^="mobile-details-"]');
+      const allMobileChevrons = document.querySelectorAll('[id^="mobile-chevron-"]');
+      
+      allDesktopDetails.forEach(element => {
+        element.classList.add('hidden');
+      });
+      
+      allDesktopChevrons.forEach(element => {
+        (element as HTMLElement).style.transform = 'rotate(0deg)';
+      });
+      
+      allMobileDetails.forEach(element => {
+        element.classList.add('hidden');
+      });
+      
+      allMobileChevrons.forEach(element => {
+        (element as HTMLElement).style.transform = 'rotate(0deg)';
+      });
+
+      // Get current filter values
+      const searchInput = document.getElementById('searchInput') as HTMLInputElement;
+      const mobileSearchInput = document.getElementById('mobileSearchInput') as HTMLInputElement;
+      const developedByFilter = document.getElementById('developedByFilter') as HTMLSelectElement;
+      const mobileDevelopedByFilter = document.getElementById('mobileDevelopedByFilter') as HTMLSelectElement;
+      
+      if (searchInput) {
+        currentFilters.search = searchInput.value.toLowerCase();
+      }
+      if (mobileSearchInput) {
+        currentFilters.search = mobileSearchInput.value.toLowerCase();
+      }
+      if (developedByFilter) {
+        currentFilters.developedBy = developedByFilter.value;
+      }
+      if (mobileDevelopedByFilter) {
+        currentFilters.developedBy = mobileDevelopedByFilter.value;
+      }
+
+      const desktopRows = document.querySelectorAll('tbody tr[data-category]');
+      const mobileCards = document.querySelectorAll('#mobile-toolkits-container > div[data-category]');
+      let visibleCount = 0;
+
+      // Filter desktop rows
+      desktopRows.forEach((row: Element) => {
+        const element = row as HTMLElement;
+        const type = element.getAttribute('data-category') || '';
+        const title = element.getAttribute('data-title') || '';
+        const developedBy = element.getAttribute('data-developed-by') || '';
+
+        const matchesSearch = !currentFilters.search || 
+          title.includes(currentFilters.search.toLowerCase());
+
+        const matchesTypes = currentFilters.types.length === 0 || 
+          currentFilters.types.some(selectedType => {
+            // Convert back to original type for comparison
+            const originalType = getOriginalType(selectedType);
+            return type === originalType;
+          });
+
+        const matchesDevelopedBy = currentFilters.developedBy === '' || developedBy === currentFilters.developedBy;
+
+        if (matchesSearch && matchesTypes && matchesDevelopedBy) {
+          element.style.display = '';
+          visibleCount++;
+        } else {
+          element.style.display = 'none';
+        }
+      });
+
+      // Filter mobile cards
+      mobileCards.forEach((card: Element) => {
+        const element = card as HTMLElement;
+        const type = element.getAttribute('data-category') || '';
+        const title = element.getAttribute('data-title') || '';
+        const developedBy = element.getAttribute('data-developed-by') || '';
+
+        const matchesSearch = !currentFilters.search || 
+          title.includes(currentFilters.search.toLowerCase());
+
+        const matchesTypes = currentFilters.types.length === 0 || 
+          currentFilters.types.some(selectedType => {
+            // Convert back to original type for comparison
+            const originalType = getOriginalType(selectedType);
+            return type === originalType;
+          });
+
+        const matchesDevelopedBy = currentFilters.developedBy === '' || developedBy === currentFilters.developedBy;
+
+        if (matchesSearch && matchesTypes && matchesDevelopedBy) {
+          element.style.display = '';
+        } else {
+          element.style.display = 'none';
+        }
+      });
+
+      // Update results count
+      const resultsCount = document.getElementById('resultsCount');
+      if (resultsCount) {
+        resultsCount.textContent = `Showing ${visibleCount} technical artefacts`;
+      }
+    }
+
+    // Function to convert capitalized type back to original
+    function getOriginalType(capitalizedType: string): string {
+      switch (capitalizedType) {
+        case 'Product':
+          return 'product';
+        case 'Data Engineering Tool':
+          return 'data-engineering-tools';
+        case 'Modelling Framework':
+          return 'modelling-frameworks-and-tools';
+        case 'Platform':
+          return 'platform';
+        case 'Web App':
+          return 'web-app';
+        case 'CLI Tool':
+          return 'cli-tool';
+        case 'Model':
+          return 'model';
+        case 'Template':
+          return 'template';
+        default:
+          return capitalizedType.toLowerCase();
+      }
+    }
+
+    // Function to toggle type selection
+    function toggleType(type: string, button: HTMLElement) {
+      const isSelected = selectedTypes.includes(type);
+      
+      if (isSelected) {
+        selectedTypes = selectedTypes.filter(t => t !== type);
+        button.classList.remove('bg-primary-600', 'text-white', 'border-primary-600', 'hover:bg-primary-700');
+        button.classList.add('bg-white', 'dark:bg-gray-700', 'text-gray-700', 'dark:text-gray-300', 'border-gray-300', 'dark:border-gray-600', 'hover:bg-gray-50', 'dark:hover:bg-gray-600', 'hover:text-gray-800', 'dark:hover:text-gray-200');
           } else {
-            card.style.display = 'none';
+        selectedTypes.push(type);
+        button.classList.add('bg-primary-600', 'text-white', 'border-primary-600', 'hover:bg-primary-700');
+        button.classList.remove('bg-white', 'dark:bg-gray-700', 'text-gray-700', 'dark:text-gray-300', 'border-gray-300', 'dark:border-gray-600', 'hover:bg-gray-50', 'dark:hover:bg-gray-600', 'hover:text-gray-800', 'dark:hover:text-gray-200');
+      }
+      
+      currentFilters.types = selectedTypes;
+      applyFilters();
+    }
+
+    // Function to reset all filters
+    function resetFilters() {
+      // Reset filter state
+      currentFilters = {
+        search: '',
+        types: [],
+        developedBy: ''
+      };
+      selectedTypes = [];
+
+      // Reset search inputs
+      const searchInput = document.getElementById('searchInput') as HTMLInputElement;
+      const mobileSearchInput = document.getElementById('mobileSearchInput') as HTMLInputElement;
+      if (searchInput) searchInput.value = '';
+      if (mobileSearchInput) mobileSearchInput.value = '';
+
+      // Reset developed by dropdowns
+      const developedByFilter = document.getElementById('developedByFilter') as HTMLSelectElement;
+      const mobileDevelopedByFilter = document.getElementById('mobileDevelopedByFilter') as HTMLSelectElement;
+      if (developedByFilter) developedByFilter.value = '';
+      if (mobileDevelopedByFilter) mobileDevelopedByFilter.value = '';
+
+      // Reset type buttons
+      const typeButtons = document.querySelectorAll('.type-filter-btn');
+      typeButtons.forEach(button => {
+        const element = button as HTMLElement;
+        element.classList.remove('bg-primary-600', 'text-white', 'border-primary-600', 'hover:bg-primary-700');
+        element.classList.add('bg-white', 'dark:bg-gray-700', 'text-gray-700', 'dark:text-gray-300', 'border-gray-300', 'dark:border-gray-600', 'hover:bg-gray-50', 'dark:hover:bg-gray-600', 'hover:text-gray-800', 'dark:hover:text-gray-200');
+      });
+
+      // Apply filters (show all)
+      applyFilters();
+    }
+    
+    // Add event delegation for row clicks and filters
+    document.addEventListener('DOMContentLoaded', function() {
+      // Populate dropdown with dynamic options
+      populateDevelopedByDropdown();
+      // Desktop table event delegation
+      const table = document.querySelector('table tbody');
+      
+      if (table) {
+        table.addEventListener('click', function(e) {
+          const target = e.target as HTMLElement;
+          
+          if (target) {
+            // Find the closest row with data-toggle-index
+            const row = target.closest('[data-toggle-index]') as HTMLElement;
+            
+            if (row && !target.closest('a')) {
+              const index = parseInt(row.getAttribute('data-toggle-index') || '0');
+              toggleDetails(index);
+            }
+          }
+        });
+      }
+
+      // Mobile table event delegation
+      const mobileContainer = document.getElementById('mobile-toolkits-container');
+      
+      if (mobileContainer) {
+        mobileContainer.addEventListener('click', function(e) {
+          const target = e.target as HTMLElement;
+          
+          if (target) {
+            // Find the closest row with data-mobile-toggle-index
+            const row = target.closest('[data-mobile-toggle-index]') as HTMLElement;
+            
+            if (row && !target.closest('a')) {
+              const index = parseInt(row.getAttribute('data-mobile-toggle-index') || '0');
+              toggleMobileDetails(index);
+            }
+          }
+        });
+      }
+
+      // Search input events
+      const searchInput = document.getElementById('searchInput') as HTMLInputElement;
+      const mobileSearchInput = document.getElementById('mobileSearchInput') as HTMLInputElement;
+      
+      if (searchInput) {
+        searchInput.addEventListener('input', function() {
+          currentFilters.search = this.value;
+          applyFilters();
+        });
+      }
+      
+      if (mobileSearchInput) {
+        mobileSearchInput.addEventListener('input', function() {
+          currentFilters.search = this.value;
+          applyFilters();
+        });
+      }
+
+      // Developed by filter events
+      const developedByFilter = document.getElementById('developedByFilter') as HTMLSelectElement;
+      const mobileDevelopedByFilter = document.getElementById('mobileDevelopedByFilter') as HTMLSelectElement;
+      
+      if (developedByFilter) {
+        developedByFilter.addEventListener('change', function() {
+          currentFilters.developedBy = this.value;
+          applyFilters();
+        });
+      }
+      
+      if (mobileDevelopedByFilter) {
+        mobileDevelopedByFilter.addEventListener('change', function() {
+          currentFilters.developedBy = this.value;
+          applyFilters();
+        });
+      }
+
+      // Type filter events
+      const typeButtons = document.querySelectorAll('.type-filter-btn');
+      typeButtons.forEach(button => {
+        button.addEventListener('click', function(this: HTMLElement) {
+          const type = this.getAttribute('data-type') || '';
+          toggleType(type, this);
+        });
+      });
+
+      // Reset filters button event
+      const resetFiltersBtn = document.getElementById('resetFiltersBtn');
+      if (resetFiltersBtn) {
+        resetFiltersBtn.addEventListener('click', resetFilters);
+      }
+
+      // Sort functionality
+      const sortHeaders = document.querySelectorAll('th[data-sort]');
+      sortHeaders.forEach(header => {
+        header.addEventListener('click', function(this: HTMLElement) {
+          const column = this.getAttribute('data-sort');
+          if (column) {
+            sortData(column);
           }
         });
       });

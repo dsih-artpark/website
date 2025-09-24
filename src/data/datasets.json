@@ -1,980 +1,3804 @@
 [
   {
-    "ds_id": "CS0007DS0041",
+    "id": 1,
     "title": "20th Livestock Census",
+    "collection_id": 1,
     "data_owner_id": 1,
     "spatial_coverage_region_id": "country_IN",
-    "temporal_coverage_start_date": "2019-07-01",
-    "temporal_resolution": "NONE",
-    "additional_metadata": {
-      "notes": "Downloaded from https://www.ahvs.kar.nic.in/en-reportsstat.html. Maharashtra data recived from PKC."
-    },
-    "id": 1,
-    "collection_id": 1,
-    "description": "District, Village and Ward-wise livestock population for Karnataka and District-wise livestock population for Maharashtra",
     "spatial_resolution": "VILLAGE",
     "temporal_coverage_end_date": "2019-07-01",
-    "access_level": "DOWNLOAD",
-    "raw_datasets": [
-      {
-        "source": "Government of India",
-        "rds_id": "CSRDS1",
-        "id": 1,
-        "title": "20th Livestock Census"
-      }
-    ],
-    "collection": {
-      "category_id": "CS",
-      "id": 1,
-      "category_name": "Census and Surveys",
-      "collection_id": "CS0007",
-      "collection_name": "Livestock Census (by DAHD)"
-    },
-    "tags": [
-      {
-        "id": 1,
-        "tag_name": "Livestock"
-      }
-    ],
-    "data_owner": {
-      "name": "Government of India",
-      "contact_person": "",
-      "contact_person_email": "",
-      "id": 1
-    },
-    "spatial_coverage_region": {
-      "region_name": "India",
-      "id": 146769,
-      "parent_region_id": "",
-      "region_id": "country_IN"
-    }
-  },
-  {
-    "ds_id": "EP0006DS0087",
-    "title": "DFMD - All India Seromonitoring Annual Summaries",
-    "data_owner_id": 2,
-    "spatial_coverage_region_id": "country_IN",
-    "temporal_coverage_start_date": "2013-07-01",
-    "temporal_resolution": "YEAR",
-    "additional_metadata": {},
-    "id": 2,
-    "collection_id": 2,
-    "description": "All India State Level Seromonitoring summaries for FMD",
-    "spatial_resolution": "STATE",
-    "temporal_coverage_end_date": "2022-07-01",
-    "access_level": "DOWNLOAD",
-    "raw_datasets": [
-      {
-        "source": "NIFMD",
-        "rds_id": "EPRDS46",
-        "id": 2,
-        "title": "NIFMD Annual Reports"
-      }
-    ],
-    "collection": {
-      "category_id": "EP",
-      "id": 2,
-      "category_name": "Epidemiology",
-      "collection_id": "EP0006",
-      "collection_name": "Epidemiological Summary"
-    },
-    "tags": [
-      {
-        "id": 2,
-        "tag_name": "Foot and Mouth Disease"
-      }
-    ],
-    "data_owner": {
-      "name": "NIFMD",
-      "contact_person": "",
-      "contact_person_email": "",
-      "id": 2
-    },
-    "spatial_coverage_region": {
-      "region_name": "India",
-      "id": 146769,
-      "parent_region_id": "",
-      "region_id": "country_IN"
-    }
-  },
-  {
-    "ds_id": "EP0006DS0086",
-    "title": "NDLM - Bharat Pashudhan - FMD Vaccinations",
-    "data_owner_id": 3,
-    "spatial_coverage_region_id": "country_IN",
-    "temporal_coverage_start_date": "2021-07-10",
-    "temporal_resolution": "NONE",
-    "additional_metadata": null,
-    "id": 10,
-    "collection_id": 2,
-    "description": "FMD Vaccinations data from NDLM website",
-    "spatial_resolution": "DISTRICT",
-    "temporal_coverage_end_date": "2025-07-10",
-    "access_level": "DOWNLOAD",
-    "raw_datasets": [
-      {
-        "source": "NDLM",
-        "rds_id": "EPRDS45",
-        "id": 6,
-        "title": "Bharat Pashudhan FMD Vaccinations"
-      }
-    ],
-    "collection": {
-      "category_id": "EP",
-      "id": 2,
-      "category_name": "Epidemiology",
-      "collection_id": "EP0006",
-      "collection_name": "Epidemiological Summary"
-    },
-    "tags": [
-      {
-        "id": 1,
-        "tag_name": "Livestock"
-      }
-    ],
-    "data_owner": {
-      "name": "NDLM",
-      "contact_person": null,
-      "contact_person_email": null,
-      "id": 3
-    },
-    "spatial_coverage_region": {
-      "region_name": "India",
-      "id": 146769,
-      "parent_region_id": "",
-      "region_id": "country_IN"
-    }
-  },
-  {
-    "ds_id": "EP0006DS0089",
-    "title": "DFMD - All India Serosurveillance Annual Summaries",
-    "data_owner_id": 2,
-    "spatial_coverage_region_id": "country_IN",
-    "temporal_coverage_start_date": "2013-07-10",
-    "temporal_resolution": "YEAR",
-    "additional_metadata": null,
-    "id": 12,
-    "collection_id": 2,
-    "description": "All India State Level Serosurveillance summaries for FMD",
-    "spatial_resolution": "STATE",
-    "temporal_coverage_end_date": "2022-07-10",
-    "access_level": "DOWNLOAD",
-    "raw_datasets": [
-      {
-        "source": "NIFMD",
-        "rds_id": "EPRDS46",
-        "id": 2,
-        "title": "NIFMD Annual Reports"
-      }
-    ],
-    "collection": {
-      "category_id": "EP",
-      "id": 2,
-      "category_name": "Epidemiology",
-      "collection_id": "EP0006",
-      "collection_name": "Epidemiological Summary"
-    },
-    "tags": [
-      {
-        "id": 2,
-        "tag_name": "Foot and Mouth Disease"
-      },
-      {
-        "id": 1,
-        "tag_name": "Livestock"
-      }
-    ],
-    "data_owner": {
-      "name": "NIFMD",
-      "contact_person": "",
-      "contact_person_email": "",
-      "id": 2
-    },
-    "spatial_coverage_region": {
-      "region_name": "India",
-      "id": 146769,
-      "parent_region_id": "",
-      "region_id": "country_IN"
-    }
-  },
-  {
-    "ds_id": "GS0015DS0034",
-    "title": "LGD Region IDs and Names",
-    "data_owner_id": 1,
-    "spatial_coverage_region_id": "country_IN",
-    "temporal_coverage_start_date": null,
-    "temporal_resolution": "NONE",
-    "additional_metadata": null,
-    "id": 13,
-    "collection_id": 5,
-    "description": "Local Government Directory names & codes for all India - states, districts, subdistricts, villages, ulbs",
-    "spatial_resolution": "STATE",
-    "temporal_coverage_end_date": null,
-    "access_level": "DOWNLOAD",
-    "raw_datasets": [
-      {
-        "source": "NIFMD",
-        "rds_id": "EPRDS46",
-        "id": 2,
-        "title": "NIFMD Annual Reports"
-      }
-    ],
-    "collection": {
-      "category_id": "GS",
-      "id": 5,
-      "category_name": "Geospatial",
-      "collection_id": "GS0015",
-      "collection_name": "Geographical & Administrative Units"
-    },
-    "tags": [],
-    "data_owner": {
-      "name": "Government of India",
-      "contact_person": "",
-      "contact_person_email": "",
-      "id": 1
-    },
-    "spatial_coverage_region": {
-      "region_name": "India",
-      "id": 146769,
-      "parent_region_id": "",
-      "region_id": "country_IN"
-    }
-  },
-  {
-    "ds_id": "EP0006DS0055",
-    "title": "Karnataka - FMD - NADCP Vaccination Progress Reports",
-    "data_owner_id": 6,
-    "spatial_coverage_region_id": "state_29",
-    "temporal_coverage_start_date": "2020-07-10",
-    "temporal_resolution": "DATE",
-    "additional_metadata": null,
-    "id": 14,
-    "collection_id": 2,
-    "description": "District-level vaccination & Tagging progress reports for Rounds 1,2,3,4,5",
-    "spatial_resolution": "DISTRICT",
-    "temporal_coverage_end_date": "2024-07-10",
-    "access_level": "DOWNLOAD",
-    "raw_datasets": [
-      {
-        "source": "National Animal Disease Control Programme",
-        "rds_id": "EPRDS26",
-        "id": 9,
-        "title": "KA FMD NADCP Vaccination Reports"
-      }
-    ],
-    "collection": {
-      "category_id": "EP",
-      "id": 2,
-      "category_name": "Epidemiology",
-      "collection_id": "EP0006",
-      "collection_name": "Epidemiological Summary"
-    },
-    "tags": [
-      {
-        "id": 1,
-        "tag_name": "Livestock"
-      },
-      {
-        "id": 2,
-        "tag_name": "Foot and Mouth Disease"
-      }
-    ],
-    "data_owner": {
-      "name": "National Animal Disease Control Programme",
-      "contact_person": null,
-      "contact_person_email": null,
-      "id": 6
-    },
-    "spatial_coverage_region": {
-      "region_name": "Karnataka",
-      "id": 183,
-      "parent_region_id": "country_IN",
-      "region_id": "state_29"
-    }
-  },
-  {
-    "ds_id": "EP0006DS0059",
-    "title": "Karnataka - FMD - NADCP - Vaccination Schedule",
-    "data_owner_id": 6,
-    "spatial_coverage_region_id": "state_29",
-    "temporal_coverage_start_date": "2021-07-10",
-    "temporal_resolution": "DATE",
-    "additional_metadata": null,
-    "id": 16,
-    "collection_id": 2,
-    "description": "Scheduled vaccination dates for cattle/buffalo, sheep/goat at the village-level - rounds 3, 4 and 5",
-    "spatial_resolution": "VILLAGE",
-    "temporal_coverage_end_date": "2024-07-10",
-    "access_level": "DOWNLOAD",
-    "raw_datasets": [
-      {
-        "source": "National Animal Disease Control Programme",
-        "rds_id": "EPRDS29",
-        "id": 10,
-        "title": "KA FMD NADCP Vaccination Schedule"
-      }
-    ],
-    "collection": {
-      "category_id": "EP",
-      "id": 2,
-      "category_name": "Epidemiology",
-      "collection_id": "EP0006",
-      "collection_name": "Epidemiological Summary"
-    },
-    "tags": [
-      {
-        "id": 1,
-        "tag_name": "Livestock"
-      },
-      {
-        "id": 2,
-        "tag_name": "Foot and Mouth Disease"
-      }
-    ],
-    "data_owner": {
-      "name": "National Animal Disease Control Programme",
-      "contact_person": null,
-      "contact_person_email": null,
-      "id": 6
-    },
-    "spatial_coverage_region": {
-      "region_name": "Karnataka",
-      "id": 183,
-      "parent_region_id": "country_IN",
-      "region_id": "state_29"
-    }
-  },
-  {
-    "ds_id": "CS0026DS0093",
-    "title": "DAHD - Meat Production Statistics",
-    "data_owner_id": 7,
-    "spatial_coverage_region_id": "country_IN",
-    "temporal_coverage_start_date": "2014-07-21",
-    "temporal_resolution": "YEAR",
-    "additional_metadata": null,
-    "id": 19,
-    "collection_id": 6,
-    "description": "Annual Meat Production Statistics from DAHD",
-    "spatial_resolution": "STATE",
-    "temporal_coverage_end_date": "2024-07-21",
-    "access_level": "DOWNLOAD",
-    "raw_datasets": [
-      {
-        "source": "DAHD",
-        "rds_id": "CSRDS9",
-        "id": 11,
-        "title": "Basic Animal Husbandry Statistics Annual Reports"
-      }
-    ],
-    "collection": {
-      "category_id": "CS",
-      "id": 6,
-      "category_name": "Census and Surveys",
-      "collection_id": "CS0026",
-      "collection_name": "Animal Husbandry Statistics"
-    },
-    "tags": [
-      {
-        "id": 1,
-        "tag_name": "Livestock"
-      }
-    ],
-    "data_owner": {
-      "name": "DAHD",
-      "contact_person": null,
-      "contact_person_email": null,
-      "id": 7
-    },
-    "spatial_coverage_region": {
-      "region_name": "India",
-      "id": 146769,
-      "parent_region_id": "",
-      "region_id": "country_IN"
-    }
-  },
-  {
-    "ds_id": "CS0001DS0094",
-    "title": "Population Census 2011",
-    "data_owner_id": 1,
-    "spatial_coverage_region_id": "country_IN",
-    "temporal_coverage_start_date": "2011-01-01",
     "temporal_resolution": "NONE",
     "additional_metadata": {
-      "source": "https://censusindia.gov.in/census.website/data/census-tables"
+      "notes": "Downloaded from https://www.ahvs.kar.nic.in/en-reportsstat.html. Maharashtra data recived from PKC.",
+      "status": "migrated"
     },
-    "id": 23,
-    "collection_id": 7,
-    "description": "Human Population Census of 2011",
-    "spatial_resolution": "STATE",
-    "temporal_coverage_end_date": "2011-01-01",
+    "ds_id": "CS0007DS0041",
+    "description": "District, Village and Ward-wise livestock population for Karnataka and District-wise livestock population for Maharashtra",
+    "temporal_coverage_start_date": "2019-07-01",
     "access_level": "DOWNLOAD",
+    "tags": [
+      {
+        "tag_name": "Livestock",
+        "id": 1
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": "",
+      "id": 1,
+      "name": "Government of India",
+      "contact_person": ""
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
     "raw_datasets": [
       {
+        "rds_id": "CSRDS1",
+        "title": "20th Livestock Census",
         "source": "Government of India",
-        "rds_id": "CSRDS10",
-        "id": 12,
-        "title": "Population Census 2011"
+        "id": 1
       }
     ],
     "collection": {
       "category_id": "CS",
-      "id": 7,
-      "category_name": "Census and Surveys",
-      "collection_id": "CS0001",
-      "collection_name": "Census of India (by Home Ministry)"
-    },
-    "tags": [
-      {
-        "id": 3,
-        "tag_name": "Census"
-      }
-    ],
-    "data_owner": {
-      "name": "Government of India",
-      "contact_person": "",
-      "contact_person_email": "",
-      "id": 1
-    },
-    "spatial_coverage_region": {
-      "region_name": "India",
-      "id": 146769,
-      "parent_region_id": "",
-      "region_id": "country_IN"
+      "collection_id": "CS0007",
+      "collection_name": "Livestock Census (by DAHD)",
+      "id": 1,
+      "category_name": "Census and Surveys"
     }
   },
   {
-    "ds_id": "EP0006DS0098",
-    "title": "FMDCP Start Years",
+    "id": 2,
+    "title": "DFMD - All India FMD Seromonitoring Annual Summaries",
+    "collection_id": 2,
     "data_owner_id": 2,
     "spatial_coverage_region_id": "country_IN",
-    "temporal_coverage_start_date": "2003-01-01",
+    "spatial_resolution": "STATE",
+    "temporal_coverage_end_date": "2022-07-01",
     "temporal_resolution": "YEAR",
-    "additional_metadata": null,
-    "id": 30,
-    "collection_id": 2,
-    "description": "Start years of FMD Control Programme at a district level",
-    "spatial_resolution": "DISTRICT",
-    "temporal_coverage_end_date": "2017-01-01",
+    "additional_metadata": {
+      "status": "migrated"
+    },
+    "ds_id": "EP0006DS0087",
+    "description": "All India State Level Seromonitoring summaries for FMD",
+    "temporal_coverage_start_date": "2013-07-01",
     "access_level": "DOWNLOAD",
+    "tags": [
+      {
+        "tag_name": "Foot and Mouth Disease",
+        "id": 2
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": "",
+      "id": 2,
+      "name": "NIFMD",
+      "contact_person": ""
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
     "raw_datasets": [
       {
-        "source": "NIFMD",
         "rds_id": "EPRDS46",
-        "id": 2,
-        "title": "NIFMD Annual Reports"
+        "title": "NIFMD Annual Reports",
+        "source": "NIFMD",
+        "id": 2
       }
     ],
     "collection": {
       "category_id": "EP",
-      "id": 2,
-      "category_name": "Epidemiology",
       "collection_id": "EP0006",
-      "collection_name": "Epidemiological Summary"
-    },
-    "tags": [
-      {
-        "id": 1,
-        "tag_name": "Livestock"
-      }
-    ],
-    "data_owner": {
-      "name": "NIFMD",
-      "contact_person": "",
-      "contact_person_email": "",
-      "id": 2
-    },
-    "spatial_coverage_region": {
-      "region_name": "India",
-      "id": 146769,
-      "parent_region_id": "",
-      "region_id": "country_IN"
+      "collection_name": "Epidemiological Summary",
+      "id": 2,
+      "category_name": "Epidemiology"
     }
   },
   {
-    "ds_id": "EP0006DS0097",
-    "title": "Karnataka FMD Outbreaks",
-    "data_owner_id": 2,
-    "spatial_coverage_region_id": "state_29",
-    "temporal_coverage_start_date": "2021-01-01",
-    "temporal_resolution": "MONTH",
-    "additional_metadata": null,
-    "id": 31,
+    "id": 10,
+    "title": "NDLM - Bharat Pashudhan - FMD Vaccinations",
     "collection_id": 2,
-    "description": "Karnataka District level FMD Outbreaks in 2021",
-    "spatial_resolution": "DISTRICT",
-    "temporal_coverage_end_date": "2021-01-01",
-    "access_level": "DOWNLOAD",
-    "raw_datasets": [
-      {
-        "source": "DFMD Annual Reports",
-        "rds_id": "EPRDS49",
-        "id": 18,
-        "title": "Karnataka FMD Outbreaks"
-      }
-    ],
-    "collection": {
-      "category_id": "EP",
-      "id": 2,
-      "category_name": "Epidemiology",
-      "collection_id": "EP0006",
-      "collection_name": "Epidemiological Summary"
-    },
-    "tags": [
-      {
-        "id": 1,
-        "tag_name": "Livestock"
-      }
-    ],
-    "data_owner": {
-      "name": "NIFMD",
-      "contact_person": "",
-      "contact_person_email": "",
-      "id": 2
-    },
-    "spatial_coverage_region": {
-      "region_name": "Karnataka",
-      "id": 183,
-      "parent_region_id": "country_IN",
-      "region_id": "state_29"
-    }
-  },
-  {
-    "ds_id": "CS0002DS0095",
-    "title": "Situation Assessment of Agricultural Households and Land and Livestock Holdings 2019 Microdata",
-    "data_owner_id": 4,
-    "spatial_coverage_region_id": "country_IN",
-    "temporal_coverage_start_date": "2019-01-01",
-    "temporal_resolution": "NONE",
-    "additional_metadata": null,
-    "id": 32,
-    "collection_id": 3,
-    "description": "Microdata of CS0002DS0084",
-    "spatial_resolution": "DISTRICT",
-    "temporal_coverage_end_date": "2019-01-01",
-    "access_level": "DOWNLOAD",
-    "raw_datasets": [
-      {
-        "source": "Government of India",
-        "rds_id": "CSRDS7",
-        "id": 5,
-        "title": "State Wise Registered Veterinary Practitioners"
-      }
-    ],
-    "collection": {
-      "category_id": "CS",
-      "id": 3,
-      "category_name": "Census and Surveys",
-      "collection_id": "CS0002",
-      "collection_name": "National Sample Survey Organisation"
-    },
-    "tags": [
-      {
-        "id": 1,
-        "tag_name": "Livestock"
-      }
-    ],
-    "data_owner": {
-      "name": "National Sample Survey Organisation",
-      "contact_person": null,
-      "contact_person_email": null,
-      "id": 4
-    },
-    "spatial_coverage_region": {
-      "region_name": "India",
-      "id": 146769,
-      "parent_region_id": "",
-      "region_id": "country_IN"
-    }
-  },
-  {
-    "ds_id": "GS0015DS0032",
-    "title": "Pimpri Chinchwad - CHCs & PHCs",
-    "data_owner_id": 13,
-    "spatial_coverage_region_id": "subdistrict_4194",
-    "temporal_coverage_start_date": null,
-    "temporal_resolution": "NONE",
-    "additional_metadata": null,
-    "id": 39,
-    "collection_id": 5,
-    "description": "Name, Address, Imputed Latitude & Longitude positions of CHC/PHC in Pimpri Chinchwad Municipality",
-    "spatial_resolution": "OTHER",
-    "temporal_coverage_end_date": null,
-    "access_level": "DOWNLOAD",
-    "raw_datasets": [
-      {
-        "source": "PCMC",
-        "rds_id": "GSRDS3",
-        "id": 29,
-        "title": "Pimpri Chinchwad - CHCs & PHCs"
-      }
-    ],
-    "collection": {
-      "category_id": "GS",
-      "id": 5,
-      "category_name": "Geospatial",
-      "collection_id": "GS0015",
-      "collection_name": "Geographical & Administrative Units"
-    },
-    "tags": [],
-    "data_owner": {
-      "name": "Pune City Municipal Corporation",
-      "contact_person": null,
-      "contact_person_email": null,
-      "id": 13
-    },
-    "spatial_coverage_region": {
-      "region_name": "Pune City",
-      "id": 94418,
-      "parent_region_id": "district_490",
-      "region_id": "subdistrict_4194"
-    }
-  },
-  {
-    "ds_id": "GS0015DS0064",
-    "title": "Bengaluru City - Impervious Surfaces",
-    "data_owner_id": 10,
-    "spatial_coverage_region_id": "district_525",
-    "temporal_coverage_start_date": "2022-01-01",
-    "temporal_resolution": "NONE",
-    "additional_metadata": null,
-    "id": 40,
-    "collection_id": 5,
-    "description": "Impervious percentages for BBMP wards",
-    "spatial_resolution": "WARD",
-    "temporal_coverage_end_date": "2022-01-01",
-    "access_level": "DOWNLOAD",
-    "raw_datasets": [
-      {
-        "source": "BBMP",
-        "rds_id": "GSRDS9",
-        "id": 30,
-        "title": "Bengaluru City - Impervious Surfaces"
-      }
-    ],
-    "collection": {
-      "category_id": "GS",
-      "id": 5,
-      "category_name": "Geospatial",
-      "collection_id": "GS0015",
-      "collection_name": "Geographical & Administrative Units"
-    },
-    "tags": [],
-    "data_owner": {
-      "name": "BBMP",
-      "contact_person": null,
-      "contact_person_email": null,
-      "id": 10
-    },
-    "spatial_coverage_region": {
-      "region_name": "Bengaluru Urban",
-      "id": 5,
-      "parent_region_id": "state_29",
-      "region_id": "district_525"
-    }
-  },
-  {
-    "ds_id": "CS0001DS0050",
-    "title": "Census 2011 - Population Data - Karnataka",
-    "data_owner_id": 1,
-    "spatial_coverage_region_id": "state_29",
-    "temporal_coverage_start_date": "2011-01-01",
-    "temporal_resolution": "NONE",
-    "additional_metadata": null,
-    "id": 41,
-    "collection_id": 7,
-    "description": "Village-level population in Karnataka",
-    "spatial_resolution": "VILLAGE",
-    "temporal_coverage_end_date": "2011-01-01",
-    "access_level": "DOWNLOAD",
-    "raw_datasets": [
-      {
-        "source": "Government of India",
-        "rds_id": "CSRDS2",
-        "id": 31,
-        "title": "Census 2011 - Population Data - Karnataka"
-      }
-    ],
-    "collection": {
-      "category_id": "CS",
-      "id": 7,
-      "category_name": "Census and Surveys",
-      "collection_id": "CS0001",
-      "collection_name": "Census of India (by Home Ministry)"
-    },
-    "tags": [],
-    "data_owner": {
-      "name": "Government of India",
-      "contact_person": "",
-      "contact_person_email": "",
-      "id": 1
-    },
-    "spatial_coverage_region": {
-      "region_name": "Karnataka",
-      "id": 183,
-      "parent_region_id": "country_IN",
-      "region_id": "state_29"
-    }
-  },
-  {
-    "ds_id": "GS0015DS0044",
-    "title": "Bengaluru City - Ward-wise Public Goods ",
-    "data_owner_id": 10,
-    "spatial_coverage_region_id": "state_29",
-    "temporal_coverage_start_date": "2023-01-01",
-    "temporal_resolution": "NONE",
-    "additional_metadata": null,
-    "id": 42,
-    "collection_id": 5,
-    "description": "BBMP ward-level availability of public goods such police stations, lakes, parks, government schools, bus stops & playgrounds",
-    "spatial_resolution": "VILLAGE",
-    "temporal_coverage_end_date": "2023-01-01",
-    "access_level": "DOWNLOAD",
-    "raw_datasets": [
-      {
-        "source": "BBMP",
-        "rds_id": "GSRDS7",
-        "id": 32,
-        "title": "Bengaluru City - Ward-wise Public Goods "
-      }
-    ],
-    "collection": {
-      "category_id": "GS",
-      "id": 5,
-      "category_name": "Geospatial",
-      "collection_id": "GS0015",
-      "collection_name": "Geographical & Administrative Units"
-    },
-    "tags": [],
-    "data_owner": {
-      "name": "BBMP",
-      "contact_person": null,
-      "contact_person_email": null,
-      "id": 10
-    },
-    "spatial_coverage_region": {
-      "region_name": "Karnataka",
-      "id": 183,
-      "parent_region_id": "country_IN",
-      "region_id": "state_29"
-    }
-  },
-  {
-    "ds_id": "EP0006DS0091",
-    "title": "MoHFW - HMIS TB Summary Data",
-    "data_owner_id": 15,
-    "spatial_coverage_region_id": "country_IN",
-    "temporal_coverage_start_date": "2017-01-01",
-    "temporal_resolution": "YEAR",
-    "additional_metadata": null,
-    "id": 44,
-    "collection_id": 2,
-    "description": "District wise HMIS data related to TB",
-    "spatial_resolution": "DISTRICT",
-    "temporal_coverage_end_date": "2020-01-01",
-    "access_level": "DOWNLOAD",
-    "raw_datasets": [
-      {
-        "source": "MoHFW",
-        "rds_id": "EPRDS48",
-        "id": 34,
-        "title": "HMIS Summary Data"
-      }
-    ],
-    "collection": {
-      "category_id": "EP",
-      "id": 2,
-      "category_name": "Epidemiology",
-      "collection_id": "EP0006",
-      "collection_name": "Epidemiological Summary"
-    },
-    "tags": [
-      {
-        "id": 6,
-        "tag_name": "Tuberculosis"
-      }
-    ],
-    "data_owner": {
-      "name": "MoHFW",
-      "contact_person": null,
-      "contact_person_email": null,
-      "id": 15
-    },
-    "spatial_coverage_region": {
-      "region_name": "India",
-      "id": 146769,
-      "parent_region_id": "",
-      "region_id": "country_IN"
-    }
-  },
-  {
-    "ds_id": "CS0026DS0099",
-    "title": "DAHD - Milk Production Statistics",
-    "data_owner_id": 7,
-    "spatial_coverage_region_id": "country_IN",
-    "temporal_coverage_start_date": "2012-01-01",
-    "temporal_resolution": "YEAR",
-    "additional_metadata": null,
-    "id": 52,
-    "collection_id": 6,
-    "description": "Annual Milk Production Statistics from DAHD",
-    "spatial_resolution": "STATE",
-    "temporal_coverage_end_date": "2024-01-01",
-    "access_level": "DOWNLOAD",
-    "raw_datasets": [
-      {
-        "source": "DAHD",
-        "rds_id": "CSRDS9",
-        "id": 11,
-        "title": "Basic Animal Husbandry Statistics Annual Reports"
-      }
-    ],
-    "collection": {
-      "category_id": "CS",
-      "id": 6,
-      "category_name": "Census and Surveys",
-      "collection_id": "CS0026",
-      "collection_name": "Animal Husbandry Statistics"
-    },
-    "tags": [
-      {
-        "id": 1,
-        "tag_name": "Livestock"
-      }
-    ],
-    "data_owner": {
-      "name": "DAHD",
-      "contact_person": null,
-      "contact_person_email": null,
-      "id": 7
-    },
-    "spatial_coverage_region": {
-      "region_name": "India",
-      "id": 146769,
-      "parent_region_id": "",
-      "region_id": "country_IN"
-    }
-  },
-  {
-    "ds_id": "CS0023DS0085",
-    "title": "State/UT-wise Number of Registered Veterinary Practitioners in the Country as on 31-03-2023 ",
-    "data_owner_id": 1,
-    "spatial_coverage_region_id": "country_IN",
-    "temporal_coverage_start_date": "2023-03-31",
-    "temporal_resolution": "NONE",
-    "additional_metadata": null,
-    "id": 8,
-    "collection_id": 4,
-    "description": "State/UT-wise Number of Registered Veterinary Practitioners in the Country as on 31-03-2023 ",
-    "spatial_resolution": "STATE",
-    "temporal_coverage_end_date": "2023-03-31",
-    "access_level": "DOWNLOAD",
-    "raw_datasets": [],
-    "collection": {
-      "category_id": "CS",
-      "id": 4,
-      "category_name": "Census and Surveys",
-      "collection_id": "CS0023",
-      "collection_name": "Open Data Portals"
-    },
-    "tags": [
-      {
-        "id": 1,
-        "tag_name": "Livestock"
-      }
-    ],
-    "data_owner": {
-      "name": "Government of India",
-      "contact_person": "",
-      "contact_person_email": "",
-      "id": 1
-    },
-    "spatial_coverage_region": {
-      "region_name": "India",
-      "id": 146769,
-      "parent_region_id": "",
-      "region_id": "country_IN"
-    }
-  },
-  {
-    "ds_id": "CS0002DS0084",
-    "title": "Situation Assessment of Agricultural Households and Land and Livestock Holdings 2019",
-    "data_owner_id": 4,
-    "spatial_coverage_region_id": "country_IN",
-    "temporal_coverage_start_date": "2018-07-08",
-    "temporal_resolution": "YEAR",
-    "additional_metadata": null,
-    "id": 6,
-    "collection_id": 3,
-    "description": "Selected tables extracted from the report Situation Assessment of Agricultural Households and Land and Livestock Holdings of Households in Rural India 2019",
-    "spatial_resolution": "STATE",
-    "temporal_coverage_end_date": "2019-07-08",
-    "access_level": "DOWNLOAD",
-    "raw_datasets": [],
-    "collection": {
-      "category_id": "CS",
-      "id": 3,
-      "category_name": "Census and Surveys",
-      "collection_id": "CS0002",
-      "collection_name": "National Sample Survey Organisation"
-    },
-    "tags": [
-      {
-        "id": 1,
-        "tag_name": "Livestock"
-      }
-    ],
-    "data_owner": {
-      "name": "National Sample Survey Organisation",
-      "contact_person": null,
-      "contact_person_email": null,
-      "id": 4
-    },
-    "spatial_coverage_region": {
-      "region_name": "India",
-      "id": 146769,
-      "parent_region_id": "",
-      "region_id": "country_IN"
-    }
-  },
-  {
-    "ds_id": "CS0026DS0083",
-    "title": "Bharat Pashudhan Registered Animals and Owners",
     "data_owner_id": 3,
     "spatial_coverage_region_id": "country_IN",
-    "temporal_coverage_start_date": "2021-07-08",
-    "temporal_resolution": "NONE",
-    "additional_metadata": null,
-    "id": 3,
-    "collection_id": 6,
-    "description": "Livestock owners and Pashu aadhaar data",
     "spatial_resolution": "DISTRICT",
-    "temporal_coverage_end_date": "2025-07-08",
-    "access_level": "DOWNLOAD",
-    "raw_datasets": [],
-    "collection": {
-      "category_id": "CS",
-      "id": 6,
-      "category_name": "Census and Surveys",
-      "collection_id": "CS0026",
-      "collection_name": "Animal Husbandry Statistics"
+    "temporal_coverage_end_date": "2025-07-10",
+    "temporal_resolution": "NONE",
+    "additional_metadata": {
+      "status": "migrated"
     },
+    "ds_id": "EP0006DS0086",
+    "description": "FMD Vaccinations data from NDLM website",
+    "temporal_coverage_start_date": "2021-07-10",
+    "access_level": "DOWNLOAD",
     "tags": [
       {
-        "id": 1,
-        "tag_name": "Livestock"
+        "tag_name": "Livestock",
+        "id": 1
       }
     ],
     "data_owner": {
-      "name": "NDLM",
-      "contact_person": null,
       "contact_person_email": null,
-      "id": 3
+      "id": 3,
+      "name": "NDLM",
+      "contact_person": null
     },
     "spatial_coverage_region": {
-      "region_name": "India",
       "id": 146769,
-      "parent_region_id": "",
-      "region_id": "country_IN"
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS45",
+        "title": "Bharat Pashudhan FMD Vaccinations",
+        "source": "NDLM",
+        "id": 6
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0006",
+      "collection_name": "Epidemiological Summary",
+      "id": 2,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 12,
+    "title": "DFMD - All India FMD Serosurveillance Annual Summaries",
+    "collection_id": 2,
+    "data_owner_id": 2,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "STATE",
+    "temporal_coverage_end_date": "2022-07-10",
+    "temporal_resolution": "YEAR",
+    "additional_metadata": {
+      "status": "migrated"
+    },
+    "ds_id": "EP0006DS0089",
+    "description": "All India State Level Serosurveillance summaries for FMD",
+    "temporal_coverage_start_date": "2013-07-10",
+    "access_level": "DOWNLOAD",
+    "tags": [
+      {
+        "tag_name": "Livestock",
+        "id": 1
+      },
+      {
+        "tag_name": "Foot and Mouth Disease",
+        "id": 2
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": "",
+      "id": 2,
+      "name": "NIFMD",
+      "contact_person": ""
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS46",
+        "title": "NIFMD Annual Reports",
+        "source": "NIFMD",
+        "id": 2
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0006",
+      "collection_name": "Epidemiological Summary",
+      "id": 2,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 14,
+    "title": "Karnataka - FMD - NADCP Vaccination Progress Reports",
+    "collection_id": 2,
+    "data_owner_id": 6,
+    "spatial_coverage_region_id": "state_29",
+    "spatial_resolution": "DISTRICT",
+    "temporal_coverage_end_date": "2024-07-10",
+    "temporal_resolution": "DATE",
+    "additional_metadata": {
+      "status": "migrated"
+    },
+    "ds_id": "EP0006DS0055",
+    "description": "District-level vaccination & Tagging progress reports for Rounds 1,2,3,4,5",
+    "temporal_coverage_start_date": "2020-07-10",
+    "access_level": "DOWNLOAD",
+    "tags": [
+      {
+        "tag_name": "Foot and Mouth Disease",
+        "id": 2
+      },
+      {
+        "tag_name": "Livestock",
+        "id": 1
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 6,
+      "name": "National Animal Disease Control Programme",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 183,
+      "region_id": "state_29",
+      "region_name": "Karnataka",
+      "parent_region_id": "country_IN"
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS26",
+        "title": "KA FMD NADCP Vaccination Reports",
+        "source": "National Animal Disease Control Programme",
+        "id": 9
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0006",
+      "collection_name": "Epidemiological Summary",
+      "id": 2,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 16,
+    "title": "Karnataka - FMD - NADCP - Vaccination Schedule",
+    "collection_id": 2,
+    "data_owner_id": 6,
+    "spatial_coverage_region_id": "state_29",
+    "spatial_resolution": "VILLAGE",
+    "temporal_coverage_end_date": "2024-07-10",
+    "temporal_resolution": "DATE",
+    "additional_metadata": {
+      "status": "migrated"
+    },
+    "ds_id": "EP0006DS0059",
+    "description": "Scheduled vaccination dates for cattle/buffalo, sheep/goat at the village-level - rounds 3, 4 and 5",
+    "temporal_coverage_start_date": "2021-07-10",
+    "access_level": "DOWNLOAD",
+    "tags": [
+      {
+        "tag_name": "Foot and Mouth Disease",
+        "id": 2
+      },
+      {
+        "tag_name": "Livestock",
+        "id": 1
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 6,
+      "name": "National Animal Disease Control Programme",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 183,
+      "region_id": "state_29",
+      "region_name": "Karnataka",
+      "parent_region_id": "country_IN"
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS29",
+        "title": "KA FMD NADCP Vaccination Schedule",
+        "source": "National Animal Disease Control Programme",
+        "id": 10
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0006",
+      "collection_name": "Epidemiological Summary",
+      "id": 2,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 19,
+    "title": "DAHD - Meat Production Statistics",
+    "collection_id": 6,
+    "data_owner_id": 7,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "STATE",
+    "temporal_coverage_end_date": "2024-07-21",
+    "temporal_resolution": "YEAR",
+    "additional_metadata": {
+      "status": "migrated"
+    },
+    "ds_id": "CS0026DS0093",
+    "description": "Annual Meat Production Statistics from DAHD",
+    "temporal_coverage_start_date": "2014-07-21",
+    "access_level": "DOWNLOAD",
+    "tags": [
+      {
+        "tag_name": "Livestock",
+        "id": 1
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 7,
+      "name": "DAHD",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "CSRDS9",
+        "title": "Basic Animal Husbandry Statistics Annual Reports",
+        "source": "DAHD",
+        "id": 11
+      }
+    ],
+    "collection": {
+      "category_id": "CS",
+      "collection_id": "CS0026",
+      "collection_name": "Animal Husbandry Statistics",
+      "id": 6,
+      "category_name": "Census and Surveys"
+    }
+  },
+  {
+    "id": 23,
+    "title": "Population Census 2011",
+    "collection_id": 7,
+    "data_owner_id": 1,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "STATE",
+    "temporal_coverage_end_date": "2011-01-01",
+    "temporal_resolution": "NONE",
+    "additional_metadata": {
+      "source": "https://censusindia.gov.in/census.website/data/census-tables",
+      "status": "migrated"
+    },
+    "ds_id": "CS0001DS0094",
+    "description": "Human Population Census of 2011",
+    "temporal_coverage_start_date": "2011-01-01",
+    "access_level": "DOWNLOAD",
+    "tags": [
+      {
+        "tag_name": "Census",
+        "id": 3
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": "",
+      "id": 1,
+      "name": "Government of India",
+      "contact_person": ""
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "CSRDS10",
+        "title": "Population Census 2011",
+        "source": "Government of India",
+        "id": 12
+      }
+    ],
+    "collection": {
+      "category_id": "CS",
+      "collection_id": "CS0001",
+      "collection_name": "Census of India (by Home Ministry)",
+      "id": 7,
+      "category_name": "Census and Surveys"
+    }
+  },
+  {
+    "id": 25,
+    "title": "KA IHIP - Dengue Line List",
+    "collection_id": 8,
+    "data_owner_id": 8,
+    "spatial_coverage_region_id": "state_29",
+    "spatial_resolution": "LAT/LONG",
+    "temporal_coverage_end_date": "9999-12-31",
+    "temporal_resolution": "DATE",
+    "additional_metadata": {
+      "status": "migrated"
+    },
+    "ds_id": "EP0005DS0067",
+    "description": "Patient-level case data with demographics, testing and case information from IHIP",
+    "temporal_coverage_start_date": "2024-07-16",
+    "access_level": "VIEW",
+    "tags": [
+      {
+        "tag_name": "Dengue",
+        "id": 5
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 8,
+      "name": "IHIP - Government of India",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 183,
+      "region_id": "state_29",
+      "region_name": "Karnataka",
+      "parent_region_id": "country_IN"
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS34",
+        "title": "KA IHIP Dengue Line List",
+        "source": "IHIP",
+        "id": 13
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0005",
+      "collection_name": "Epidemiological Line List",
+      "id": 8,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 26,
+    "title": "Karnataka - Dengue Line List",
+    "collection_id": 8,
+    "data_owner_id": 9,
+    "spatial_coverage_region_id": "state_29",
+    "spatial_resolution": "VILLAGE",
+    "temporal_coverage_end_date": "9999-12-31",
+    "temporal_resolution": "DATE",
+    "additional_metadata": {
+      "status": "migrated"
+    },
+    "ds_id": "EP0005DS0014",
+    "description": "Patient-level case data with demographics, testing and case information",
+    "temporal_coverage_start_date": "2013-01-01",
+    "access_level": "VIEW",
+    "tags": [
+      {
+        "tag_name": "Dengue",
+        "id": 5
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 9,
+      "name": "NVBDCP - Karnataka",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 183,
+      "region_id": "state_29",
+      "region_name": "Karnataka",
+      "parent_region_id": "country_IN"
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS7",
+        "title": "KA Dengue Chikungunya Line List",
+        "source": "NVBDCP - Karnataka",
+        "id": 14
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0005",
+      "collection_name": "Epidemiological Line List",
+      "id": 8,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 27,
+    "title": "Karnataka - Dengue Summaries",
+    "collection_id": 2,
+    "data_owner_id": 9,
+    "spatial_coverage_region_id": "state_29",
+    "spatial_resolution": "DISTRICT",
+    "temporal_coverage_end_date": "9999-12-31",
+    "temporal_resolution": "DATE",
+    "additional_metadata": {
+      "status": "migrated"
+    },
+    "ds_id": "EP0006DS0015",
+    "description": "Day-wise summaries of tests, suspected cases, confirmed cases and deaths by district",
+    "temporal_coverage_start_date": "2012-01-01",
+    "access_level": "DOWNLOAD",
+    "tags": [
+      {
+        "tag_name": "Dengue",
+        "id": 5
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 9,
+      "name": "NVBDCP - Karnataka",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 183,
+      "region_id": "state_29",
+      "region_name": "Karnataka",
+      "parent_region_id": "country_IN"
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS8",
+        "title": "KA Dengue Chikungunya Summaries",
+        "source": "NVBDCP - Karnataka",
+        "id": 15
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0006",
+      "collection_name": "Epidemiological Summary",
+      "id": 2,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 28,
+    "title": "Bengaluru City - Dengue Summaries",
+    "collection_id": 2,
+    "data_owner_id": 10,
+    "spatial_coverage_region_id": "district_525",
+    "spatial_resolution": "ULB",
+    "temporal_coverage_end_date": "2024-01-01",
+    "temporal_resolution": "MONTH",
+    "additional_metadata": {
+      "status": "migrated"
+    },
+    "ds_id": "EP0006DS0007",
+    "description": "Zonal summaries from BBMP",
+    "temporal_coverage_start_date": "2018-01-01",
+    "access_level": "VIEW",
+    "tags": [
+      {
+        "tag_name": "Dengue",
+        "id": 5
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 10,
+      "name": "BBMP",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 5,
+      "region_id": "district_525",
+      "region_name": "Bengaluru Urban",
+      "parent_region_id": "state_29"
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS3",
+        "title": "Bengaluru City Dengue Summaries",
+        "source": "BBMP",
+        "id": 16
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0006",
+      "collection_name": "Epidemiological Summary",
+      "id": 2,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 30,
+    "title": "FMDCP Start Years",
+    "collection_id": 2,
+    "data_owner_id": 2,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "DISTRICT",
+    "temporal_coverage_end_date": "2017-01-01",
+    "temporal_resolution": "YEAR",
+    "additional_metadata": {
+      "status": "migrated"
+    },
+    "ds_id": "EP0006DS0098",
+    "description": "Start years of FMD Control Programme at a district level",
+    "temporal_coverage_start_date": "2003-01-01",
+    "access_level": "DOWNLOAD",
+    "tags": [
+      {
+        "tag_name": "Livestock",
+        "id": 1
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": "",
+      "id": 2,
+      "name": "NIFMD",
+      "contact_person": ""
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS46",
+        "title": "NIFMD Annual Reports",
+        "source": "NIFMD",
+        "id": 2
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0006",
+      "collection_name": "Epidemiological Summary",
+      "id": 2,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 31,
+    "title": "Karnataka FMD Outbreaks",
+    "collection_id": 2,
+    "data_owner_id": 2,
+    "spatial_coverage_region_id": "state_29",
+    "spatial_resolution": "DISTRICT",
+    "temporal_coverage_end_date": "2021-01-01",
+    "temporal_resolution": "MONTH",
+    "additional_metadata": {
+      "status": "migrated"
+    },
+    "ds_id": "EP0006DS0097",
+    "description": "Karnataka District level FMD Outbreaks in 2021",
+    "temporal_coverage_start_date": "2021-01-01",
+    "access_level": "DOWNLOAD",
+    "tags": [
+      {
+        "tag_name": "Livestock",
+        "id": 1
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": "",
+      "id": 2,
+      "name": "NIFMD",
+      "contact_person": ""
+    },
+    "spatial_coverage_region": {
+      "id": 183,
+      "region_id": "state_29",
+      "region_name": "Karnataka",
+      "parent_region_id": "country_IN"
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS49",
+        "title": "Karnataka FMD Outbreaks",
+        "source": "DFMD Annual Reports",
+        "id": 18
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0006",
+      "collection_name": "Epidemiological Summary",
+      "id": 2,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 32,
+    "title": "Situation Assessment of Agricultural Households and Land and Livestock Holdings 2019 Microdata",
+    "collection_id": 3,
+    "data_owner_id": 4,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "DISTRICT",
+    "temporal_coverage_end_date": "2019-01-01",
+    "temporal_resolution": "NONE",
+    "additional_metadata": {
+      "status": "migrated"
+    },
+    "ds_id": "CS0002DS0095",
+    "description": "Microdata of CS0002DS0084",
+    "temporal_coverage_start_date": "2019-01-01",
+    "access_level": "DOWNLOAD",
+    "tags": [
+      {
+        "tag_name": "Livestock",
+        "id": 1
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 4,
+      "name": "National Sample Survey Organisation",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "CSRDS7",
+        "title": "State Wise Registered Veterinary Practitioners",
+        "source": "Government of India",
+        "id": 5
+      }
+    ],
+    "collection": {
+      "category_id": "CS",
+      "collection_id": "CS0002",
+      "collection_name": "National Sample Survey Organisation",
+      "id": 3,
+      "category_name": "Census and Surveys"
+    }
+  },
+  {
+    "id": 38,
+    "title": "Bengaluru City - IHIP Dengue Line List",
+    "collection_id": 8,
+    "data_owner_id": 10,
+    "spatial_coverage_region_id": "district_525",
+    "spatial_resolution": "LAT/LONG",
+    "temporal_coverage_end_date": "2024-01-01",
+    "temporal_resolution": "DATE",
+    "additional_metadata": {
+      "status": "migrated"
+    },
+    "ds_id": "EP0005DS0006",
+    "description": "Patient-level case data with demographics, testing and case information sent by BBMP staff (use EP0005DS0067 instead)",
+    "temporal_coverage_start_date": "2018-01-01",
+    "access_level": "VIEW",
+    "tags": [
+      {
+        "tag_name": "Dengue",
+        "id": 5
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 10,
+      "name": "BBMP",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 5,
+      "region_id": "district_525",
+      "region_name": "Bengaluru Urban",
+      "parent_region_id": "state_29"
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS2",
+        "title": "Bengaluru City - Dengue Line List",
+        "source": "BBMP, IHIP",
+        "id": 28
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0005",
+      "collection_name": "Epidemiological Line List",
+      "id": 8,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 44,
+    "title": "MoHFW - HMIS TB Summary Data",
+    "collection_id": 2,
+    "data_owner_id": 15,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "DISTRICT",
+    "temporal_coverage_end_date": "2020-01-01",
+    "temporal_resolution": "YEAR",
+    "additional_metadata": {
+      "status": "migrated"
+    },
+    "ds_id": "EP0006DS0091",
+    "description": "District wise HMIS data related to TB",
+    "temporal_coverage_start_date": "2017-01-01",
+    "access_level": "DOWNLOAD",
+    "tags": [
+      {
+        "tag_name": "Tuberculosis",
+        "id": 6
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 15,
+      "name": "MoHFW",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS48",
+        "title": "HMIS Summary Data",
+        "source": "MoHFW",
+        "id": 34
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0006",
+      "collection_name": "Epidemiological Summary",
+      "id": 2,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 45,
+    "title": "Maharashtra - Avian Influenza Outbreaks",
+    "collection_id": 2,
+    "data_owner_id": 16,
+    "spatial_coverage_region_id": "state_27",
+    "spatial_resolution": "VILLAGE",
+    "temporal_coverage_end_date": "2024-01-01",
+    "temporal_resolution": "YEAR",
+    "additional_metadata": {
+      "status": "migrated"
+    },
+    "ds_id": "EP0006DS0075",
+    "description": "Count of Avian Influenza outbreaks by village in Maharashtra",
+    "temporal_coverage_start_date": "2021-01-01",
+    "access_level": "VIEW",
+    "tags": [
+      {
+        "tag_name": "Avian Influenza",
+        "id": 7
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 16,
+      "name": "Animal Husbandry Department, Government of Maharashtra",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 181,
+      "region_id": "state_27",
+      "region_name": "Maharashtra",
+      "parent_region_id": "country_IN"
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS41",
+        "title": "Maharashtra - Avian Influenza Outbreaks",
+        "source": "Animal Husbandry Department, Government of Maharashtra",
+        "id": 35
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0006",
+      "collection_name": "Epidemiological Summary",
+      "id": 2,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 52,
+    "title": "DAHD - Milk Production Statistics",
+    "collection_id": 6,
+    "data_owner_id": 7,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "STATE",
+    "temporal_coverage_end_date": "2024-01-01",
+    "temporal_resolution": "YEAR",
+    "additional_metadata": {
+      "status": "migrated"
+    },
+    "ds_id": "CS0026DS0099",
+    "description": "Annual Milk Production Statistics from DAHD",
+    "temporal_coverage_start_date": "2012-01-01",
+    "access_level": "DOWNLOAD",
+    "tags": [
+      {
+        "tag_name": "Livestock",
+        "id": 1
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 7,
+      "name": "DAHD",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "CSRDS9",
+        "title": "Basic Animal Husbandry Statistics Annual Reports",
+        "source": "DAHD",
+        "id": 11
+      }
+    ],
+    "collection": {
+      "category_id": "CS",
+      "collection_id": "CS0026",
+      "collection_name": "Animal Husbandry Statistics",
+      "id": 6,
+      "category_name": "Census and Surveys"
+    }
+  },
+  {
+    "id": 6,
+    "title": "Situation Assessment of Agricultural Households and Land and Livestock Holdings 2019",
+    "collection_id": 3,
+    "data_owner_id": 4,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "STATE",
+    "temporal_coverage_end_date": "2019-07-08",
+    "temporal_resolution": "YEAR",
+    "additional_metadata": {
+      "status": "migrated"
+    },
+    "ds_id": "CS0002DS0084",
+    "description": "Selected tables extracted from the report Situation Assessment of Agricultural Households and Land and Livestock Holdings of Households in Rural India 2019",
+    "temporal_coverage_start_date": "2018-07-08",
+    "access_level": "DOWNLOAD",
+    "tags": [
+      {
+        "tag_name": "Livestock",
+        "id": 1
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 4,
+      "name": "National Sample Survey Organisation",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [],
+    "collection": {
+      "category_id": "CS",
+      "collection_id": "CS0002",
+      "collection_name": "National Sample Survey Organisation",
+      "id": 3,
+      "category_name": "Census and Surveys"
+    }
+  },
+  {
+    "id": 3,
+    "title": "Bharat Pashudhan Registered Animals and Owners",
+    "collection_id": 6,
+    "data_owner_id": 3,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "DISTRICT",
+    "temporal_coverage_end_date": "2025-07-08",
+    "temporal_resolution": "NONE",
+    "additional_metadata": {
+      "status": "migrated"
+    },
+    "ds_id": "CS0026DS0083",
+    "description": "Livestock owners and Pashu aadhaar data",
+    "temporal_coverage_start_date": "2021-07-08",
+    "access_level": "DOWNLOAD",
+    "tags": [
+      {
+        "tag_name": "Livestock",
+        "id": 1
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 3,
+      "name": "NDLM",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [],
+    "collection": {
+      "category_id": "CS",
+      "collection_id": "CS0026",
+      "collection_name": "Animal Husbandry Statistics",
+      "id": 6,
+      "category_name": "Census and Surveys"
+    }
+  },
+  {
+    "id": 8,
+    "title": "State/UT-wise Number of Registered Veterinary Practitioners in the Country as on 31-03-2023 ",
+    "collection_id": 4,
+    "data_owner_id": 1,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "STATE",
+    "temporal_coverage_end_date": "2023-03-31",
+    "temporal_resolution": "NONE",
+    "additional_metadata": {
+      "status": "migrated"
+    },
+    "ds_id": "CS0023DS0085",
+    "description": "State/UT-wise Number of Registered Veterinary Practitioners in the Country as on 31-03-2023 ",
+    "temporal_coverage_start_date": "2023-03-31",
+    "access_level": "DOWNLOAD",
+    "tags": [
+      {
+        "tag_name": "Livestock",
+        "id": 1
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": "",
+      "id": 1,
+      "name": "Government of India",
+      "contact_person": ""
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [],
+    "collection": {
+      "category_id": "CS",
+      "collection_id": "CS0023",
+      "collection_name": "Open Data Portals",
+      "id": 4,
+      "category_name": "Census and Surveys"
+    }
+  },
+  {
+    "id": 53,
+    "title": "Karnataka - Cattle Breed Populations",
+    "collection_id": 6,
+    "data_owner_id": 19,
+    "spatial_coverage_region_id": "state_29",
+    "spatial_resolution": "DISTRICT",
+    "temporal_coverage_end_date": "2019-01-01",
+    "temporal_resolution": "NONE",
+    "additional_metadata": {
+      "status": "migrated"
+    },
+    "ds_id": "CS0026DS0100",
+    "description": "Cattle Breed Populations in Karnataka",
+    "temporal_coverage_start_date": "2019-01-01",
+    "access_level": "DOWNLOAD",
+    "tags": [
+      {
+        "tag_name": "Livestock",
+        "id": 1
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 19,
+      "name": "Indian Journal of Animal Sciences",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 183,
+      "region_id": "state_29",
+      "region_name": "Karnataka",
+      "parent_region_id": "country_IN"
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "CSRDS11",
+        "title": "Karnataka Ruminant Genetic Resources Paper",
+        "source": "Indian Journal of Animal Sciences",
+        "id": 41
+      }
+    ],
+    "collection": {
+      "category_id": "CS",
+      "collection_id": "CS0026",
+      "collection_name": "Animal Husbandry Statistics",
+      "id": 6,
+      "category_name": "Census and Surveys"
+    }
+  },
+  {
+    "id": 55,
+    "title": "India - District Level TB Notifications",
+    "collection_id": 2,
+    "data_owner_id": 15,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "DISTRICT",
+    "temporal_coverage_end_date": "2025-01-01",
+    "temporal_resolution": "YEAR",
+    "additional_metadata": {
+      "source": "https://ndap.niti.gov.in/dataset/1140",
+      "status": "migrated"
+    },
+    "ds_id": "EP0006DS0102",
+    "description": "District wise TB notification report",
+    "temporal_coverage_start_date": "2022-01-01",
+    "access_level": "DOWNLOAD",
+    "tags": [
+      {
+        "tag_name": "TB",
+        "id": 8
+      },
+      {
+        "tag_name": "Tuberculosis",
+        "id": 6
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 15,
+      "name": "MoHFW",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS49",
+        "title": "Karnataka FMD Outbreaks",
+        "source": "DFMD Annual Reports",
+        "id": 18
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0006",
+      "collection_name": "Epidemiological Summary",
+      "id": 2,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 56,
+    "title": "Gadag District - House & Larval Survey",
+    "collection_id": 9,
+    "data_owner_id": 9,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "VILLAGE",
+    "temporal_coverage_end_date": "2022-12-31",
+    "temporal_resolution": "DATE",
+    "additional_metadata": {
+      "status": "raw_data_only"
+    },
+    "ds_id": "ET0004DS0002",
+    "description": null,
+    "temporal_coverage_start_date": "2022-01-01",
+    "access_level": "VIEW",
+    "tags": [
+      {
+        "tag_name": "Dengue",
+        "id": 5
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 9,
+      "name": "NVBDCP - Karnataka",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "ETRDS2",
+        "title": "Gadag District - House & Larval Survey",
+        "source": "NVBDCP - Karnataka",
+        "id": 43
+      }
+    ],
+    "collection": {
+      "category_id": "ET",
+      "collection_id": "ET0004",
+      "collection_name": "Larval Survey",
+      "id": 9,
+      "category_name": "Entomology"
+    }
+  },
+  {
+    "id": 57,
+    "title": "Pimpri Chinchwad - Breeding Spots",
+    "collection_id": 9,
+    "data_owner_id": 20,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "OTHER",
+    "temporal_coverage_end_date": "2022-12-31",
+    "temporal_resolution": "YEAR",
+    "additional_metadata": {
+      "status": "not_migrated"
+    },
+    "ds_id": "ET0004DS0003",
+    "description": "Addresses and imputed latitude & longitude coordinates for breeding spots in Pimpri Chinchwad",
+    "temporal_coverage_start_date": "2022-01-01",
+    "access_level": "VIEW",
+    "tags": [
+      {
+        "tag_name": "Dengue",
+        "id": 5
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 20,
+      "name": "PCMC",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "ETRDS3",
+        "title": "Pimpri Chinchwad - Breeding Spots",
+        "source": "PCMC",
+        "id": 44
+      }
+    ],
+    "collection": {
+      "category_id": "ET",
+      "collection_id": "ET0004",
+      "collection_name": "Larval Survey",
+      "id": 9,
+      "category_name": "Entomology"
+    }
+  },
+  {
+    "id": 58,
+    "title": "Pimpri Chinchwad - Larval Survey & Summaries",
+    "collection_id": 9,
+    "data_owner_id": 20,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "OTHER",
+    "temporal_coverage_end_date": "2022-12-31",
+    "temporal_resolution": "YEAR",
+    "additional_metadata": {
+      "status": "raw_data_only"
+    },
+    "ds_id": "ET0004DS0004",
+    "description": null,
+    "temporal_coverage_start_date": "2022-01-01",
+    "access_level": "VIEW",
+    "tags": [
+      {
+        "tag_name": "Dengue",
+        "id": 5
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 20,
+      "name": "PCMC",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "ETRDS4",
+        "title": "Pimpri Chinchwad - Larval Survey & Summaries",
+        "source": "PCMC",
+        "id": 45
+      }
+    ],
+    "collection": {
+      "category_id": "ET",
+      "collection_id": "ET0004",
+      "collection_name": "Larval Survey",
+      "id": 9,
+      "category_name": "Entomology"
+    }
+  },
+  {
+    "id": 59,
+    "title": "AG Diagnostics - Dengue Positive Tests Line List",
+    "collection_id": 8,
+    "data_owner_id": 21,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "OTHER",
+    "temporal_coverage_end_date": "2018-12-31",
+    "temporal_resolution": "DATE",
+    "additional_metadata": {
+      "status": "not_migrated"
+    },
+    "ds_id": "EP0005DS0005",
+    "description": null,
+    "temporal_coverage_start_date": "2018-01-01",
+    "access_level": "VIEW",
+    "tags": [
+      {
+        "tag_name": "Dengue",
+        "id": 5
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 21,
+      "name": "AG Diagnostics",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS1",
+        "title": "AG Diagnostics - Dengue Positive Tests Line List",
+        "source": "AG Diagnostics",
+        "id": 46
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0005",
+      "collection_name": "Epidemiological Line List",
+      "id": 8,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 60,
+    "title": "BJMC - Dengue Line List",
+    "collection_id": 8,
+    "data_owner_id": 22,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "OTHER",
+    "temporal_coverage_end_date": "2017-12-31",
+    "temporal_resolution": "DATE",
+    "additional_metadata": {
+      "status": "raw_data_only"
+    },
+    "ds_id": "EP0005DS0008",
+    "description": null,
+    "temporal_coverage_start_date": "2014-01-01",
+    "access_level": "VIEW",
+    "tags": [
+      {
+        "tag_name": "Dengue",
+        "id": 5
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 22,
+      "name": "BJMC",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS4",
+        "title": "BJMC - Dengue Line List",
+        "source": "BJMC",
+        "id": 47
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0005",
+      "collection_name": "Epidemiological Line List",
+      "id": 8,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 61,
+    "title": "BJMC - Dengue Summaries",
+    "collection_id": 2,
+    "data_owner_id": 22,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "OTHER",
+    "temporal_coverage_end_date": "2017-12-31",
+    "temporal_resolution": "DATE",
+    "additional_metadata": {
+      "status": "raw_data_only"
+    },
+    "ds_id": "EP0006DS0009",
+    "description": null,
+    "temporal_coverage_start_date": "2014-01-01",
+    "access_level": "VIEW",
+    "tags": [
+      {
+        "tag_name": "Dengue",
+        "id": 5
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 22,
+      "name": "BJMC",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS4",
+        "title": "BJMC - Dengue Line List",
+        "source": "BJMC",
+        "id": 47
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0006",
+      "collection_name": "Epidemiological Summary",
+      "id": 2,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 62,
+    "title": "DY Patil - Dengue Positive Tests Line List",
+    "collection_id": 8,
+    "data_owner_id": 23,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "OTHER",
+    "temporal_coverage_end_date": "2016-12-31",
+    "temporal_resolution": "DATE",
+    "additional_metadata": {
+      "status": "not_migrated"
+    },
+    "ds_id": "EP0005DS0010",
+    "description": null,
+    "temporal_coverage_start_date": "2016-01-01",
+    "access_level": "VIEW",
+    "tags": [
+      {
+        "tag_name": "Dengue",
+        "id": 5
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 23,
+      "name": "DY Patil Hospital",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS5",
+        "title": "DY Patil - Dengue Positive Tests Line List",
+        "source": "DY Patil Hospital",
+        "id": 49
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0005",
+      "collection_name": "Epidemiological Line List",
+      "id": 8,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 63,
+    "title": "India NVBDCP - Dengue Summaries",
+    "collection_id": 2,
+    "data_owner_id": 24,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "OTHER",
+    "temporal_coverage_end_date": "2022-12-31",
+    "temporal_resolution": "YEAR",
+    "additional_metadata": {
+      "status": "raw_data_only"
+    },
+    "ds_id": "EP0006DS0011",
+    "description": null,
+    "temporal_coverage_start_date": "2017-01-01",
+    "access_level": "VIEW",
+    "tags": [
+      {
+        "tag_name": "Dengue",
+        "id": 5
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 24,
+      "name": "NVBDCP India",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS6",
+        "title": "India NVBDCP - Dengue Summaries",
+        "source": "NVBDCP India",
+        "id": 50
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0006",
+      "collection_name": "Epidemiological Summary",
+      "id": 2,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 64,
+    "title": "Karnataka - Chikungunya Line List",
+    "collection_id": 8,
+    "data_owner_id": 9,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "VILLAGE",
+    "temporal_coverage_end_date": "2024-12-31",
+    "temporal_resolution": "DATE",
+    "additional_metadata": {
+      "status": "raw_data_only"
+    },
+    "ds_id": "EP0005DS0012",
+    "description": "Patient-level case data with demographics, testing and case information",
+    "temporal_coverage_start_date": "2013-01-01",
+    "access_level": "VIEW",
+    "tags": [
+      {
+        "tag_name": "Chikungunya",
+        "id": 9
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 9,
+      "name": "NVBDCP - Karnataka",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS7",
+        "title": "KA Dengue Chikungunya Line List",
+        "source": "NVBDCP - Karnataka",
+        "id": 14
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0005",
+      "collection_name": "Epidemiological Line List",
+      "id": 8,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 65,
+    "title": "Karnataka - Chikungunya Summaries",
+    "collection_id": 2,
+    "data_owner_id": 9,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "DISTRICT",
+    "temporal_coverage_end_date": "2023-12-31",
+    "temporal_resolution": "YEAR",
+    "additional_metadata": {
+      "status": "raw_data_only"
+    },
+    "ds_id": "EP0006DS0016",
+    "description": null,
+    "temporal_coverage_start_date": "2012-01-01",
+    "access_level": "VIEW",
+    "tags": [
+      {
+        "tag_name": "Chikungunya",
+        "id": 9
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 9,
+      "name": "NVBDCP - Karnataka",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS8",
+        "title": "KA Dengue Chikungunya Summaries",
+        "source": "NVBDCP - Karnataka",
+        "id": 15
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0006",
+      "collection_name": "Epidemiological Summary",
+      "id": 2,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 66,
+    "title": "NCT Delhi - Dengue Tests Line List",
+    "collection_id": 8,
+    "data_owner_id": 25,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "OTHER",
+    "temporal_coverage_end_date": "2022-12-31",
+    "temporal_resolution": "DATE",
+    "additional_metadata": {
+      "status": "raw_data_only"
+    },
+    "ds_id": "EP0005DS0017",
+    "description": null,
+    "temporal_coverage_start_date": "2022-01-01",
+    "access_level": "VIEW",
+    "tags": [
+      {
+        "tag_name": "Dengue",
+        "id": 5
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 25,
+      "name": "nan",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS9",
+        "title": "NCT Delhi - Dengue Tests Line List",
+        "source": "nan",
+        "id": 53
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0005",
+      "collection_name": "Epidemiological Line List",
+      "id": 8,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 67,
+    "title": "Noble Hospital - Dengue Positive Tests Line List",
+    "collection_id": 8,
+    "data_owner_id": 26,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "OTHER",
+    "temporal_coverage_end_date": "2018-12-31",
+    "temporal_resolution": "DATE",
+    "additional_metadata": {
+      "status": "not_migrated"
+    },
+    "ds_id": "EP0005DS0018",
+    "description": null,
+    "temporal_coverage_start_date": "2018-01-01",
+    "access_level": "VIEW",
+    "tags": [
+      {
+        "tag_name": "Dengue",
+        "id": 5
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 26,
+      "name": "Noble Hospital",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS10",
+        "title": "Noble Hospital - Dengue Positive Tests Line List",
+        "source": "Noble Hospital",
+        "id": 54
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0005",
+      "collection_name": "Epidemiological Line List",
+      "id": 8,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 68,
+    "title": "PH Diagnostics - Dengue Positive Tests Line List",
+    "collection_id": 8,
+    "data_owner_id": 27,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "OTHER",
+    "temporal_coverage_end_date": "2022-12-31",
+    "temporal_resolution": "DATE",
+    "additional_metadata": {
+      "status": "not_migrated"
+    },
+    "ds_id": "EP0005DS0019",
+    "description": null,
+    "temporal_coverage_start_date": "2022-01-01",
+    "access_level": "VIEW",
+    "tags": [
+      {
+        "tag_name": "Dengue",
+        "id": 5
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 27,
+      "name": "PH Diagnostics",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS11",
+        "title": "PH Diagnostics - Dengue Positive Tests Line List",
+        "source": "PH Diagnostics",
+        "id": 55
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0005",
+      "collection_name": "Epidemiological Line List",
+      "id": 8,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 69,
+    "title": "Pimpri Chinchwad Health Department - Dengue Line List",
+    "collection_id": 8,
+    "data_owner_id": 20,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "OTHER",
+    "temporal_coverage_end_date": "2012-12-31",
+    "temporal_resolution": "DATE",
+    "additional_metadata": {
+      "status": "not_migrated"
+    },
+    "ds_id": "EP0005DS0020",
+    "description": null,
+    "temporal_coverage_start_date": "2012-01-01",
+    "access_level": "VIEW",
+    "tags": [
+      {
+        "tag_name": "Dengue",
+        "id": 5
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 20,
+      "name": "PCMC",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS12",
+        "title": "Pimpri Chinchwad Health Department - Dengue Line List",
+        "source": "PCMC",
+        "id": 56
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0005",
+      "collection_name": "Epidemiological Line List",
+      "id": 8,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 70,
+    "title": "Pimpri Chinchwad Health Department - Dengue Summaries",
+    "collection_id": 2,
+    "data_owner_id": 20,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": null,
+    "temporal_coverage_end_date": "2023-12-31",
+    "temporal_resolution": "MONTH",
+    "additional_metadata": {
+      "status": "raw_data_only"
+    },
+    "ds_id": "EP0006DS0021",
+    "description": null,
+    "temporal_coverage_start_date": "2004-01-01",
+    "access_level": "VIEW",
+    "tags": [
+      {
+        "tag_name": "Dengue",
+        "id": 5
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 20,
+      "name": "PCMC",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS13",
+        "title": "Pimpri Chinchwad Health Department - Dengue Summaries",
+        "source": "PCMC",
+        "id": 57
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0006",
+      "collection_name": "Epidemiological Summary",
+      "id": 2,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 71,
+    "title": "Pune City Health Department - Dengue Line List",
+    "collection_id": 8,
+    "data_owner_id": 28,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "OTHER",
+    "temporal_coverage_end_date": "2018-12-31",
+    "temporal_resolution": "DATE",
+    "additional_metadata": {
+      "status": "not_migrated"
+    },
+    "ds_id": "EP0005DS0022",
+    "description": null,
+    "temporal_coverage_start_date": "2018-01-01",
+    "access_level": "VIEW",
+    "tags": [
+      {
+        "tag_name": "Dengue",
+        "id": 5
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 28,
+      "name": "PMC",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS14",
+        "title": "Pune City Health Department - Dengue Line List",
+        "source": "PMC",
+        "id": 58
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0005",
+      "collection_name": "Epidemiological Line List",
+      "id": 8,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 72,
+    "title": "Pune City Health Department - Infectious Diseases Summaries",
+    "collection_id": 2,
+    "data_owner_id": 28,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": null,
+    "temporal_coverage_end_date": "2019-12-31",
+    "temporal_resolution": "YEAR",
+    "additional_metadata": {
+      "status": "raw_data_only"
+    },
+    "ds_id": "EP0006DS0023",
+    "description": null,
+    "temporal_coverage_start_date": "2012-01-01",
+    "access_level": "VIEW",
+    "tags": [
+      {
+        "tag_name": "Multiple",
+        "id": 10
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 28,
+      "name": "PMC",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS15",
+        "title": "Pune City Health Department - Infectious Diseases Summaries",
+        "source": "PMC",
+        "id": 59
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0006",
+      "collection_name": "Epidemiological Summary",
+      "id": 2,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 73,
+    "title": "Pune City Health Department - Malaria, Dengue, & Chikungunya Diseases Summary",
+    "collection_id": 2,
+    "data_owner_id": 28,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": null,
+    "temporal_coverage_end_date": "2018-12-31",
+    "temporal_resolution": "YEAR",
+    "additional_metadata": {
+      "status": "raw_data_only"
+    },
+    "ds_id": "EP0006DS0024",
+    "description": null,
+    "temporal_coverage_start_date": "2011-01-01",
+    "access_level": "VIEW",
+    "tags": [
+      {
+        "tag_name": "Malaria",
+        "id": 11
+      },
+      {
+        "tag_name": "Dengue & Chikungunya",
+        "id": 12
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 28,
+      "name": "PMC",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS16",
+        "title": "Pune City Health Department - Malaria, Dengue, & Chikungunya Diseases Summary",
+        "source": "PMC",
+        "id": 60
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0006",
+      "collection_name": "Epidemiological Summary",
+      "id": 2,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 74,
+    "title": "Pune Rural NVBDCP - Dengue Line List",
+    "collection_id": 8,
+    "data_owner_id": 29,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "OTHER",
+    "temporal_coverage_end_date": "2012-12-31",
+    "temporal_resolution": "DATE",
+    "additional_metadata": {
+      "status": "not_migrated"
+    },
+    "ds_id": "EP0005DS0025",
+    "description": null,
+    "temporal_coverage_start_date": "2012-01-01",
+    "access_level": "VIEW",
+    "tags": [
+      {
+        "tag_name": "Dengue",
+        "id": 5
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 29,
+      "name": "NVBDCP - Pune",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS17",
+        "title": "Pune Rural NVBDCP - Dengue Line List",
+        "source": "NVBDCP - Pune",
+        "id": 61
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0005",
+      "collection_name": "Epidemiological Line List",
+      "id": 8,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 75,
+    "title": "Pune District NVBDCP - Dengue Summaries",
+    "collection_id": 2,
+    "data_owner_id": 29,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "OTHER",
+    "temporal_coverage_end_date": "2022-12-31",
+    "temporal_resolution": "MONTH",
+    "additional_metadata": {
+      "status": "raw_data_only"
+    },
+    "ds_id": "EP0006DS0026",
+    "description": null,
+    "temporal_coverage_start_date": "2012-01-01",
+    "access_level": "VIEW",
+    "tags": [
+      {
+        "tag_name": "Dengue",
+        "id": 5
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 29,
+      "name": "NVBDCP - Pune",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS18",
+        "title": "Pune District NVBDCP - Dengue Summaries",
+        "source": "NVBDCP - Pune",
+        "id": 62
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0006",
+      "collection_name": "Epidemiological Summary",
+      "id": 2,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 76,
+    "title": "Pimpri Chinchwad Health Department & NVBDCP - Reconciled Dengue Line List",
+    "collection_id": 8,
+    "data_owner_id": 30,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "OTHER",
+    "temporal_coverage_end_date": "2018-12-31",
+    "temporal_resolution": "DATE",
+    "additional_metadata": {
+      "status": "raw_data_only"
+    },
+    "ds_id": "EP0005DS0027",
+    "description": null,
+    "temporal_coverage_start_date": "2018-01-01",
+    "access_level": "VIEW",
+    "tags": [
+      {
+        "tag_name": "Dengue",
+        "id": 5
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 30,
+      "name": "PCMC, NVBDCP - Pune",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS12, EPRDS17",
+        "title": "Pimpri Chinchwad Health Department & NVBDCP - Reconciled Dengue Line List",
+        "source": "PCMC, NVBDCP - Pune",
+        "id": 63
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0005",
+      "collection_name": "Epidemiological Line List",
+      "id": 8,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 77,
+    "title": "Pune City Health Department & NVBDCP - Reconciled Dengue Line List",
+    "collection_id": 8,
+    "data_owner_id": 31,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "OTHER",
+    "temporal_coverage_end_date": "2012-12-31",
+    "temporal_resolution": "DATE",
+    "additional_metadata": {
+      "status": "raw_data_only"
+    },
+    "ds_id": "EP0005DS0028",
+    "description": null,
+    "temporal_coverage_start_date": "2012-01-01",
+    "access_level": "VIEW",
+    "tags": [
+      {
+        "tag_name": "Dengue",
+        "id": 5
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 31,
+      "name": "PMC, NVBDCP - Pune",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS12, EPRDS17",
+        "title": "Pimpri Chinchwad Health Department & NVBDCP - Reconciled Dengue Line List",
+        "source": "PCMC, NVBDCP - Pune",
+        "id": 63
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0005",
+      "collection_name": "Epidemiological Line List",
+      "id": 8,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 81,
+    "title": "Karnataka - Dengue Serotype Survey Line List",
+    "collection_id": 11,
+    "data_owner_id": 34,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "DISTRICT",
+    "temporal_coverage_end_date": "2023-12-31",
+    "temporal_resolution": "DATE",
+    "additional_metadata": {
+      "status": "not_migrated"
+    },
+    "ds_id": "EP0010DS0042",
+    "description": "Sample-wise results for IgM, NS1, RT-PCR with RT-PCR serotype",
+    "temporal_coverage_start_date": "2023-01-01",
+    "access_level": "VIEW",
+    "tags": [
+      {
+        "tag_name": "Dengue & Chikungunya",
+        "id": 12
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 34,
+      "name": "ICMR - NIV",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS23",
+        "title": "Karnataka - Dengue Serotype Survey Line List",
+        "source": "ICMR - NIV",
+        "id": 68
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0010",
+      "collection_name": "Serosurvey Line Lists",
+      "id": 11,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 82,
+    "title": "Karnataka - Dengue Source Reduction Summaries",
+    "collection_id": 9,
+    "data_owner_id": 35,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "OTHER",
+    "temporal_coverage_end_date": "2023-12-31",
+    "temporal_resolution": "WEEK",
+    "additional_metadata": {
+      "status": "not_migrated"
+    },
+    "ds_id": "ET0004DS0043",
+    "description": "By district, village the number of households visited, containers checked, and number that tested positive, along with House Index, Container Index, and Breteau Index",
+    "temporal_coverage_start_date": "2021-01-01",
+    "access_level": "VIEW",
+    "tags": [
+      {
+        "tag_name": "Dengue",
+        "id": 5
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 35,
+      "name": "Government of Karnataka",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "ETRDS5",
+        "title": "Karnataka - Dengue Source Reduction Summaries",
+        "source": "Government of Karnataka",
+        "id": 69
+      }
+    ],
+    "collection": {
+      "category_id": "ET",
+      "collection_id": "ET0004",
+      "collection_name": "Larval Survey",
+      "id": 9,
+      "category_name": "Entomology"
+    }
+  },
+  {
+    "id": 83,
+    "title": "Karnataka - Mosquito RT-PCR Summaries",
+    "collection_id": 14,
+    "data_owner_id": 35,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "OTHER",
+    "temporal_coverage_end_date": "2023-12-31",
+    "temporal_resolution": "DATE",
+    "additional_metadata": {
+      "status": "not_migrated"
+    },
+    "ds_id": "ET0008DS0045",
+    "description": "RT-PCR results for Mosquito Pools in Karnataka",
+    "temporal_coverage_start_date": "2023-01-01",
+    "access_level": "VIEW",
+    "tags": [
+      {
+        "tag_name": "Dengue",
+        "id": 5
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 35,
+      "name": "Government of Karnataka",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "ETRDS6",
+        "title": "Karnataka - Mosquito RT-PCR Summaries",
+        "source": "Government of Karnataka",
+        "id": 70
+      }
+    ],
+    "collection": {
+      "category_id": "ET",
+      "collection_id": "ET0008",
+      "collection_name": "Mosquito Virology",
+      "id": 14,
+      "category_name": "Entomology"
+    }
+  },
+  {
+    "id": 89,
+    "title": "19th Livestock Census",
+    "collection_id": 1,
+    "data_owner_id": 1,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "DISTRICT",
+    "temporal_coverage_end_date": "2012-12-31",
+    "temporal_resolution": "YEAR",
+    "additional_metadata": {
+      "status": "not_migrated"
+    },
+    "ds_id": "CS0007DS0052",
+    "description": null,
+    "temporal_coverage_start_date": "2012-01-01",
+    "access_level": "DOWNLOAD",
+    "tags": [
+      {
+        "tag_name": "Livestock",
+        "id": 1
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": "",
+      "id": 1,
+      "name": "Government of India",
+      "contact_person": ""
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "CSRDS3",
+        "title": "19th Livestock Census",
+        "source": "Government of India",
+        "id": 76
+      }
+    ],
+    "collection": {
+      "category_id": "CS",
+      "collection_id": "CS0007",
+      "collection_name": "Livestock Census (by DAHD)",
+      "id": 1,
+      "category_name": "Census and Surveys"
+    }
+  },
+  {
+    "id": 90,
+    "title": "Sahai - Pune & Nagpur - Disease, Climate & Population Summaries",
+    "collection_id": 19,
+    "data_owner_id": 41,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "OTHER",
+    "temporal_coverage_end_date": "2016-12-31",
+    "temporal_resolution": "WEEK",
+    "additional_metadata": {
+      "status": "raw_data_only"
+    },
+    "ds_id": "ST0022DS0054",
+    "description": "Weekly Summaries for Malaria, Acute Diarheal Disease, Climate Variables & Census Population Data for Nagpur & Pune, 31x31 gridded data used to compute climate variables",
+    "temporal_coverage_start_date": "2009-01-01",
+    "access_level": "VIEW",
+    "tags": [
+      {
+        "tag_name": "Malaria",
+        "id": 11
+      },
+      {
+        "tag_name": "Diarrhoea",
+        "id": 13
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 41,
+      "name": "Dr Somnath Datta, Sahai et al",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "STRDS1",
+        "title": "Sahai - Pune & Nagpur - Disease, Climate & Population Summaries",
+        "source": "Dr Somnath Datta, Sahai et al",
+        "id": 77
+      }
+    ],
+    "collection": {
+      "category_id": "ST",
+      "collection_id": "ST0022",
+      "collection_name": "Health Warning Systems",
+      "id": 19,
+      "category_name": "Research Study"
+    }
+  },
+  {
+    "id": 94,
+    "title": "Bengaluru - NCBS Tuberculosis Genome Sequences",
+    "collection_id": 20,
+    "data_owner_id": 43,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "OTHER",
+    "temporal_coverage_end_date": null,
+    "temporal_resolution": "DATE",
+    "additional_metadata": {
+      "status": "not_migrated"
+    },
+    "ds_id": "EP0025DS0069",
+    "description": "Genome Sequences for Tuberculosis collected by VS Lab, NCBS",
+    "temporal_coverage_start_date": null,
+    "access_level": "VIEW",
+    "tags": [
+      {
+        "tag_name": "Tuberculosis",
+        "id": 6
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 43,
+      "name": "APSI - VS Lab, National Centre for Biological Sciences",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS35",
+        "title": "Bengaluru - NCBS Tuberculosis Genome Sequences",
+        "source": "APSI - VS Lab, National Centre for Biological Sciences",
+        "id": 81
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0025",
+      "collection_name": "Environmental Surveillance Sequences",
+      "id": 20,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 95,
+    "title": "Meghalaya - Pasteur SARS CoV2 Wastewater Samples",
+    "collection_id": 20,
+    "data_owner_id": 44,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "OTHER",
+    "temporal_coverage_end_date": "2023-12-31",
+    "temporal_resolution": "DATE",
+    "additional_metadata": {
+      "status": "not_migrated"
+    },
+    "ds_id": "EP0025DS0070",
+    "description": "Wastewater samples for SARS CoV2 along with metadata on Date of Sample Collection, Sample ID, Barcode, Pangolin, Time, pH Level, Temp°C, Climate, Latitude, Longitude",
+    "temporal_coverage_start_date": "2023-01-01",
+    "access_level": "VIEW",
+    "tags": [
+      {
+        "tag_name": "SARS-CoV-2",
+        "id": 14
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 44,
+      "name": "APSI - Pasteur Institute",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS36",
+        "title": "Meghalaya - Pasteur SARS CoV2 Wastewater Samples",
+        "source": "APSI - Pasteur Institute",
+        "id": 82
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0025",
+      "collection_name": "Environmental Surveillance Sequences",
+      "id": 20,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 96,
+    "title": "Pune - MSD Lab - SARS Sequences",
+    "collection_id": 20,
+    "data_owner_id": 45,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "OTHER",
+    "temporal_coverage_end_date": "2022-12-31",
+    "temporal_resolution": "DATE",
+    "additional_metadata": {
+      "status": "not_migrated"
+    },
+    "ds_id": "EP0025DS0071",
+    "description": "SARS genome sequences along with metadata on location, sample collection date, sample ID and sequence ID",
+    "temporal_coverage_start_date": "2021-01-01",
+    "access_level": "VIEW",
+    "tags": [
+      {
+        "tag_name": "SARS",
+        "id": 15
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 45,
+      "name": "APSI - MSD Lab at CSIR, NCL",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS37",
+        "title": "Pune - MSD Lab - SARS Sequences",
+        "source": "APSI - MSD Lab at CSIR, NCL",
+        "id": 83
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0025",
+      "collection_name": "Environmental Surveillance Sequences",
+      "id": 20,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 97,
+    "title": "Pune - DS Lab - AMR Sequences",
+    "collection_id": 20,
+    "data_owner_id": 46,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "OTHER",
+    "temporal_coverage_end_date": null,
+    "temporal_resolution": "DATE",
+    "additional_metadata": {
+      "status": "not_migrated"
+    },
+    "ds_id": "EP0025DS0072",
+    "description": "Genome Sequences for AMR from milk",
+    "temporal_coverage_start_date": null,
+    "access_level": "VIEW",
+    "tags": [
+      {
+        "tag_name": "Antimicrobial Resistance",
+        "id": 16
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 46,
+      "name": "APSI - DS Lab, NCL",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS38",
+        "title": "Pune - DS Lab - AMR Sequences",
+        "source": "APSI - DS Lab, NCL",
+        "id": 84
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0025",
+      "collection_name": "Environmental Surveillance Sequences",
+      "id": 20,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 98,
+    "title": "TIGS NCBI SARS CoV2 Sequences",
+    "collection_id": 20,
+    "data_owner_id": 47,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "OTHER",
+    "temporal_coverage_end_date": null,
+    "temporal_resolution": "DATE",
+    "additional_metadata": {
+      "status": "not_migrated"
+    },
+    "ds_id": "EP0025DS0073",
+    "description": "Genome Sequences for SARS CoV2",
+    "temporal_coverage_start_date": null,
+    "access_level": "VIEW",
+    "tags": [
+      {
+        "tag_name": "SARS-CoV-2",
+        "id": 14
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 47,
+      "name": "APSI - TIGS, NCBI",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS39",
+        "title": "TIGS NCBI SARS CoV2 Sequences",
+        "source": "APSI - TIGS, NCBI",
+        "id": 85
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0025",
+      "collection_name": "Environmental Surveillance Sequences",
+      "id": 20,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 99,
+    "title": "Hyderabad - CSIR CCMB SARS Sequences",
+    "collection_id": 20,
+    "data_owner_id": 48,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "OTHER",
+    "temporal_coverage_end_date": "2022-12-31",
+    "temporal_resolution": "DATE",
+    "additional_metadata": {
+      "status": "not_migrated"
+    },
+    "ds_id": "EP0025DS0074",
+    "description": "Genome Sequences along with metadata on Sequence ID, City location, Date of collection",
+    "temporal_coverage_start_date": "2021-01-01",
+    "access_level": "VIEW",
+    "tags": [
+      {
+        "tag_name": "SARS",
+        "id": 15
+      }
+    ],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 48,
+      "name": "APSI - CSIR CCMB",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS40",
+        "title": "Hyderabad - CSIR CCMB SARS Sequences",
+        "source": "APSI - CSIR CCMB",
+        "id": 86
+      }
+    ],
+    "collection": {
+      "category_id": "EP",
+      "collection_id": "EP0025",
+      "collection_name": "Environmental Surveillance Sequences",
+      "id": 20,
+      "category_name": "Epidemiology"
+    }
+  },
+  {
+    "id": 106,
+    "title": "IMERG NASA Rainfall data",
+    "collection_id": 15,
+    "data_owner_id": 25,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "OTHER",
+    "temporal_coverage_end_date": "1998-12-31",
+    "temporal_resolution": "HOUR",
+    "additional_metadata": {
+      "status": "not_migrated"
+    },
+    "ds_id": "MW0016DS0092",
+    "description": "Final Run 30 Minute Precipitation L3 Half Hourly V07B",
+    "temporal_coverage_start_date": "1998-01-01",
+    "access_level": "DOWNLOAD",
+    "tags": [],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 25,
+      "name": "nan",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "MWRDS9",
+        "title": "IMERG NASA Rainfall data",
+        "source": "nan",
+        "id": 93
+      }
+    ],
+    "collection": {
+      "category_id": "MW",
+      "collection_id": "MW0016",
+      "collection_name": "Gridded Meteorological Reanalysis",
+      "id": 15,
+      "category_name": "Meteorology"
+    }
+  },
+  {
+    "id": 101,
+    "title": "Odisha - Districts, Blocks, CHCs, SCs, SSH Master Files",
+    "collection_id": 5,
+    "data_owner_id": 49,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "DISTRICT",
+    "temporal_coverage_end_date": "2024-12-31",
+    "temporal_resolution": null,
+    "additional_metadata": {
+      "status": "raw_data_only"
+    },
+    "ds_id": "GS0015DS0078",
+    "description": "List of district, block, CHC, SC and Sentinel Surveillance hospital names in Odisha ",
+    "temporal_coverage_start_date": "2024-01-01",
+    "access_level": "VIEW",
+    "tags": [],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 49,
+      "name": "PATH",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "GSRDS11",
+        "title": "Odisha - Districts, Blocks, CHCs, SCs, SSH Master Files",
+        "source": "PATH",
+        "id": 88
+      }
+    ],
+    "collection": {
+      "category_id": "GS",
+      "collection_id": "GS0015",
+      "collection_name": "Geographical & Administrative Units",
+      "id": 5,
+      "category_name": "Geospatial"
+    }
+  },
+  {
+    "id": 93,
+    "title": "Bengaluru City - Water Supply Lines Maps",
+    "collection_id": 18,
+    "data_owner_id": 42,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "LAT/LONG",
+    "temporal_coverage_end_date": null,
+    "temporal_resolution": null,
+    "additional_metadata": {
+      "status": "not_migrated"
+    },
+    "ds_id": "GS0012DS0063",
+    "description": "KML files with latitude and longitude positions for water pipelines in Bengaluru City along with valves",
+    "temporal_coverage_start_date": null,
+    "access_level": "DOWNLOAD",
+    "tags": [],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 42,
+      "name": "OpenCity",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "GSRDS99",
+        "title": "Bengaluru City - Water Supply Lines Maps",
+        "source": "OpenCity",
+        "id": 80
+      }
+    ],
+    "collection": {
+      "category_id": "GS",
+      "collection_id": "GS0012",
+      "collection_name": "Geometry",
+      "id": 18,
+      "category_name": "Geospatial"
+    }
+  },
+  {
+    "id": 39,
+    "title": "Pimpri Chinchwad - CHCs & PHCs",
+    "collection_id": 5,
+    "data_owner_id": 13,
+    "spatial_coverage_region_id": "subdistrict_4194",
+    "spatial_resolution": "OTHER",
+    "temporal_coverage_end_date": null,
+    "temporal_resolution": "NONE",
+    "additional_metadata": {
+      "status": "migrated"
+    },
+    "ds_id": "GS0015DS0032",
+    "description": "Name, Address, Imputed Latitude & Longitude positions of CHC/PHC in Pimpri Chinchwad Municipality",
+    "temporal_coverage_start_date": null,
+    "access_level": "DOWNLOAD",
+    "tags": [],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 13,
+      "name": "Pune City Municipal Corporation",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 94418,
+      "region_id": "subdistrict_4194",
+      "region_name": "Pune City",
+      "parent_region_id": "district_490"
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "GSRDS3",
+        "title": "Pimpri Chinchwad - CHCs & PHCs",
+        "source": "PCMC",
+        "id": 29
+      }
+    ],
+    "collection": {
+      "category_id": "GS",
+      "collection_id": "GS0015",
+      "collection_name": "Geographical & Administrative Units",
+      "id": 5,
+      "category_name": "Geospatial"
+    }
+  },
+  {
+    "id": 102,
+    "title": "ECPDS - Operational Forecasts",
+    "collection_id": 16,
+    "data_owner_id": 36,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "OTHER",
+    "temporal_coverage_end_date": "2025-12-31",
+    "temporal_resolution": "HOUR",
+    "additional_metadata": {
+      "status": "not_migrated"
+    },
+    "ds_id": "MW0021DS0079",
+    "description": "Archive of Operational Forecasts obtained from ECMWF (data.ecmwf.int)",
+    "temporal_coverage_start_date": "2025-01-01",
+    "access_level": "DOWNLOAD",
+    "tags": [],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 36,
+      "name": "ECMWF, European Commission",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "MWRDS6",
+        "title": "ECPDS - Operational Forecasts",
+        "source": "ECMWF, European Commission",
+        "id": 89
+      }
+    ],
+    "collection": {
+      "category_id": "MW",
+      "collection_id": "MW0021",
+      "collection_name": "Weather Forecast",
+      "id": 16,
+      "category_name": "Meteorology"
+    }
+  },
+  {
+    "id": 40,
+    "title": "Bengaluru City - Impervious Surfaces",
+    "collection_id": 5,
+    "data_owner_id": 10,
+    "spatial_coverage_region_id": "district_525",
+    "spatial_resolution": "WARD",
+    "temporal_coverage_end_date": "2022-01-01",
+    "temporal_resolution": "NONE",
+    "additional_metadata": {
+      "status": "migrated"
+    },
+    "ds_id": "GS0015DS0064",
+    "description": "Impervious percentages for BBMP wards",
+    "temporal_coverage_start_date": "2022-01-01",
+    "access_level": "DOWNLOAD",
+    "tags": [],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 10,
+      "name": "BBMP",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 5,
+      "region_id": "district_525",
+      "region_name": "Bengaluru Urban",
+      "parent_region_id": "state_29"
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "GSRDS9",
+        "title": "Bengaluru City - Impervious Surfaces",
+        "source": "BBMP",
+        "id": 30
+      }
+    ],
+    "collection": {
+      "category_id": "GS",
+      "collection_id": "GS0015",
+      "collection_name": "Geographical & Administrative Units",
+      "id": 5,
+      "category_name": "Geospatial"
+    }
+  },
+  {
+    "id": 13,
+    "title": "LGD Region IDs and Names",
+    "collection_id": 5,
+    "data_owner_id": 1,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "STATE",
+    "temporal_coverage_end_date": null,
+    "temporal_resolution": "NONE",
+    "additional_metadata": {
+      "status": "migrated"
+    },
+    "ds_id": "GS0015DS0034",
+    "description": "Local Government Directory names & codes for all India - states, districts, subdistricts, villages, ulbs",
+    "temporal_coverage_start_date": null,
+    "access_level": "DOWNLOAD",
+    "tags": [],
+    "data_owner": {
+      "contact_person_email": "",
+      "id": 1,
+      "name": "Government of India",
+      "contact_person": ""
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "EPRDS46",
+        "title": "NIFMD Annual Reports",
+        "source": "NIFMD",
+        "id": 2
+      }
+    ],
+    "collection": {
+      "category_id": "GS",
+      "collection_id": "GS0015",
+      "collection_name": "Geographical & Administrative Units",
+      "id": 5,
+      "category_name": "Geospatial"
+    }
+  },
+  {
+    "id": 91,
+    "title": "Bengaluru - Water Tanker Survey",
+    "collection_id": 4,
+    "data_owner_id": 42,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "LAT/LONG",
+    "temporal_coverage_end_date": "2015-12-31",
+    "temporal_resolution": "YEAR",
+    "additional_metadata": {
+      "status": "not_migrated"
+    },
+    "ds_id": "CS0023DS0056",
+    "description": "Survey on private water tank purchase and water sources, along with latitude and longitude of households",
+    "temporal_coverage_start_date": "2015-01-01",
+    "access_level": "DOWNLOAD",
+    "tags": [],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 42,
+      "name": "OpenCity",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "CSRDS4",
+        "title": "Bengaluru - Water Tanker Survey",
+        "source": "OpenCity",
+        "id": 78
+      }
+    ],
+    "collection": {
+      "category_id": "CS",
+      "collection_id": "CS0023",
+      "collection_name": "Open Data Portals",
+      "id": 4,
+      "category_name": "Census and Surveys"
+    }
+  },
+  {
+    "id": 107,
+    "title": "District Shapefiles Derived From Post Office Pincodes",
+    "collection_id": 5,
+    "data_owner_id": 53,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "DISTRICT",
+    "temporal_coverage_end_date": null,
+    "temporal_resolution": null,
+    "additional_metadata": {
+      "status": "not_migrated"
+    },
+    "ds_id": "GS0015DS0096",
+    "description": "All India district shapefiles derived from pincode shapefiles. Is NOT accurate to known district level shapefiles. Use only as a secondary source.",
+    "temporal_coverage_start_date": null,
+    "access_level": "DOWNLOAD",
+    "tags": [],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 53,
+      "name": "GoI",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "GSRDS12",
+        "title": "District Shapefiles Derived From Post Office Pincodes",
+        "source": "GoI",
+        "id": 94
+      }
+    ],
+    "collection": {
+      "category_id": "GS",
+      "collection_id": "GS0015",
+      "collection_name": "Geographical & Administrative Units",
+      "id": 5,
+      "category_name": "Geospatial"
+    }
+  },
+  {
+    "id": 85,
+    "title": "IMDAA - Reanalysis Single Level Data",
+    "collection_id": 15,
+    "data_owner_id": 37,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "OTHER",
+    "temporal_coverage_end_date": "2023-12-31",
+    "temporal_resolution": "HOUR",
+    "additional_metadata": {
+      "status": "not_migrated"
+    },
+    "ds_id": "MW0016DS0047",
+    "description": "10m U-Component of Wind, 10m V-Component of Wind, 2m Temperature, 2m, Relative Humidity, Total Precipitation, Soil Moisture",
+    "temporal_coverage_start_date": "1979-01-01",
+    "access_level": "DOWNLOAD",
+    "tags": [],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 37,
+      "name": "NCMRWF",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "MWRDS4",
+        "title": "IMDAA - Reanalysis Single Level Data",
+        "source": "NCMRWF",
+        "id": 72
+      }
+    ],
+    "collection": {
+      "category_id": "MW",
+      "collection_id": "MW0016",
+      "collection_name": "Gridded Meteorological Reanalysis",
+      "id": 15,
+      "category_name": "Meteorology"
+    }
+  },
+  {
+    "id": 78,
+    "title": "Pune City - Hospitals & PHCs",
+    "collection_id": 5,
+    "data_owner_id": 28,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "OTHER",
+    "temporal_coverage_end_date": null,
+    "temporal_resolution": null,
+    "additional_metadata": {
+      "status": "not_migrated"
+    },
+    "ds_id": "GS0015DS0033",
+    "description": "Name, Address, Imputed Latitude & Longitude positions of Hospitals in Pune City and some PHCs in Pune District",
+    "temporal_coverage_start_date": null,
+    "access_level": "DOWNLOAD",
+    "tags": [],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 28,
+      "name": "PMC",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "GSRDS4",
+        "title": "Pune City - Hospitals & PHCs",
+        "source": "PMC",
+        "id": 65
+      }
+    ],
+    "collection": {
+      "category_id": "GS",
+      "collection_id": "GS0015",
+      "collection_name": "Geographical & Administrative Units",
+      "id": 5,
+      "category_name": "Geospatial"
+    }
+  },
+  {
+    "id": 80,
+    "title": "Pune Weather Station Data - Station ID 43063",
+    "collection_id": 13,
+    "data_owner_id": 33,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "OTHER",
+    "temporal_coverage_end_date": "2021-12-31",
+    "temporal_resolution": "MINUTE",
+    "additional_metadata": {
+      "status": "raw_data_only"
+    },
+    "ds_id": "MW0017DS0036",
+    "description": null,
+    "temporal_coverage_start_date": "2000-01-01",
+    "access_level": "VIEW",
+    "tags": [],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 33,
+      "name": "IMD",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "MWRDS2",
+        "title": "Pune Weather Station Data - Station ID 43063",
+        "source": "IMD",
+        "id": 67
+      }
+    ],
+    "collection": {
+      "category_id": "MW",
+      "collection_id": "MW0017",
+      "collection_name": "Weather Station",
+      "id": 13,
+      "category_name": "Meteorology"
+    }
+  },
+  {
+    "id": 79,
+    "title": "Karnataka - Hobliwise Weather Data ",
+    "collection_id": 12,
+    "data_owner_id": 32,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "OTHER",
+    "temporal_coverage_end_date": "2022-12-31",
+    "temporal_resolution": "YEAR",
+    "additional_metadata": {
+      "status": "raw_data_only"
+    },
+    "ds_id": "MW0018DS0035",
+    "description": null,
+    "temporal_coverage_start_date": "2017-01-01",
+    "access_level": "DOWNLOAD",
+    "tags": [],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 32,
+      "name": "KSNMDC",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "MWRDS1",
+        "title": "Karnataka - Hobliwise Weather Data ",
+        "source": "KSNMDC",
+        "id": 66
+      }
+    ],
+    "collection": {
+      "category_id": "MW",
+      "collection_id": "MW0018",
+      "collection_name": "Hobliwise Weather",
+      "id": 12,
+      "category_name": "Meteorology"
+    }
+  },
+  {
+    "id": 42,
+    "title": "Bengaluru City - Ward-wise Public Goods ",
+    "collection_id": 5,
+    "data_owner_id": 10,
+    "spatial_coverage_region_id": "state_29",
+    "spatial_resolution": "VILLAGE",
+    "temporal_coverage_end_date": "2023-01-01",
+    "temporal_resolution": "NONE",
+    "additional_metadata": {
+      "status": "migrated"
+    },
+    "ds_id": "GS0015DS0044",
+    "description": "BBMP ward-level availability of public goods such police stations, lakes, parks, government schools, bus stops & playgrounds",
+    "temporal_coverage_start_date": "2023-01-01",
+    "access_level": "DOWNLOAD",
+    "tags": [],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 10,
+      "name": "BBMP",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 183,
+      "region_id": "state_29",
+      "region_name": "Karnataka",
+      "parent_region_id": "country_IN"
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "GSRDS7",
+        "title": "Bengaluru City - Ward-wise Public Goods ",
+        "source": "BBMP",
+        "id": 32
+      }
+    ],
+    "collection": {
+      "category_id": "GS",
+      "collection_id": "GS0015",
+      "collection_name": "Geographical & Administrative Units",
+      "id": 5,
+      "category_name": "Geospatial"
+    }
+  },
+  {
+    "id": 84,
+    "title": "ERA5 - Reanalysis Single Level Data",
+    "collection_id": 15,
+    "data_owner_id": 36,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "OTHER",
+    "temporal_coverage_end_date": "2017-12-31",
+    "temporal_resolution": "HOUR",
+    "additional_metadata": {
+      "status": "not_migrated"
+    },
+    "ds_id": "MW0016DS0046",
+    "description": "10m u-component of wind, 100m u-component of wind,10m v-component of wind,100m v-component of wind, 2m temperature, Sea surface temperature, 2m dewpoint temperature, Total precipitation, Total cloud cover, High vegetation cover, Low vegetation cover",
+    "temporal_coverage_start_date": "2017-01-01",
+    "access_level": "DOWNLOAD",
+    "tags": [],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 36,
+      "name": "ECMWF, European Commission",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "MWRDS3",
+        "title": "ERA5 - Reanalysis Single Level Data",
+        "source": "ECMWF, European Commission",
+        "id": 71
+      }
+    ],
+    "collection": {
+      "category_id": "MW",
+      "collection_id": "MW0016",
+      "collection_name": "Gridded Meteorological Reanalysis",
+      "id": 15,
+      "category_name": "Meteorology"
+    }
+  },
+  {
+    "id": 41,
+    "title": "Census 2011 - Population Data - Karnataka",
+    "collection_id": 7,
+    "data_owner_id": 1,
+    "spatial_coverage_region_id": "state_29",
+    "spatial_resolution": "VILLAGE",
+    "temporal_coverage_end_date": "2011-01-01",
+    "temporal_resolution": "NONE",
+    "additional_metadata": {
+      "status": "migrated"
+    },
+    "ds_id": "CS0001DS0050",
+    "description": "Village-level population in Karnataka",
+    "temporal_coverage_start_date": "2011-01-01",
+    "access_level": "DOWNLOAD",
+    "tags": [],
+    "data_owner": {
+      "contact_person_email": "",
+      "id": 1,
+      "name": "Government of India",
+      "contact_person": ""
+    },
+    "spatial_coverage_region": {
+      "id": 183,
+      "region_id": "state_29",
+      "region_name": "Karnataka",
+      "parent_region_id": "country_IN"
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "CSRDS2",
+        "title": "Census 2011 - Population Data - Karnataka",
+        "source": "Government of India",
+        "id": 31
+      }
+    ],
+    "collection": {
+      "category_id": "CS",
+      "collection_id": "CS0001",
+      "collection_name": "Census of India (by Home Ministry)",
+      "id": 7,
+      "category_name": "Census and Surveys"
+    }
+  },
+  {
+    "id": 54,
+    "title": "Karnataka - Disease Diagnostic Labs",
+    "collection_id": 5,
+    "data_owner_id": 15,
+    "spatial_coverage_region_id": "state_29",
+    "spatial_resolution": "LAT/LONG",
+    "temporal_coverage_end_date": null,
+    "temporal_resolution": "NONE",
+    "additional_metadata": {
+      "source": "https://idsp.mohfw.gov.in/WriteReadData/l892s/60357166951567066611.pdf",
+      "status": "migrated"
+    },
+    "ds_id": "GS0015DS0101",
+    "description": "MoHFW",
+    "temporal_coverage_start_date": null,
+    "access_level": "DOWNLOAD",
+    "tags": [],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 15,
+      "name": "MoHFW",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 183,
+      "region_id": "state_29",
+      "region_name": "Karnataka",
+      "parent_region_id": "country_IN"
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "GSRDS13",
+        "title": "Karnataka Disease Diagnostic Labs",
+        "source": "MoHFW",
+        "id": 42
+      }
+    ],
+    "collection": {
+      "category_id": "GS",
+      "collection_id": "GS0015",
+      "collection_name": "Geographical & Administrative Units",
+      "id": 5,
+      "category_name": "Geospatial"
+    }
+  },
+  {
+    "id": 92,
+    "title": "Karnataka - Veterinary Hospitals Helpline Contacts",
+    "collection_id": 5,
+    "data_owner_id": 11,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "OTHER",
+    "temporal_coverage_end_date": "2024-12-31",
+    "temporal_resolution": "DATE",
+    "additional_metadata": {
+      "status": "not_migrated"
+    },
+    "ds_id": "GS0015DS0060",
+    "description": "Veterinary officer contacts by veterinary hospital",
+    "temporal_coverage_start_date": "2024-01-01",
+    "access_level": "DOWNLOAD",
+    "tags": [],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 11,
+      "name": "NIVEDI",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "GSRDS8",
+        "title": "Karnataka - Veterinary Hospitals Helpline Contacts",
+        "source": "NIVEDI",
+        "id": 79
+      }
+    ],
+    "collection": {
+      "category_id": "GS",
+      "collection_id": "GS0015",
+      "collection_name": "Geographical & Administrative Units",
+      "id": 5,
+      "category_name": "Geospatial"
+    }
+  },
+  {
+    "id": 86,
+    "title": "IITM - Forecast Data",
+    "collection_id": 16,
+    "data_owner_id": 38,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "OTHER",
+    "temporal_coverage_end_date": "2023-12-31",
+    "temporal_resolution": "DATE",
+    "additional_metadata": {
+      "status": "not_migrated"
+    },
+    "ds_id": "MW0021DS0048",
+    "description": "Maximum Temperature, Minimum Temperature, Rainfall, Wind",
+    "temporal_coverage_start_date": "2023-01-01",
+    "access_level": "DOWNLOAD",
+    "tags": [],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 38,
+      "name": "Indian Institute of Tropical Medicine",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "MWRDS5",
+        "title": "IITM - Forecast Data",
+        "source": "Indian Institute of Tropical Medicine",
+        "id": 73
+      }
+    ],
+    "collection": {
+      "category_id": "MW",
+      "collection_id": "MW0021",
+      "collection_name": "Weather Forecast",
+      "id": 16,
+      "category_name": "Meteorology"
+    }
+  },
+  {
+    "id": 87,
+    "title": "WRI - Land Use Land Cover Data",
+    "collection_id": 17,
+    "data_owner_id": 39,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "OTHER",
+    "temporal_coverage_end_date": "2023-12-31",
+    "temporal_resolution": "WEEK",
+    "additional_metadata": {
+      "status": "not_migrated"
+    },
+    "ds_id": "LU0014DS0049",
+    "description": "Trees, Grass, Flooded Vegetation, Crops, Shrub and Scrub, Built, Bare, Snow and Ice",
+    "temporal_coverage_start_date": "2016-01-01",
+    "access_level": "DOWNLOAD",
+    "tags": [],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 39,
+      "name": "Google",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "LURDS1",
+        "title": "WRI - Land Use Land Cover Data",
+        "source": "Google",
+        "id": 74
+      }
+    ],
+    "collection": {
+      "category_id": "LU",
+      "collection_id": "LU0014",
+      "collection_name": "Gridded Land Use Land Cover",
+      "id": 17,
+      "category_name": "Land Use & Land Cover"
+    }
+  },
+  {
+    "id": 88,
+    "title": "Shapefiles India",
+    "collection_id": 18,
+    "data_owner_id": 40,
+    "spatial_coverage_region_id": "country_IN",
+    "spatial_resolution": "OTHER",
+    "temporal_coverage_end_date": null,
+    "temporal_resolution": "YEAR",
+    "additional_metadata": {
+      "status": "not_migrated"
+    },
+    "ds_id": "GS0012DS0051",
+    "description": null,
+    "temporal_coverage_start_date": null,
+    "access_level": "VIEW",
+    "tags": [],
+    "data_owner": {
+      "contact_person_email": null,
+      "id": 40,
+      "name": "PMC, PCMC, Government of Karnataka, BBMP",
+      "contact_person": null
+    },
+    "spatial_coverage_region": {
+      "id": 146769,
+      "region_id": "country_IN",
+      "region_name": "India",
+      "parent_region_id": ""
+    },
+    "raw_datasets": [
+      {
+        "rds_id": "GSRDS1, GSRDS2",
+        "title": "Shapefiles India",
+        "source": "PMC, PCMC, Government of Karnataka, BBMP",
+        "id": 75
+      }
+    ],
+    "collection": {
+      "category_id": "GS",
+      "collection_id": "GS0012",
+      "collection_name": "Geometry",
+      "id": 18,
+      "category_name": "Geospatial"
     }
   }
 ]

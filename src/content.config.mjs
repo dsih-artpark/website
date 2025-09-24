@@ -48,13 +48,16 @@ const toolkits = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    icon: z.string(),
-    category: z.string().optional(),
-    projects: z.array(z.string()).optional(),
-    status: z.enum(['Live', 'In Development', 'Beta']),
+    type: z.string(),
+    developed_by: z.string().optional(),
+    developed_by_asterisk: z.string().optional(),
     link: z.string().optional(),
-    github: z.string().optional(),
-    features: z.array(z.string()),
+    github_repo: z.string().optional(),
+    status: z.enum(['active', 'inactive', 'beta', 'deprecated']),
+    team: z.array(z.string()).optional(),
+    contact_email: z.string().optional(),
+    additional_notes: z.string().optional(),
+    projects: z.array(z.string()).optional(),
   }),
 });
 
