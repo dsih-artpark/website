@@ -89,9 +89,10 @@ const optimizedImage = getProjectImage(project.data.image);
                     <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">{toolkit.data.description}</p>
                     <div class="flex items-center space-x-4">
                       <span class={`px-2 py-1 rounded text-xs font-medium ${
-                        toolkit.data.status === 'Live' ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200' :
-                        toolkit.data.status === 'In Development' ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200' :
-                        'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200'
+                        toolkit.data.status === 'active' ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200' :
+                        toolkit.data.status === 'beta' ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200' :
+                        toolkit.data.status === 'deprecated' ? 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200' :
+                        'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200'
                       }`}>
                         {toolkit.data.status}
                       </span>
