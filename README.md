@@ -2,15 +2,6 @@
 
 A modern, responsive website built with Astro for the Health Initiatives @ ARTPARK.
 
-## Features
-
-- 🚀 Built with Astro for optimal performance
-- 🎨 Beautiful, responsive design with Tailwind CSS
-- 🌙 Dark mode support
-- 📱 Mobile-first responsive design
-- ⚡ Fast loading and SEO optimized
-- 🎯 Three main pages: Landing, Team, and Projects
-
 ## Getting Started
 
 ### Prerequisites
@@ -30,6 +21,7 @@ cd dsih-website
 2. Install dependencies:
 
 ```bash
+nvm use 22
 npm install
 ```
 

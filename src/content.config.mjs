@@ -53,6 +53,7 @@ const toolkits = defineCollection({
     developed_by_asterisk: z.string().optional(),
     link: z.string().optional(),
     github_repo: z.string().optional(),
+    tags: z.array(z.string()).optional(),
     status: z.enum(['active', 'inactive', 'beta', 'deprecated']),
     team: z.array(z.string()).optional(),
     contact_email: z.string().optional(),
