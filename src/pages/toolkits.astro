@@ -414,7 +414,7 @@ const categories = ["All", ...(await getUniqueCategories())];
         developers.forEach(developer => {
           const optionText = developer === 'In House' ? 'Developed In House' : 
                            developer === 'CNI Lab, IISc and ICTS Bengaluru' ? 'Developed by CNI, IISc, & ICTS Bengaluru' :
-                           developer === 'Ashoka University' ? 'Developed by Ashoka' : developer;
+                           developer === 'Ashoka University' ? 'Developed by Ashoka University' : developer;
           
           const desktopOption = new Option(optionText, developer);
           const mobileOption = new Option(optionText, developer);
